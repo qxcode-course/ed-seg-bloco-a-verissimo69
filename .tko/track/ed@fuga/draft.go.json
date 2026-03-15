@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_14-49-25",
+            "content": "@@ -158,17 +158,17 @@\n rintln(%22\n-N\n+S\n %22)   %0A  \n@@ -198,33 +198,33 @@\n    fmt.Println(%22\n-S\n+n\n %22)%0A        %7D%0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-15_14-49-58",
+            "content": "@@ -267,33 +267,33 @@\n    fmt.Println(%22\n-S\n+N\n %22)%0A        %7Delse\n@@ -312,33 +312,33 @@\n    fmt.Println(%22\n-N\n+S\n %22)%0A        %7D%0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-15_14-50-12",
+            "content": "@@ -135,17 +135,8 @@\n %3C a \n- &&  a%3Ec \n %7B%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-15_14-53-43",
+            "content": "@@ -137,19 +137,17 @@\n a  &&  a\n- %3C \n+%3E\n c %7B%0A    \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-15_14-54-13",
+            "content": "@@ -27,16 +27,8 @@\n mt%22%0A\n-%09%22math%22%0A\n )%0Afu\n@@ -125,17 +125,16 @@\n     if  \n-(\n b %3C a  &\n@@ -145,60 +145,9 @@\n  %3C c\n-) %7C%7C math.Abs(float64(a-b)) %3C math.Abs(float64(a-c))\n+ \n %7B%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-15_14-58-54",
+            "content": "@@ -33,17 +33,16 @@\n math%22%0A)%0A\n-%0A\n func mai\n@@ -47,17 +47,20 @@\n ain() %7B%0A\n-%09\n+    \n var a, b\n@@ -72,17 +72,20 @@\n d int16%0A\n-%09\n+    \n fmt.Scan\n@@ -92,23 +92,28 @@\n (&a,\n- \n &b,\n- \n &c,\n- \n &d)%0A\n-%0A%09\n+    %0A%0A    \n if d\n@@ -125,12 +125,41 @@\n 1 %7B%0A\n-%09%09if\n+        if  (b %3C a  &&  a %3C c) %7C%7C\n  mat\n@@ -182,9 +182,9 @@\n b)) \n-%3E\n+%3C\n  mat\n@@ -206,38 +206,218 @@\n -c))\n- %7B%0A%09%09%09fmt.Printf(%22S%5Cn%22)%0A%09%09%7D%0A%09%7D\n+%7B%0A            fmt.Println(%22N%22)   %0A        %7Delse %7B%0A            fmt.Println(%22S%22)%0A        %7D%0A    %7Delse %7B%0A        if b %3C a%7B%0A            fmt.Println(%22S%22)%0A        %7Delse %7B%0A            fmt.Println(%22N%22)%0A        %7D%0A    %7D%0A%0A\n %0A%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-15_15-06-10",
+            "content": "@@ -191,40 +191,8 @@\n n%22)%0A\n-%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22N%5Cn%22)%0A\n %09%09%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-15_15-07-24",
+            "content": "@@ -167,28 +167,8 @@\n -c))\n- %7C%7C (a %3C b && b %3E c)\n  %7B%0A%09\n@@ -219,17 +219,16 @@\n (%22N%5Cn%22)%0A\n-%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-15_15-09-32",
+            "content": "@@ -170,17 +170,17 @@\n ) %7C%7C (a \n-%3E\n+%3C\n  b && b \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_15-09-53",
+            "content": "@@ -243,92 +243,8 @@\n n%22)%0A\n-%09%09%7D%0A%09%7D else %7B%0A%09%09if math.Abs(float64(a-c)) %3C math.Abs(float64(a-b)) %7B%0A%09%09%09println(%22N%22)\n %0A%09%09%7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_15-12-26",
+            "content": "@@ -307,29 +307,25 @@\n (a-b)) %7B%0A%09%09%09\n-fmt.P\n+p\n rintln(%22N%22)%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-15_15-13-19",
+            "content": "@@ -258,17 +258,16 @@\n  %7B%0A%09%09if \n-(\n math.Abs\n@@ -309,80 +309,28 @@\n -b))\n-) && (a %3E b && a %3E c) %7B%0A%09%09%09fmt.Println(%22N%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(%22S\n+ %7B%0A%09%09%09fmt.Println(%22N\n %22)%0A%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-15_15-15-11",
+            "content": "@@ -322,12 +322,12 @@\n %3E b \n-%7C%7C b\n+&& a\n  %3E c\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-15_15-17-03",
+            "content": "@@ -327,25 +327,16 @@\n %7C b %3E c)\n- && b %3E c\n  %7B%0A%09%09%09fm\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-15_15-19-04",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c, d int16\n\tfmt.Scan(&a, &b, &c, &d)\n\n\tif d == -1 {\n\t\tif math.Abs(float64(a-b)) > math.Abs(float64(a-c)) || (a > b && b > c) {\n\t\t\tfmt.Printf(\"S\\n\")\n\t\t} else {\n\t\t\tfmt.Printf(\"N\\n\")\n\t\t}\n\t} else {\n\t\tif (math.Abs(float64(a-c)) < math.Abs(float64(a-b))) && (a > b || b > c) && b > c {\n\t\t\tfmt.Println(\"N\")\n\t\t} else {\n\t\t\tfmt.Println(\"S\")\n\t\t}\n\t}\n\n}\n",
+            "lines": "26"
+        }
+    ]
+}
