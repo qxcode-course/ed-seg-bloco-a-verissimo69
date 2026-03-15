@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_13-50-25",
+            "content": "@@ -180,10 +180,9 @@\n rint\n-ln\n+f\n (%22%25.\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-15_13-54-44",
+            "content": "@@ -33,17 +33,16 @@\n math%22%0A)%0A\n-%0A\n func mai\n@@ -51,25 +51,24 @@\n ) %7B%0A\n-%09\n+    \n var a,\n- \n b,\n- \n c,\n- \n p,\n- \n r fl\n@@ -73,17 +73,20 @@\n float64%0A\n-%09\n+    \n fmt.Scan\n@@ -93,76 +93,65 @@\n (&a,\n- \n &b,\n- \n &c)%0A\n-%09\n+    \n p = (a\n- + b + c) / 2%0A%09r = p * (p - a) * (p - b) * (p - c)%0A%09\n++b+c)/2%0A    r = p*(p-a)*(p-b)*(p-c)%0A    \n r = \n@@ -163,17 +163,20 @@\n Sqrt(r)%0A\n-%09\n+    \n fmt.Prin\n@@ -180,22 +180,24 @@\n rint\n-f\n+ln\n (%22%25.2f\n-%5Cn\n %22,\n- \n r)%0A\n+    \n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-15_13-55-18",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c, p, r float64\n\tfmt.Scan(&a, &b, &c)\n\tp = (a + b + c) / 2\n\tr = p * (p - a) * (p - b) * (p - c)\n\tr = math.Sqrt(r)\n\tfmt.Printf(\"%.2f\\n\", r)\n\n}\n",
+            "lines": "16"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+2026-03-15 13:27:54, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-15 13:28:48, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 13:50:25, EXEC, v:1, k:ed@pintando, mode:FREE, size:15
+2026-03-15 13:53:41, EXEC, v:1, k:ed@pintando, mode:FREE
+2026-03-15 13:53:57, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 13:54:12, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 13:54:44, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:15
+2026-03-15 13:55:18, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:16
+2026-03-15 13:55:39, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 13:55:40, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 13:56:05, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 13:56:10, EXEC, v:1, k:ed@pintando, mode:FREE
+2026-03-15 13:56:19, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 13:56:20, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 13:56:20, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 13:56:21, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 13:56:24, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 13:56:39, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 13:56:44, EXEC, v:1, k:ed@pintando, mode:LOCK, rate:100
+2026-03-15 13:56:46, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 13:57:10, EXEC, v:1, k:ed@pintando, mode:LOCK, rate:100
+2026-03-15 13:57:11, EXEC, v:1, k:ed@pintando, mode:LOCK, rate:100
+2026-03-15 13:57:16, EXEC, v:1, k:ed@pintando, mode:LOCK, rate:100
+2026-03-15 13:57:22, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
