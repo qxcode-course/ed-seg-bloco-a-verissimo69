@@ -14,11 +14,12 @@ sources:
   quests: null
   tasks: null
 expanded:
+- sandbox@sandbox
 - ed@main-quest
 - ed@revisão
 - sandbox@sandbox:00_rascunhos
-- sandbox@sandbox
-tasks: {}
+tasks:
+  ed@pintando: '{rate:100}'
 flags:
   painel: 0
   quests: 0
@@ -27,4 +28,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@pintando
+selected: ed@mumia

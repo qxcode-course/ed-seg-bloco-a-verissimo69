@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_14-23-23",
+            "content": "@@ -257,17 +257,16 @@\n %22fmt%22%0A)%0A\n-%0A\n func mai\n@@ -271,18 +271,25 @@\n ain() %7B%0A\n-%0A%09\n+    %0A    \n var nome\n@@ -296,17 +296,20 @@\n  string%0A\n-%09\n+    \n var idad\n@@ -316,17 +316,20 @@\n e int16%0A\n-%09\n+    \n fmt.Scan\n@@ -348,19 +348,24 @@\n de)%0A\n-%09\n+    \n switch\n- \n %7B%0A\n-%09\n+    \n case\n@@ -377,18 +377,24 @@\n e %3C 12:%0A\n-%09%09\n+        \n fmt.Prin\n@@ -410,28 +410,32 @@\n  crianca\n-%5Cn\n %22,\n- \n nome)\n-%0A%09\n+    %0A    \n case ida\n@@ -442,15 +442,20 @@\n de %3C\n- \n 18:%0A\n-%09%09\n+        \n fmt.\n@@ -473,18 +473,16 @@\n eh jovem\n-%5Cn\n %22, nome)\n@@ -474,33 +474,36 @@\n h jovem%22, nome)%0A\n-%09\n+    \n case idade %3C 65:\n@@ -502,15 +502,20 @@\n de %3C\n- \n 65:%0A\n-%09%09\n+        \n fmt.\n@@ -534,18 +534,16 @@\n h adulto\n-%5Cn\n %22, nome)\n@@ -535,33 +535,36 @@\n  adulto%22, nome)%0A\n-%09\n+    \n case idade %3C 100\n@@ -559,25 +559,30 @@\n  idade %3C\n- \n 1000:%0A\n-%09%09\n+        \n fmt.Prin\n@@ -596,18 +596,16 @@\n eh idoso\n-%5Cn\n %22, nome)\n@@ -605,17 +605,20 @@\n , nome)%0A\n-%09\n+    \n case ida\n@@ -632,10 +632,16 @@\n 00:%0A\n-%09%09\n+        \n fmt.\n@@ -663,10 +663,8 @@\n umia\n-%5Cn\n %22, n\n@@ -668,14 +668,25 @@\n , nome)%0A\n-%0A%09\n+        %0A    \n %7D%0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-15_14-24-15",
+            "content": "package main\n\n/*\n\"crianca\" se menor que 12 (n\u00e3o use o \u00e7),\n- \"jovem\" se menor que 18,\n- \"adulto\" se menor que 65,\n- \"idoso\" se menor que 1000,\n- \"mumia\" caso contrario (n\u00e3o ponha o acento).\n Uma frase no formato \"`<nome>` eh `<classifica\u00e7\u00e3o>`\"\n*/\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\n\tvar nome string\n\tvar idade int16\n\tfmt.Scan(&nome, &idade)\n\tswitch {\n\tcase idade < 12:\n\t\tfmt.Printf(\"%s eh crianca\\n\", nome)\n\tcase idade < 18:\n\t\tfmt.Printf(\"%s eh jovem\\n\", nome)\n\tcase idade < 65:\n\t\tfmt.Printf(\"%s eh adulto\\n\", nome)\n\tcase idade < 1000:\n\t\tfmt.Printf(\"%s eh idoso\\n\", nome)\n\tcase idade > 1000:\n\t\tfmt.Printf(\"%s eh mumia\\n\", nome)\n\n\t}\n}\n",
+            "lines": "33"
+        }
+    ]
+}
