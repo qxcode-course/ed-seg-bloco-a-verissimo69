@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_14-26-57",
+            "content": "@@ -60,16 +60,21 @@\n  a, b, c\n+%0A    \n  int%0A%09va\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-16_14-27-13",
+            "content": "@@ -70,43 +70,35 @@\n nt%0A%09\n-fmt.Scan(&c)%0A%09vetor := make(%5B%5Dint, \n+var vetor %5B%5Dint%0A%09fmt.Scan(&\n c)%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_14-29-18",
+            "content": "@@ -149,16 +149,25 @@\n &a, &b)%0A\n+%09%09j := 0%0A\n %09%09if a %3E\n@@ -189,17 +189,17 @@\n %09%09vetor%5B\n-i\n+j\n %5D = int(\n@@ -224,16 +224,23 @@\n  - b)))%0A\n+%09%09%09j++%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_14-30-55",
+            "content": "@@ -251,10 +251,8 @@\n  %3C c\n--1\n ; i+\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_14-31-19",
+            "content": "@@ -294,18 +294,16 @@\n %09%09%09a = i\n-+1\n %0A%09%09%7D%0A%0A%09%7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_14-31-40",
+            "content": "@@ -65,11 +65,8 @@\n , c \n-,r \n int%0A\n@@ -223,16 +223,21 @@\n %09%09%7D%0A%09%7D%0A%09\n+a = 0\n %0A%09for i \n@@ -289,17 +289,17 @@\n 1%5D %7B%0A%09%09%09\n-r\n+a\n  = i+1%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_14-32-29",
+            "content": "@@ -60,18 +60,18 @@\n  a, b, c\n-,\n  \n+,\n r int%0A%09f\n@@ -225,16 +225,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09for i \n@@ -296,11 +296,9 @@\n  = i\n- + \n++\n 1%0A%09%09\n@@ -316,14 +316,14 @@\n Println(\n-r\n+a\n )%0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_14-33-24",
+            "content": "@@ -291,16 +291,20 @@\n %09%09%09r = i\n+ + 1\n %0A%09%09%7D%0A%0A%09%7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_14-34-18",
+            "content": "@@ -67,11 +67,8 @@\n c, r\n-, j\n  int\n@@ -174,17 +174,16 @@\n b %3E 9 %7B%0A\n-%0A\n %09%09%09vetor\n@@ -183,17 +183,17 @@\n %09%09vetor%5B\n-j\n+i\n %5D = int(\n@@ -222,24 +222,8 @@\n )))%0A\n-            j++%0A\n %09%09%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_14-38-20",
+            "content": "@@ -311,18 +311,16 @@\n %09%09%09r = i\n-+1\n %0A%09%09%7D%0A%0A%09%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_14-38-34",
+            "content": "@@ -65,32 +65,17 @@\n , c, r, \n-indiceDuplicacao\n+j\n  int%0A%09fm\n@@ -183,25 +183,25 @@\n %7B%0A%0A%09%09%09vetor%5B\n-i\n+j\n %5D = int(math\n@@ -226,35 +226,23 @@\n )))%0A\n-%09%09%7D else %7B%0A%09%09%09vetor%5Bi%5D = -1\n+            j++\n %0A%09%09%7D\n@@ -310,188 +310,24 @@\n %0A%09%09%09\n-a = vetor%5Bi+1%5D%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C c; i++ %7B%0A%09%09if a == vetor%5Bi%5D %7B%0A%09%09%09r = i%0A%09%09%09indiceDuplicacao += 1%0A%09%09%7D%0A%09%7D%0A%0A%09if indiceDuplicacao %3E 1 %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D else %7B%0A%09\n+r = i+1%0A%09%09%7D%0A%0A%09%7D%0A\n %09fmt\n@@ -337,15 +337,12 @@\n intln(r)\n-%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_15-51-49",
+            "content": "@@ -356,44 +356,8 @@\n %09%09%7D%0A\n-%09%09if vetor%5Bi%5D == -1 %7B%0A%09%09%09r = -1%0A%09%09%7D%0A\n %09%7D%0A%0A\n@@ -474,19 +474,8 @@\n %3E 1 \n-%7C%7C r == -1 \n %7B%0A%09%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-16_15-57-35",
+            "content": "@@ -351,21 +351,19 @@\n i+1%5D%0A%09%09%7D\n-else \n+%0A%09%09\n if vetor\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-16_16-00-35",
+            "content": "@@ -483,35 +483,8 @@\n %09%09%7D%0A\n-%09%09if(r == 0)%7B%0A%09%09%09r = 1%0A%09%09%7D%0A\n %09%7D%0A%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-16_16-01-59",
+            "content": "@@ -354,19 +354,9 @@\n %5D%0A%09%09\n-%09r = i%0A%09%09%7D \n+%7D\n else\n@@ -441,16 +441,25 @@\n or%5Bi%5D %7B%0A\n+%09%09%09r = i%0A\n %09%09%09indic\n@@ -487,16 +487,16 @@\n %09%09if\n- \n+(\n r == 0\n- \n+)\n %7B%0A%09%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-16_16-03-32",
+            "content": "@@ -53,17 +53,44 @@\n  %7B%0A%09var \n-n\n+a, b, c, r, indiceDuplicacao\n  int%0A%09fm\n@@ -101,68 +101,35 @@\n an(&\n-n)%0A\n+c)\n %0A%09ve\n-ncedorIndice := -1%0A%09melhorPontuacao := math.MaxInt32%0A\n+tor := make(%5B%5Dint, c)\n %0A%09fo\n@@ -146,17 +146,17 @@\n i %3C \n-n\n+c\n ; i++ %7B%0A\n %09%09va\n@@ -155,23 +155,8 @@\n + %7B%0A\n-%09%09var a, b int%0A\n %09%09fm\n@@ -174,17 +174,16 @@\n &b)%0A\n-%0A\n %09%09if a %3E\n = 10\n@@ -182,40 +182,35 @@\n  a %3E\n-= 10 && b %3E= 10\n+ 9 %7C%7C b %3E 9\n  %7B%0A\n+%0A\n %09%09%09\n-pontuacao :\n+vetor%5Bi%5D \n = in\n@@ -243,128 +243,309 @@\n )%0A%09%09\n-%09if pontuacao %3C melhorPontuacao %7B%0A%09%09%09%09melhorPontuacao = pontuacao%0A%09%09%09%09vencedorIndice = i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if vencedorIndice\n+%7D else %7B%0A%09%09%09vetor%5Bi%5D = -1%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C c-1; i++ %7B%0A%09%09if vetor%5Bi%5D %3E vetor%5Bi+1%5D %7B%0A%09%09%09a = vetor%5Bi+1%5D%0A%09%09%09r = i%0A%09%09%7D else if vetor%5Bi%5D == -1 %7B%0A%09%09%09r = -1%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C c; i++ %7B%0A%09%09if a == vetor%5Bi%5D %7B%0A%09%09%09indiceDuplicacao += 1%0A%09%09%7D%0A%09%09if r == 0 %7B%0A%09%09%09r = 1%0A%09%09%7D%0A%09%7D%0A%0A%09if indiceDuplicacao %3E 1 %7C%7C r\n  == \n@@ -607,24 +607,13 @@\n tln(\n-vencedorIndice\n+r\n )%0A%09%7D%0A\n-%7D\n+%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-16_16-10-32",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tvencedorIndice := -1\n\tmelhorPontuacao := math.MaxInt32\n\n\tfor i := 0; i < n; i++ {\n\t\tvar a, b int\n\t\tfmt.Scan(&a, &b)\n\n\t\tif a >= 10 && b >= 10 {\n\t\t\tpontuacao := int(math.Abs(float64(a - b)))\n\t\t\tif pontuacao < melhorPontuacao {\n\t\t\t\tmelhorPontuacao = pontuacao\n\t\t\t\tvencedorIndice = i\n\t\t\t}\n\t\t}\n\t}\n\n\tif vencedorIndice == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t} else {\n\t\tfmt.Println(vencedorIndice)\n\t}\n}",
+            "lines": "33"
+        }
+    ]
+}

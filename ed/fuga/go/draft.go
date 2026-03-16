@@ -8,7 +8,7 @@ import (
 func main() {
 	var a, b, c, d int16
 	fmt.Scan(&a, &b, &c, &d)
-
+    
 	if d == -1 {
 		if math.Abs(float64(a-b)) > math.Abs(float64(a-c)) || (a > b && b > c) {
 			fmt.Printf("S\n")
