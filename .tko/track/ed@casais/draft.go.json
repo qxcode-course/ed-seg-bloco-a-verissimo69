@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_09-37-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var count, valor, pares int\n    fmt.Scan(&count)\n\n    // A Chave ser\u00e1 o N\u00daMERO e o Valor ser\u00e1 a QUANTIDADE de vezes que apareceu\n    estoque := make(map[int]int)\n\n    for i := 0; i < count; i++ {\n        fmt.Scan(&valor)\n\n        // Verificamos se o negativo desse valor j\u00e1 est\u00e1 no \"estoque\"\n        if estoque[-valor] > 0 {\n            pares++            // Encontramos um par!\n            estoque[-valor]--  // Removemos um do estoque para n\u00e3o usar o mesmo n\u00famero de novo\n        } else {\n            // Se n\u00e3o tem o par, guardamos esse n\u00famero para ver se o par dele aparece depois\n            estoque[valor]++\n        }\n    }\n\n    fmt.Println(pares)\n}",
+            "lines": "26"
+        }
+    ]
+}
