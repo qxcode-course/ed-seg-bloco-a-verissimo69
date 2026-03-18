@@ -1,0 +1,40 @@
+2026-03-18 09:43:49, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-18 09:45:31, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:66
+2026-03-18 09:46:25, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:66
+2026-03-18 09:49:05, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:69
+2026-03-18 09:50:22, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:70
+2026-03-18 09:51:31, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:70
+2026-03-18 09:52:12, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:70
+2026-03-18 09:52:34, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:70
+2026-03-18 10:01:49, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25
+2026-03-18 10:07:41, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:71
+2026-03-18 10:07:44, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25
+2026-03-18 10:08:19, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:71
+2026-03-18 10:10:59, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:71
+2026-03-18 10:11:37, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:71
+2026-03-18 10:11:46, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-18 10:11:57, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-18 10:12:27, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-18 10:14:09, SELF, v:1, k:ed@pintando, self:1, rate:100, study:120, friend:N, concept:1
+2026-03-18 10:14:12, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-18 10:14:44, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-18 10:15:04, SELF, v:1, k:ed@mumia, self:1, rate:100, study:50, friend:N, concept:1
+2026-03-18 10:15:06, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-18 10:15:11, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-18 10:15:20, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-18 10:15:22, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-18 10:15:50, SELF, v:1, k:ed@fuga, self:1, rate:100, study:90, friend:N, concept:1
+2026-03-18 10:15:53, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-18 10:15:56, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-18 10:16:24, SELF, v:1, k:ed@pedra, self:1, rate:41, study:120, friend:N, concept:1
+2026-03-18 10:16:25, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-18 10:16:29, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-18 10:16:31, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-03-18 10:16:32, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-18 10:16:39, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-18 10:17:01, SELF, v:1, k:ed@casais, self:1, rate:100, study:60, friend:N, concept:1
+2026-03-18 10:17:02, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-18 10:17:07, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-18 10:17:27, SELF, v:1, k:ed@baruel, self:1, rate:100, study:120, friend:N, guided:1, concept:1
+2026-03-18 10:17:28, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-03-18 10:17:30, MOVE, v:1, k:ed@baruel, mode:BACK

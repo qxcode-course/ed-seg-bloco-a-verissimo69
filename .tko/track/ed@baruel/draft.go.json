@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_10-28-58",
+            "content": "@@ -18,13 +18,18 @@\n ort \n+(%0A%09\n %22fmt%22\n+%0A)\n %0A%0Afu\n@@ -49,143 +49,231 @@\n var \n-qtd0, qtd1 int%0A%09fmt.Scan(&qtd0, &qtd1)%0A%09vetor0 := make(%5B%5Dint, qtd1)%0A%09vetorRep := make(%5B%5Dint, qtd1)%0A%09aux :=  -999999999999999999%0A%09j := 0\n+totalAlbum, totalPossuidas int%0A%09fmt.Scan(&totalAlbum)%0A%09fmt.Scan(&totalPossuidas)%0A%0A%09possuidas := make(%5B%5Dint, totalPossuidas)%0A%09temNoAlbum := make(map%5Bint%5Dbool) // Para rastrear quais figurinhas ele tem%0A%09repetidas := %5B%5Dint%7B%7D%0A%09\n %0A%09fo\n@@ -290,12 +290,22 @@\n i %3C \n-qtd1\n+totalPossuidas\n ; i+\n@@ -324,161 +324,855 @@\n an(&\n-vetor0%5Bi%5D)%0A%09%09if vetor0\n+possuidas%5Bi%5D)%0A%09%09%0A%09%09// L%C3%B3gica para repetidas: se j%C3%A1 vimos esse n%C3%BAmero antes, %C3%A9 repetida%0A%09%09if i %3E 0 && possuidas\n %5Bi%5D\n+ \n == \n-aux %7B%0A%09%09%09vetorRep%5Bj\n+possuidas%5Bi-1%5D %7B%0A%09%09%09// Evita adicionar a mesma repetida v%C3%A1rias vezes (ex: 1 1 1)%0A%09%09%09if len(repetidas) == 0 %7C%7C repetidas%5Blen(repetidas)-1\n %5D \n+!\n = \n-aux\n+possuidas%5Bi%5D %7B%0A%09%09%09%09repetidas = append(repetidas, possuidas%5Bi%5D)\n %0A%09%09%09\n-j++\n+%7D\n %0A%09%09%7D%0A%09%09\n-aux = vetor0%5Bi%5D%0A%09%09%0A%09%7D%0A%09for i := 0,i%3Cj, i++ %7B%0A%09%09fmt.Print(vetorRep%5Bi%5D\n+temNoAlbum%5Bpossuidas%5Bi%5D%5D = true%0A%09%7D%0A%0A%09// Sa%C3%ADda 1: Repetidas%0A%09if len(repetidas) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09for i, v := range repetidas %7B%0A%09%09%09fmt.Print(v)%0A%09%09%09if i %3C len(repetidas)-1 %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D%0A%0A%09// Sa%C3%ADda 2: Faltando%0A%09faltando := %5B%5Dint%7B%7D%0A%09for i := 1; i %3C= totalAlbum; i++ %7B%0A%09%09if !temNoAlbum%5Bi%5D %7B%0A%09%09%09faltando = append(faltando, i)%0A%09%09%7D%0A%09%7D%0A%0A%09if len(faltando) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09for i, v := range faltando %7B%0A%09%09%09fmt.Print(v\n )%0A\n+%09\n %09%09if i\n-%3Cj\n+ %3C len(faltando)\n -1\n+ \n %7B%0A%09%09%09\n+%09\n fmt.\n@@ -1180,17 +1180,16 @@\n rint\n-f\n (%22 %22)%0A%09%09\n %7D%0A%09%7D\n@@ -1188,26 +1188,31 @@\n )%0A%09%09\n+%09\n %7D%0A\n+%09\n %09%7D\n- \n %0A%09%09\n-%09%0A%0A%09%0A%7D%0A%09%0A%0A%0A%0A\n+fmt.Println()%0A%09%7D\n %0A%7D\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-17_16-07-38",
+            "content": "@@ -307,17 +307,16 @@\n %5D%0A%09%09%0A%09%7D%0A\n-%0A\n %09for i :\n@@ -322,14 +322,13 @@\n := 0\n-; i%3Cj;\n+,i%3Cj,\n  i++\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-17_16-09-17",
+            "content": "@@ -113,566 +113,8 @@\n 1)%0A%09\n-unicos := make(map%5Bint%5Dbool)%0A%09repetidos := make(%5B%5Dint, 0, qtd0)%0A%0A%09for i := range vetor0 %7B%0A%09%09fmt.Scan(&vetor0%5Bi%5D)%0A%09%7D%0A%09for _, fig := range vetor0 %7B%0A%09%09if unicos%5Bfig%5D %7B%0A%09%09%09repetidos = append(repetidos, fig)%0A%09%09%7D else %7B%0A%09%09%09unicos%5Bfig%5D = true%0A%09%09%7D%0A%09%7D%0A%09for i, valor := range repetidos %7B%0A%09%09if i != 0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09fmt.Printf(%22%25v%22, valor)%0A%09%7D%0A%0A%09fmt.Println(%22%22)%0A%0A%09saida := %22%22%0A%09for i := 1; i %3C= qtd1; i++ %7B%0A%09%09if !unicos%5Bi%5D %7B%0A%09%09%09saida = fmt.Sprintf(%22%25s%25v%22,saida, i)%0A%09%09%7D%0A%09%7D%0A%0A%09if saida ==%22%22%7B%0A%09%09fmt.Println(%22N%22)%0A%09%7Delse%7B%0A%09%09fmt.Println(saida%5B0:len(saida)-1%5D)%0A%09%7D%0A%0A%09/*\n veto\n@@ -146,16 +146,17 @@\n %0A%09aux :=\n+ \n  -999999\n@@ -242,17 +242,16 @@\n etor0%5Bi%5D\n- \n == aux %7B\n@@ -301,20 +301,23 @@\n tor0%5Bi%5D%0A\n+%09%09\n %0A%09%7D%0A\n+%0A\n %09for i :\n@@ -322,19 +322,17 @@\n  := 0; i\n- %3C \n+%3C\n j; i++ %7B\n@@ -367,15 +367,12 @@\n if i\n- %3C \n+%3C\n j-1\n- \n %7B%0A%09%09\n@@ -398,31 +398,22 @@\n %7D%0A%09%7D\n+ \n %0A%09\n-fmt.Printf(%22%5Cn%22)%0A%0A%09*/\n+%09%09%0A%0A%09%0A%7D%0A%09%0A%0A%0A\n %0A%0A%7D\n-%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-18_09-45-31",
+            "content": "@@ -541,17 +541,16 @@\n %09%09saida \n-+\n = fmt.Sp\n@@ -557,19 +557,28 @@\n rintf(%22%25\n+s%25\n v%22,\n+saida, \n i)%0A%09%09%7D%0A%09\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-18_09-46-25",
+            "content": "@@ -356,64 +356,8 @@\n %0A%09%7D%0A\n-%09if len(repetidos) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09\n %09for\n@@ -389,17 +389,16 @@\n dos %7B%0A%09%09\n-%09\n if i != \n@@ -401,17 +401,16 @@\n  != 0 %7B%0A\n-%09\n %09%09%09fmt.P\n@@ -421,20 +421,18 @@\n (%22 %22)%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%09fmt.Pr\n@@ -449,23 +449,20 @@\n  valor)%0A\n-%09%09%7D%0A\n %09%7D%0A\n+%0A\n %09fmt.Pri\n@@ -561,17 +561,16 @@\n tf(%22%25v%22,\n- \n i)%0A%09%09%7D%0A%09\n@@ -588,12 +588,10 @@\n a ==\n- \n %22%22\n- \n %7B%0A%09%09\n@@ -609,22 +609,20 @@\n (%22N%22)%0A%09%7D\n- \n else\n- \n %7B%0A%09%09fmt.\n@@ -640,11 +640,9 @@\n da%5B0\n- : \n+:\n len(\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-18_09-49-05",
+            "content": "@@ -514,16 +514,18 @@\n r)%0A%09%09%7D%0A%09\n+%7D%0A\n %09fmt.Pri\n@@ -532,21 +532,16 @@\n ntln(%22%22)\n-%0A%09%7D%0A%09\n %0A%0A%09saida\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-18_09-50-22",
+            "content": "@@ -571,17 +571,17 @@\n i %3C= qtd\n-0\n+1\n ; i++ %7B%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-18_09-51-31",
+            "content": "@@ -576,10 +576,8 @@\n qtd0\n-+1\n ; i+\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-18_09-52-12",
+            "content": "@@ -572,16 +572,18 @@\n  %3C= qtd0\n++1\n ; i++ %7B%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-18_09-52-34",
+            "content": "@@ -584,11 +584,8 @@\n + %7B%0A\n-%09%09%0A\n %09%09if\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-18_10-07-41",
+            "content": "@@ -170,17 +170,17 @@\n , 0, qtd\n-1\n+0\n )%0A%0A%09for \n@@ -580,16 +580,18 @@\n ; i++ %7B%0A\n+%09%09\n %0A%09%09if !u\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-18_10-08-19",
+            "content": "@@ -707,17 +707,20 @@\n n(saida%5B\n-:\n+0 : \n len(said\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-18_10-10-59",
+            "content": "@@ -626,17 +626,16 @@\n intf(%22%25v\n- \n %22, i)%0A%09%09\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-18_10-11-37",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtd0, qtd1 int\n\tfmt.Scan(&qtd0, &qtd1)\n\tvetor0 := make([]int, qtd1)\n\tunicos := make(map[int]bool)\n\trepetidos := make([]int, 0, qtd1)\n\n\tfor i := range vetor0 {\n\t\tfmt.Scan(&vetor0[i])\n\t}\n\tfor _, fig := range vetor0 {\n\t\tif unicos[fig] {\n\t\t\trepetidos = append(repetidos, fig)\n\t\t} else {\n\t\t\tunicos[fig] = true\n\t\t}\n\t}\n\tif len(repetidos) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfor i, valor := range repetidos {\n\t\t\tif i != 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Printf(\"%v\", valor)\n\t\t}\n\t\tfmt.Println(\"\")\n\t}\n\t\n\n\tsaida := \"\"\n\tfor i := 1; i <= qtd0; i++ {\n\n\t\tif !unicos[i] {\n\t\t\tsaida += fmt.Sprintf(\"%v \", i)\n\t\t}\n\t}\n\n\tif saida == \"\" {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(saida[:len(saida)-1])\n\t}\n\n\t/*vetorRep := make([]int, qtd1)\n\taux := -999999999999999999\n\tj := 0\n\tfor i := 0; i < qtd1; i++ {\n\t\tfmt.Scan(&vetor0[i])\n\t\tif vetor0[i] == aux {\n\t\t\tvetorRep[j] = aux\n\t\t\tj++\n\t\t}\n\t\taux = vetor0[i]\n\n\t}\n\tfor i := 0; i < j; i++ {\n\t\tfmt.Print(vetorRep[i])\n\t\tif i < j-1 {\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}\n\tfmt.Printf(\"\\n\")\n\n\t*/\n\n}\n",
+            "lines": "71"
+        }
+    ]
+}
