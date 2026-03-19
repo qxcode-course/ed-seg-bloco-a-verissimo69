@@ -10,14 +10,13 @@ sources:
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-18 09:43:37'
   quests: null
   tasks: null
 expanded:
 - ed@revisão
-- ed@main-quest
-- sandbox@sandbox:00_rascunhos
 - sandbox@sandbox
+- sandbox@sandbox:00_rascunhos
+- ed@main-quest
 tasks:
   ed@pintando: '{self:1, rate:100, study:120, friend:N, concept:1}'
   ed@mumia: '{self:1, rate:100, study:50, friend:N, concept:1}'

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_12-40-34",
+            "content": "@@ -200,25 +200,28 @@\n ra%5Bi%5D.y)%0A%09%7D%0A\n-%09\n+    \n fmt.Println(\n@@ -241,50 +241,53 @@\n ra)%0A\n-%09\n+    \n for i\n- \n := qtd\n- - \n+-\n 1; i\n- %3E \n+%3E\n 0; i--\n- \n %7B%0A\n-%09%09\n+        \n cobra%5Bi%5D\n  = c\n@@ -282,17 +282,16 @@\n cobra%5Bi%5D\n- \n = cobra%5B\n@@ -299,223 +299,35 @@\n -1%5D%0A\n-%09%7D%0A%09fmt.Println(cobra)%0A%09switch dir %7B%0A%09case %22L%22:%0A%09%09cobra%5B0%5D.x--%0A%09case %22R%22:%0A%09%09cobra%5B0%5D.x++%0A%09case %22U%22:%0A%09%09cobra%5B0%5D.y--%0A%09case %22D%22:%0A%09%09cobra%5B0%5D.y++%0A%09%7D%0A%09for _, gomo := range cobra %7B%0A%09%09fmt.Printf(%22%25v %25v%5Cn%22, gomo.x, gomo.y)%0A%09%7D\n+    %7D%0A    fmt.Println(cobra)\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-19_12-45-28",
+            "content": "@@ -204,16 +204,46 @@\n %5D.y)%0A%09%7D%0A\n+%09fmt.Println(qtd, dir, cobra)%0A\n %09for i :\n@@ -270,16 +270,10 @@\n - %7B%0A\n-        \n+%09%09\n cobr\n@@ -327,20 +327,17 @@\n h dir %7B%0A\n-    \n+%09\n case %22L%22\n@@ -435,44 +435,11 @@\n y++%0A\n+\n %09%7D%0A\n-    fmt.Println(qtd, dir, cobra)%0A\n %09for\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-19_12-47-06",
+            "content": "@@ -409,24 +409,57 @@\n a%5B0%5D.y++%0A%09%7D%0A\n+    fmt.Println(qtd, dir, cobra)%0A\n %09for _, gomo\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-19_12-47-16",
+            "content": "@@ -269,16 +269,36 @@\n i-1%5D%0A%09%7D%0A\n+%09fmt.Println(cobra)%0A\n %09switch \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-19_12-49-25",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Gomo struct {\n\tx, y int\n}\n\nfunc main() {\n\tqtd := 0\n\tdir := \"\"\n\tfmt.Scan(&qtd, &dir)\n\n\tcobra := make([]Gomo, qtd)\n\n\tfor i := range cobra {\n\t\tfmt.Scan(&cobra[i].x, &cobra[i].y)\n\t}\n\tfor i := qtd - 1; i > 0; i-- {\n        cobra[i] = cobra[i-1]\n\t}\n\tswitch dir {\n    case \"L\":\n\t\tcobra[0].x--\n\tcase \"R\":\n\t\tcobra[0].x++\n\tcase \"U\":\n\t\tcobra[0].y--\n\tcase \"D\":\n\t\tcobra[0].y++\n\t}\n\tfor _, gomo := range cobra {\n\t\tfmt.Printf(\"%v %v\\n\", gomo.x, gomo.y)\n\t}\n}\n",
+            "lines": "35"
+        }
+    ]
+}
