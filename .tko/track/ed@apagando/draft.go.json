@@ -1,0 +1,144 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-28_16-20-26",
+            "content": "@@ -158,93 +158,36 @@\n fmt.\n-Scan(&a)%0A%09for i := 1; i %3C a; i++ %7B%0A%09%09fmt.Scan(&b)%0A%09%09delete(mapas, b)%0A%09%7D%0A%09fmt.Println(\n+Println(%22Mapa resultante:%22, \n mapa\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-28_16-22-48",
+            "content": "@@ -232,64 +232,25 @@\n %7D%0A%09f\n-or _, valor:= range mapas%7B%0A%09%09fmt.Printf(%22%25v %22, valor)%0A%09%7D\n+mt.Println(mapas)\n %0A%0A%0A%7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-28_16-25-31",
+            "content": "@@ -104,14 +104,15 @@\n  := \n-0\n+1\n ; i %3C\n+ \n a; i\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-28_16-26-00",
+            "content": "@@ -104,16 +104,14 @@\n  := \n-1\n+0\n ; i %3C\n-= \n a; i\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-28_16-26-33",
+            "content": "@@ -172,33 +172,32 @@\n %09for i := 1; i %3C\n-=\n  a; i++ %7B%0A%09%09fmt.\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-28_16-26-49",
+            "content": "@@ -47,24 +47,13 @@\n  a,b\n-, r\n  int%0A\n-%09i:= 0 %0A\n %09map\n@@ -94,15 +94,8 @@\n &a)%0A\n-%09r = a%0A\n %09for\n@@ -168,16 +168,8 @@\n &a)%0A\n-%09r =- a%0A\n %09for\n@@ -261,29 +261,8 @@\n as%7B%0A\n-%09%09if i %3C r %7B%0A%09%09%09i++%0A%09\n %09%09fm\n@@ -288,48 +288,8 @@\n or)%0A\n-%09%09%7Delse%7B%0A%09%09%09fmt.Printf(%22%25v%22, valor)%0A%09%09%7D%0A\n %09%7D%0A%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-28_16-32-06",
+            "content": "@@ -320,16 +320,17 @@\n intf(%22%25v\n+ \n %22, valor\n@@ -349,33 +349,32 @@\n %09%09fmt.Printf(%22%25v\n- \n %22, valor)%0A%09%09%7D%0A%09%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-28_16-32-40",
+            "content": "@@ -296,16 +296,23 @@\n i %3C r %7B%0A\n+%09%09%09i++%0A\n %09%09%09fmt.P\n@@ -371,21 +371,15 @@\n or)%0A%09%09%7D%0A\n-%09%09i++%0A\n %09%7D%0A%0A%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-28_16-33-03",
+            "content": "@@ -341,32 +341,33 @@\n %09%09fmt.Printf(%22%25v\n+ \n %22, valor)%0A%09%09%7D%0A%09%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-28_16-33-17",
+            "content": "@@ -327,26 +327,8 @@\n or)%0A\n-%09%09%09fmt.println(r)%0A\n %09%09%7De\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-28_16-33-45",
+            "content": "@@ -326,25 +326,25 @@\n lor)%0A%09%09%09fmt.\n-P\n+p\n rintln(r)%0A%09%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-28_16-33-54",
+            "content": "@@ -377,34 +377,16 @@\n  valor)%0A\n-%09%09%09fmt.Println(r)%0A\n %09%09%7D%0A%09%09i+\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-28_16-34-03",
+            "content": "@@ -189,10 +189,10 @@\n %0A%09r \n--\n =\n+-\n  a%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-34-39",
+            "content": "@@ -384,10 +384,8 @@\n %0A%09%09%09\n-//\n fmt.\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-34-51",
+            "content": "@@ -318,34 +318,32 @@\n %22%25v%22, valor)%0A%09%09%09\n-//\n fmt.Println(r)%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-34-58",
+            "content": "@@ -313,17 +313,16 @@\n intf(%22%25v\n- \n %22, valor\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-35-04",
+            "content": "@@ -56,17 +56,18 @@\n nt%0A%09i:= \n-1\n+0 \n %0A%09mapas \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-35-28",
+            "content": "@@ -410,14 +410,10 @@\n %0A%09%09i\n- = i+1\n+++\n %0A%09%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-36-11",
+            "content": "@@ -287,37 +287,137 @@\n s%7B%0A%09\n-%0A%09%09%09fmt.Printf(%22%25v%22, valor)%0A%09\n+%09if i %3C r %7B%0A%09%09%09fmt.Printf(%22%25v %22, valor)%0A%09%09%09//fmt.Println(r)%0A%09%09%7Delse%7B%0A%09%09%09fmt.Printf(%22%25v%22, valor)%0A%09%09%09//fmt.Println(r)%0A%09%09%7D%0A%09%09i = i+1\n %0A%09%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-28_16-37-22",
+            "content": "@@ -51,16 +51,23 @@\n , r int%0A\n+%09i:= 1%0A\n %09mapas :\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_16-37-30",
+            "content": "@@ -294,17 +294,16 @@\n intf(%22%25v\n- \n %22, valor\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-28_16-37-40",
+            "content": "@@ -18,26 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A%09%22sort%22%0A)\n %0A%0Afu\n@@ -251,150 +251,34 @@\n %09%7D%0A%09\n-vetor := make(%5B%5Dint, 0, len(mapas))%0A%09for chaves := range mapas%7B%0A%09%09vetor= append(vetor,chaves)%0A%09%7D%0A%09sort.Ints(vetor)%0A%09for _, valor:= range vetor\n+for _, valor:= range mapas\n %7B%0A%09%0A\n@@ -302,20 +302,13 @@\n  %22, \n-mapas%5B\n valor\n-%5D\n )%0A%09%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-28_16-43-31",
+            "content": "@@ -367,48 +367,19 @@\n ort.\n-Sort(sort.Reverse(sort.IntSlice\n+Ints\n (vetor)\n-))\n %0A%09fo\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-28_16-46-16",
+            "content": "@@ -296,20 +296,17 @@\n mapas))%0A\n-    \n+%09\n for chav\n@@ -326,25 +326,17 @@\n apas\n- \n %7B%0A\n-        \n+%09%09\n vetor\n- \n = ap\n@@ -350,17 +350,16 @@\n tor,\n- \n chaves)%0A\n     \n@@ -358,62 +358,12 @@\n es)%0A\n-    %7D%0A    %0A    // ORDENANDO DO MAIOR PARA O MENOR%0A    \n+%09%7D%0A%09\n sort\n@@ -408,17 +408,9 @@\n )))%0A\n-    %0A    \n+%09\n for \n@@ -417,17 +417,16 @@\n _, valor\n- \n := range\n@@ -435,19 +435,15 @@\n etor\n- \n %7B%0A\n-        \n+%09%0A%09%09%09\n fmt.\n@@ -474,12 +474,11 @@\n r%5D)%0A\n-    \n+%09%0A%09\n %7D%0A%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-28_16-47-05",
+            "content": "@@ -259,16 +259,222 @@\n , b)%0A%09%7D%0A\n+%09vetor := make(%5B%5Dint, 0, len(mapas))%0A    for chaves := range mapas %7B%0A        vetor = append(vetor, chaves)%0A    %7D%0A    %0A    // ORDENANDO DO MAIOR PARA O MENOR%0A    sort.Sort(sort.Reverse(sort.IntSlice(vetor)))\n %0A    %0A  \n@@ -497,21 +497,22 @@\n = range \n-mapas\n+vetor \n %7B%0A      \n@@ -531,21 +531,28 @@\n (%22%25v %22, \n+mapas%5B\n valor\n+%5D\n )%0A    %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-28_16-48-05",
+            "content": "@@ -23,16 +23,24 @@\n %0A%09%22fmt%22%0A\n+%09%22sort%22%0A\n )%0A%0Afunc \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-28_16-48-21",
+            "content": "@@ -49,71 +49,46 @@\n var \n-n, m, id int%0A%0A%09// 1. L%C3%AA a quantidade de pessoas na fila inicial\n+a,b, r int%0A%09mapas := make(map%5Bint%5Dint)\n %0A%09fm\n@@ -99,99 +99,17 @@\n an(&\n-n)%0A%0A%09// Cria um slice para guardar a fila mantendo a ordem original%0A%09fila := make(%5B%5Dint, n)\n+a)%0A%09r = a\n %0A%09fo\n@@ -119,16 +119,17 @@\n  := \n-0\n+1\n ; i %3C\n- n\n+= a\n ; i+\n@@ -148,229 +148,50 @@\n an(&\n-fila%5Bi%5D)%0A%09%7D%0A%0A%09// 2. L%C3%AA a quantidade de pessoas que sa%C3%ADram%0A%09fmt.Scan(&m)%0A%0A%09// Cria um map de booleanos para registrar quem saiu.%0A%09// Usamos map%5Bint%5Dbool porque a busca nele %C3%A9 instant%C3%A2nea O(1).%0A%09sairam := make(map%5Bint%5Dbool)\n+b)%0A%09%09mapas%5Bb%5D = b%0A%09%7D%0A%09fmt.Scan(&a)%0A%09r -= a\n %0A%09fo\n@@ -201,16 +201,17 @@\n  := \n-0\n+1\n ; i %3C\n- m\n+= a\n ; i+\n@@ -230,133 +230,55 @@\n an(&\n-id\n+b\n )%0A%09%09\n-sairam%5Bid%5D = true // Marca que este ID saiu da fila%0A%09%7D%0A%0A%09// 3. Percorre a fila original na ordem correta%0A%09\n+delete(mapas, b)%0A%09%7D%0A%0A    %0A    \n for _, \n-pessoa\n+valor\n  := \n@@ -287,204 +287,54 @@\n nge \n-fila %7B%0A%09%09// Se a pessoa N%C3%83O est%C3%A1 no map de quem saiu, n%C3%B3s a imprimimos%0A%09%09if !sairam%5Bpessoa%5D %7B%0A%09%09%09fmt.Printf(%22%25v %22, pessoa)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println() // Quebra de linha no final para manter a sa%C3%ADda limpa\n+mapas%7B%0A        fmt.Printf(%22%25v %22, valor)%0A    %7D%0A%0A\n %0A%7D\n+%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-28_16-51-49",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar n, m, id int\n\n\t// 1. L\u00ea a quantidade de pessoas na fila inicial\n\tfmt.Scan(&n)\n\n\t// Cria um slice para guardar a fila mantendo a ordem original\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\t// 2. L\u00ea a quantidade de pessoas que sa\u00edram\n\tfmt.Scan(&m)\n\n\t// Cria um map de booleanos para registrar quem saiu.\n\t// Usamos map[int]bool porque a busca nele \u00e9 instant\u00e2nea O(1).\n\tsairam := make(map[int]bool)\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&id)\n\t\tsairam[id] = true // Marca que este ID saiu da fila\n\t}\n\n\t// 3. Percorre a fila original na ordem correta\n\tfor _, pessoa := range fila {\n\t\t// Se a pessoa N\u00c3O est\u00e1 no map de quem saiu, n\u00f3s a imprimimos\n\t\tif !sairam[pessoa] {\n\t\t\tfmt.Printf(\"%v \", pessoa)\n\t\t}\n\t}\n\tfmt.Println() // Quebra de linha no final para manter a sa\u00edda limpa\n}",
+            "lines": "38"
+        }
+    ]
+}
