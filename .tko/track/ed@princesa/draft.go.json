@@ -1,0 +1,254 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_10-16-50",
+            "content": "@@ -75,17 +75,17 @@\n or i := \n-1\n+0\n ; i %3C= n\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-23_10-18-21",
+            "content": "@@ -59,39 +59,19 @@\n t %7B%0A\n-    vetor := make(%5B%5Dint,n)%0A    \n+%09res := 0%0A%09\n for \n@@ -79,14 +79,15 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  n; \n@@ -96,409 +96,74 @@\n + %7B%0A\n-        vetor%5Bi%5D = i+1%0A    %7D%0A%0A pos := 0%0A%09for len(elementos) %3E 0 %7B%0A%09%09fmt.Println(elementos, %22espada com:%22, elementos%5Bpos%5D)%0A%0A%09%09// Remover o elemento na posi%C3%A7%C3%A3o pos%0A%09%09elementos = append(elementos%5B:pos%5D, elementos%5Bpos+1:%5D...)%0A%09%09%0A%09%09if len(elementos) == 0 %7B break %7D%0A%0A%09%09// Calcula a pr%C3%B3xima posi%C3%A7%C3%A3o da espada%0A%09%09// k-1 porque a lista diminuiu e j%C3%A1 estamos no %22pr%C3%B3ximo%22%0A%09%09pos = (pos + k - 1) %25 len(elementos)%0A%09\n+%09%09res = (res + e) %25 i%0A%09%09fmt.Println(res, %22%3E%22)%0A%09%7D%0A%0A%09return res + 1%0A\n %7D%0A%0Af\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-23_10-38-41",
+            "content": "@@ -477,22 +477,9 @@\n o%22%0A%09\n-%0A        %7D    \n+%09\n pos \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-23_10-38-58",
+            "content": "@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func jos\n@@ -40,60 +40,36 @@\n us(n\n+ int\n , \n-k\n+e\n  int) \n-%7B%0A%09// Criar vetor %5B1, 2, 3... n%5D%0A%09elementos\n+int %7B%0A    vetor\n  := \n@@ -83,13 +83,15 @@\n int,\n- \n n)%0A\n-%09\n+    \n for \n@@ -114,34 +114,40 @@\n ++ %7B\n- elementos\n+%0A        vetor\n %5Bi%5D = i\n- + 1\n++1%0A   \n  %7D%0A%0A\n-%09\n+ \n pos \n@@ -473,17 +473,30 @@\n %C3%B3ximo%22%0A%09\n-%09\n+%0A        %7D    \n pos = (p\n@@ -527,17 +527,16 @@\n tos)%0A%09%7D%0A\n-%7D\n %0Afunc ma\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_10-40-22",
+            "content": "@@ -192,17 +192,16 @@\n ) %3E 0 %7B%0A\n-%0A\n %09%09fmt.Pr\n@@ -203,17 +203,18 @@\n mt.Print\n-f\n+ln\n (element\n@@ -219,19 +219,24 @@\n ntos\n-%5Bpos%5D+%22%3E %22+\n+, %22espada com:%22,\n  ele\n@@ -241,16 +241,21 @@\n lementos\n+%5Bpos%5D\n )%0A%0A%09%09// \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-23_10-43-47",
+            "content": "@@ -20,17 +20,16 @@\n t %22fmt%22%0A\n-%0A\n func jos\n@@ -131,19 +131,17 @@\n n; i++ %7B\n-%0A%09%09\n+ \n elemento\n@@ -152,18 +152,17 @@\n  = i + 1\n-%0A%09\n+ \n %7D%0A%0A%09pos \n@@ -208,195 +208,40 @@\n rint\n-(%22%5B %22)%0A%09%09for i, v := range elementos %7B%0A%09%09%09if i == pos %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, v) // Imprime o n%C3%BAmero com a marca da espada%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println(%22%5D%22\n+f(elementos%5Bpos%5D+%22%3E %22+ elementos\n )%0A%0A%09\n@@ -338,16 +338,18 @@\n 1:%5D...)%0A\n+%09%09\n %0A%09%09if le\n@@ -371,20 +371,15 @@\n  0 %7B\n-%0A%09%09%09\n+ \n break\n-%0A%09%09\n+ \n %7D%0A%0A%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_10-44-56",
+            "content": "@@ -165,171 +165,372 @@\n %7D%0A%0A%09\n-for i := 0; i %3C n; i++\n+pos := 0%0A%09for len(elementos) %3E 0\n  %7B%0A\n+%0A\n %09%09\n-if(k %3E= n-2)%7B%0A%09%09%09k = elementos%5B0%5D%0A%09%09%7D%0A%09%09for j := k; j %3C n; i++ %7B%0A%09%09%09if(k == elementos%5Bi%5D)%7B%0A%09%09%09%09elementos%5Bi+1%5D=0%0A%09%09%09%09k = elementos%5Bi+2%5D%0A%09\n+fmt.Print(%22%5B %22)%0A%09%09for i, v := range elementos %7B%0A%09%09%09if i == pos %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, v) // Imprime o n%C3%BAmero com a marca da espada%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println(%22%5D%22)%0A%0A%09%09// Remover o elemento na posi%C3%A7%C3%A3o pos%0A%09%09elementos = append(elementos%5B:pos%5D, elementos%5Bpos+1:%5D...)%0A%0A%09%09if len(elementos) == 0 %7B%0A\n %09%09%09b\n@@ -538,22 +538,154 @@\n eak%0A\n-%09\n %09%09%7D%0A\n+%0A\n %09%09\n-%7D%0A%09%7D%0A\n+// Calcula a pr%C3%B3xima posi%C3%A7%C3%A3o da espada%0A%09%09// k-1 porque a lista diminuiu e j%C3%A1 estamos no %22pr%C3%B3ximo%22%0A%09%09pos = (pos + k - 1) %25 len(elementos)\n %0A%09\n+%7D\n %0A%7D%0Af\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-23_16-26-21",
+            "content": "@@ -206,30 +206,8 @@\n 2)%7B%0A\n-%09%09%09elementos%5Bn+1%5D = 0%0A\n %09%09%09k\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-28-24",
+            "content": "@@ -197,25 +197,14 @@\n f(k \n-=\n+%3E\n = \n-elementos%5B\n n-2\n-%5D\n )%7B%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-30-28",
+            "content": "@@ -382,50 +382,56 @@\n %0A%09%7D%0A\n-%09fmt.Println(elementos)%0A%0A%09%0A%7D%0Afunc main() %7B\n+%0A%09%0A%7D%0Afunc main() %7B%0A%09fmt.Println(%22Hello, World!%22)\n %0A%09va\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-31-17",
+            "content": "@@ -379,33 +379,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println(elementos)%0A\n %09%7D%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-31-57",
+            "content": "@@ -398,19 +398,16 @@\n lementos\n-%5Bi%5D\n )%0A%09%7D%0A%09fm\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-32-10",
+            "content": "@@ -208,17 +208,17 @@\n entos%5Bn-\n-1\n+2\n %5D)%7B%0A%09%09%09e\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-34-56",
+            "content": "@@ -353,17 +353,17 @@\n entos%5Bi+\n-1\n+2\n %5D%0A%09%09%09%09br\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-35-14",
+            "content": "@@ -208,17 +208,17 @@\n entos%5Bn-\n-2\n+1\n %5D)%7B%0A%09%09%09e\n@@ -307,17 +307,17 @@\n ementos%5B\n-j\n+i\n %5D)%7B%0A%09%09%09%09\n@@ -326,17 +326,17 @@\n ementos%5B\n-j\n+i\n +1%5D=0%0A%09%09\n@@ -355,11 +355,11 @@\n tos%5B\n-j+2\n+i+1\n %5D%0A%09%09\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-35-49",
+            "content": "@@ -40,20 +40,16 @@\n us(n\n- int\n , k int)\n %7B%0A  \n@@ -48,75 +48,51 @@\n int)\n+ \n %7B%0A\n-    // Inicializa o c%C3%ADrculo com os n%C3%BAmeros das pessoas%0A    pessoa\n+%09// Criar vetor %5B1, 2, 3... n%5D%0A%09elemento\n s :=\n@@ -107,20 +107,17 @@\n int, n)%0A\n-    \n+%09\n for i :=\n@@ -137,812 +137,281 @@\n + %7B%0A\n-        pessoas%5Bi%5D = i + 1%0A    %7D%0A%0A    pessoasRestantes := n%0A    posicaoAtual := 0%0A%0A    // O loop continua at%C3%A9 sobrar apenas uma pessoa ativa%0A    for pessoasRestantes %3E 1 %7B%0A        contadorK := 0%0A        %0A       %0A        for %7B%0A            if pessoas%5BposicaoAtual\n+%09%09elementos%5Bi%5D = i + 1%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09if(k == elementos%5Bn-2%5D)%7B%0A%09%09%09elementos%5Bn+1\n %5D \n-!\n = \n--1 %7B%0A                contadorK++%0A            %7D%0A            %0A            // Se chegamos na k-%C3%A9sima pessoa ativa%0A            if contadorK == k %7B%0A                break%0A            %7D%0A            %0A            // Move para a pr%C3%B3xima posi%C3%A7%C3%A3o (circular)%0A            posicaoAtual = (posicaoAtual + 1) %25 n%0A        %7D%0A%0A%0A        // %22Elimina%22 a pessoa marcando com -1%0A        pessoas%5BposicaoAtual%5D = -1%0A        pessoasRestantes--%0A        %0A        // Move para a pr%C3%B3xima posi%C3%A7%C3%A3o para recome%C3%A7ar a contagem%0A        posicaoAtual = (posicaoAtual + 1) %25 n%0A%0A%09\n+0%0A%09%09%09k = elementos%5B0%5D%0A%09%09%7D%0A%09%09for j := k; j %3C n; i++ %7B%0A%09%09%09if(k == elementos%5Bj%5D)%7B%0A%09%09%09%09elementos%5Bj+1%5D=0%0A%09%09%09%09k = elementos%5Bj+2%5D%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println(elementos%5Bi%5D)%0A%09%7D%0A\n %09fmt\n@@ -423,25 +423,21 @@\n tln(\n-pessoa\n+elemento\n s)%0A%0A\n-%0A\n-    %7D%0A\n+%09\n %0A%7D%0Af\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-58-46",
+            "content": "@@ -246,17 +246,16 @@\n al := 0%0A\n-%09\n %0A    // \n@@ -336,18 +336,24 @@\n s %3E 1 %7B%0A\n-%09%09\n+        \n contador\n@@ -372,31 +372,8 @@\n    %0A\n-%09%09fmt.Println(pessoas)%0A\n     \n@@ -967,16 +967,39 @@\n 1) %25 n%0A%0A\n+%09%09fmt.Println(pessoas)%0A\n %0A%0A    %7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-59-17",
+            "content": "@@ -333,17 +333,17 @@\n antes %3E \n-0\n+1\n  %7B%0A%09%09con\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-59-41",
+            "content": "@@ -52,17 +52,76 @@\n int)\n- \n %7B%0A\n-%09vetor\n+    // Inicializa o c%C3%ADrculo com os n%C3%BAmeros das pessoas%0A    pessoas\n  := \n@@ -136,12 +136,15 @@\n nt, \n-k)%0A%09\n+n)%0A    \n for \n@@ -159,17 +159,17 @@\n i %3C \n-k\n+n\n ; i++ %7B%0A\n %09%09ve\n@@ -168,225 +168,835 @@\n + %7B%0A\n-%09%09vetor%5Bi%5D = i + 1%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09if k == len(vetor)-1 %7B%0A%09%09%09k = vetor%5B0%5D%0A%09%09%7D%0A%09%09j := 0%0A%09%09for %7B%0A%09%09%09if vetor%5Bj\n+        pessoas%5Bi%5D = i + 1%0A    %7D%0A%0A    pessoasRestantes := n%0A    posicaoAtual := 0%0A%09%0A    // O loop continua at%C3%A9 sobrar apenas uma pessoa ativa%0A    for pessoasRestantes %3E 0 %7B%0A%09%09contadorK := 0%0A        %0A%09%09fmt.Println(pessoas)%0A       %0A        for %7B%0A            if pessoas%5BposicaoAtual\n %5D != \n-0 %7B%0A%09%09%09%09k = vetor%5Bj%5D%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%09j++%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09fmt.Println(vetor)%0A%09\n+-1 %7B%0A                contadorK++%0A            %7D%0A            %0A            // Se chegamos na k-%C3%A9sima pessoa ativa%0A            if contadorK == k %7B%0A                break%0A            %7D%0A            %0A            // Move para a pr%C3%B3xima posi%C3%A7%C3%A3o (circular)%0A            posicaoAtual = (posicaoAtual + 1) %25 n%0A        %7D%0A%0A%0A        // %22Elimina%22 a pessoa marcando com -1%0A        pessoas%5BposicaoAtual%5D = -1%0A        pessoasRestantes--%0A        %0A        // Move para a pr%C3%B3xima posi%C3%A7%C3%A3o para recome%C3%A7ar a contagem%0A        posicaoAtual = (posicaoAtual + 1) %25 n%0A%0A%0A%0A    \n %7D%0A%0A%7D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-24_15-35-16",
+            "content": "@@ -269,16 +269,24 @@\n %5Bj%5D = 0%0A\n+%09%09%09%09j++%0A\n %09%09%09%09brea\n@@ -292,23 +292,16 @@\n ak%0A%09%09%09%7D%0A\n-%09%09%09j++%0A\n %09%09%7D%0A%0A%09%09f\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_15-35-45",
+            "content": "@@ -73,17 +73,17 @@\n (%5B%5Dint, \n-n\n+k\n )%0A%09for i\n@@ -89,25 +89,25 @@\n i := 0; i %3C \n-n\n+k\n ; i++ %7B%0A%09%09ve\n@@ -135,17 +135,17 @@\n or i := \n-k\n+0\n ; i %3C n;\n@@ -155,16 +155,21 @@\n + %7B%0A%09%09if\n+ k ==\n  len(vet\n@@ -175,59 +175,47 @@\n tor)\n-+i%25n == 0%7B%0A%09%09%09continue\n+-1 %7B%0A%09%09%09k = vetor%5B0%5D\n %0A%09%09%7D%0A%09%09\n-for \n j := \n-i; j %3C n; j++\n+0%0A%09%09for\n  %7B%0A%09\n@@ -237,38 +237,26 @@\n = 0 \n-%7C%7C vetor%5Bj%5D != k\n %7B%0A%09%09%09%09\n+k = \n vetor%5Bj%5D\n =0%0A%09\n@@ -255,19 +255,13 @@\n r%5Bj%5D\n-=0\n %0A%09%09%09%09\n-k = \n veto\n@@ -269,156 +269,59 @@\n %5Bj%5D \n-+ 1\n+= 0\n %0A%09%09%09\n-%7D%09%09%0A%09%09%7D%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if k == vetor%5Bj%5D %7B%0A%09%09%09%09fmt.Printf(%22%25v %3E%22, k)%0A%09%09%09%7Delse%7B%0A%09%09%09%09fmt.Printf(%22%25v%22, vetor%5Bj%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09%09%0A%09%09%7D%09\n+%09break%0A%09%09%09%7D%0A%09%09%09j++%0A%09%09%7D%0A%0A%09%09fmt.Println(vetor)\n %0A%09%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_16-10-24",
+            "content": "@@ -175,19 +175,18 @@\n i%25n == 0\n- \n %7B%0A\n+\n %09%09%09conti\n@@ -256,17 +256,16 @@\n %5Bj%5D != k\n- \n %7B%0A%09%09%09%09ve\n@@ -270,19 +270,17 @@\n vetor%5Bj%5D\n- = \n+=\n 0%0A%09%09%09%09k \n@@ -294,24 +294,26 @@\n %5Bj%5D + 1%0A%09%09%09%7D\n+%09%09\n %0A%09%09%7D%0A%09%09for j\n@@ -388,14 +388,12 @@\n %09%09%09%7D\n- \n else\n- \n %7B%0A%09%09\n@@ -430,20 +430,29 @@\n %09%09%7D%0A%09%09%7D%0A\n+%09%09%09%0A%09%09%7D%09\n %0A%09%7D%0A\n+%0A\n %7D%0Afunc m\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-24_16-10-43",
+            "content": "@@ -415,17 +415,24 @@\n f(%22%25v%22, \n-j\n+vetor%5Bj%5D\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-24_16-11-16",
+            "content": "@@ -430,24 +430,8 @@\n %0A%09%09%7D\n-%0A%09%09fmt.Println()\n %0A%0A%09%7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-24_16-11-44",
+            "content": "@@ -412,17 +412,16 @@\n intf(%22%25v\n- \n %22, j)%0A%09%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-24_16-11-56",
+            "content": "@@ -395,27 +395,8 @@\n else\n- if (vetor%5Bj%5D != 0)\n  %7B%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-24_16-13-35",
+            "content": "@@ -182,25 +182,8 @@\n 0 %7B%0A\n-%09%09%09k  = vetor%5B0%5D%0A\n %09%09%09c\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-24_16-15-18",
+            "content": "@@ -56,48 +56,13 @@\n  %7B%0A%09\n-// 1. Create the initial circle%0A%09players\n+vetor\n  := \n@@ -104,23 +104,21 @@\n i++ %7B%0A%09%09\n-players\n+vetor\n %5Bi%5D = i \n@@ -130,432 +130,313 @@\n %7D%0A%0A%09\n-index := 0 // Start at the first person%0A%09fmt.Print(%22Elimination order: %22)%0A%0A%09for len(players) %3E 0 %7B%0A%09%09// 2. Find the index of the person to eliminate%0A%09%09// We use (index + k - 1) %25 len(players) to handle the circular wrap-around%0A%09%09index = (index + k - 1) %25 len(players)%0A%0A%09%09// 3. Print and remove the person%0A%09%09fmt.Printf(%22%25d %22, players%5Bindex%5D)%0A%09%09players = append(players%5B:index%5D, players%5Bindex+1:%5D...)%0A%0A%09%09if len(players) %3E\n+for i := k; i %3C n; i++ %7B%0A%09%09if len(vetor)+i%25n == 0 %7B%0A%09%09%09k  = vetor%5B0%5D%0A%09%09%09continue%0A%09%09%7D%0A%09%09for j := i; j %3C n; j++ %7B%0A%09%09%09if vetor%5Bj%5D != 0 %7C%7C vetor%5Bj%5D != k %7B%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09%09%09%09k = vetor%5Bj%5D + 1%0A%09%09%09%7D%0A%09%09%7D%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if k == vetor%5Bj%5D %7B%0A%09%09%09%09fmt.Printf(%22%25v %3E%22, k)%0A%09%09%09%7D else if (vetor%5Bj%5D !=\n  0\n+)\n  %7B%0A\n+%09\n %09%09%09f\n@@ -447,22 +447,30 @@\n rint\n+f\n (%22\n-%3E %22\n+%25v %22, j\n )%0A\n+%09\n %09%09%7D%0A\n+%09\n %09%7D%0A\n+%09\n %09fmt\n@@ -483,12 +483,15 @@\n ln()\n+%0A%0A%09%7D\n %0A%7D%0A\n-%0A\n func\n@@ -508,17 +508,17 @@\n %09var n, \n-k\n+e\n  int%0A%09fm\n@@ -523,189 +523,20 @@\n fmt.\n-Println(%22Enter number of people (n) and the step (k):%22)%0A%09_, err := fmt.Scan(&n, &k)%0A%09if err != nil %7C%7C n %3C= 0 %7C%7C k %3C= 0 %7B%0A%09%09fmt.Println(%22Please enter positive integers.%22)%0A%09%09return%0A%09%7D\n+Scan(&n, &e)\n %0A%09jo\n@@ -545,13 +545,14 @@\n phus(n, \n-k)\n+e)%0A\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-24_16-18-28",
+            "content": "@@ -204,18 +204,16 @@\n person%0A%09\n-//\n fmt.Prin\n@@ -660,18 +660,16 @@\n  k int%0A%09\n-//\n fmt.Prin\n@@ -787,18 +787,16 @@\n = 0 %7B%0A%09%09\n-//\n fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-24_16-19-03",
+            "content": "@@ -52,21 +52,56 @@\n int) %7B%0A%09\n-vetor\n+// 1. Create the initial circle%0A%09players\n  := make\n@@ -139,21 +139,23 @@\n i++ %7B%0A%09%09\n-vetor\n+players\n %5Bi%5D = i \n@@ -167,47 +167,84 @@\n %7D%0A%0A%09\n-//fmt.Println(%22========%22)%0A%09%0A%09index := 0\n+index := 0 // Start at the first person%0A%09//fmt.Print(%22Elimination order: %22)%0A\n %0A%09fo\n@@ -249,21 +249,23 @@\n for len(\n-vetor\n+players\n ) %3E 0 %7B%0A\n@@ -273,140 +273,208 @@\n %09// \n-Calcula quem ser%C3%A1 removido: (atual + salto - 1) %25 total atual%0A%09%09index = (index + k - 1) %25 len(vetor)%0A%09%09%0A%09%09// Impress%C3%A3o personalizada\n+2. Find the index of the person to eliminate%0A%09%09// We use (index + k - 1) %25 len(players) to handle the circular wrap-around%0A%09%09index = (index + k - 1) %25 len(players)%0A%0A%09%09// 3. Print and remove the person\n %0A%09%09f\n@@ -485,101 +485,116 @@\n rint\n+f\n (%22\n-%5B %22)%0A%09%09for i, v := range vetor %7B%0A%09%09%09if i == index %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%09%7D else\n+%25d %22, players%5Bindex%5D)%0A%09%09players = append(players%5B:index%5D, players%5Bindex+1:%5D...)%0A%0A%09%09if len(players) %3E 0\n  %7B%0A\n-%09\n %09%09%09f\n@@ -605,30 +605,22 @@\n rint\n-f\n (%22\n-%25d %22, v\n+%3E %22\n )%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D%0A\n-%09\n %09fmt\n@@ -632,168 +632,103 @@\n tln(\n-%22%5D%22)%0A%0A%09%09// Remove o elemento %22index%22 do slice%0A%09%09vetor = append(vetor%5B:index%5D, vetor%5Bindex+1:%5D...)%0A%09%7D%0A%09%0A%09//fmt.Println(%22%3C%3C%3C%3C%3C%3C%3C%3C%22)%0A%7D%0A%0Afunc main() %7B%0A%09var n, k int\n+)%0A%7D%0A%0Afunc main() %7B%0A%09var n, k int%0A%09//fmt.Println(%22Enter number of people (n) and the step (k):%22)\n %0A%09_,\n@@ -764,18 +764,100 @@\n err \n-=\n+!\n = nil \n-%7B%0A%09\n+%7C%7C n %3C= 0 %7C%7C k %3C= 0 %7B%0A%09%09//fmt.Println(%22Please enter positive integers.%22)%0A%09%09return%0A%09%7D%0A\n %09jos\n@@ -872,8 +872,6 @@\n  k)%0A\n-%09\n %7D%0A\n-%7D\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-24_16-28-59",
+            "content": "@@ -21,17 +21,16 @@\n  %22fmt%22%0A%0A\n-%0A\n func jos\n@@ -35,19 +35,24 @@\n osephus(\n-a,b\n+n int, k\n  int) %7B%0A\n@@ -77,11 +77,10 @@\n nt, \n-a)%0A\n+n)\n %0A%09fo\n@@ -85,33 +85,33 @@\n for i := 0; i %3C \n-a\n+n\n ; i++ %7B%0A%09%09vetor%5B\n@@ -120,221 +120,502 @@\n  = i\n-+1;\n+ + 1\n %0A%09%7D%0A%0A%09\n-for i := 0; i %3C a; i++\n+//fmt.Println(%22========%22)%0A%09%0A%09index := 0%0A%09for len(vetor) %3E 0\n  %7B%0A\n-%0A\n %09%09\n-for j := i; j %3C a; j++ %7B%0A%09%09%09if vetor%5Bj%5D != 0 %7B%0A%09%09%09%09vetor%5Bj%5D = 0%0A%09\n+// Calcula quem ser%C3%A1 removido: (atual + salto - 1) %25 total atual%0A%09%09index = (index + k - 1) %25 len(vetor)%0A%09%09%0A%09%09// Impress%C3%A3o personalizada%0A%09%09fmt.Print(%22%5B %22)%0A%09%09for i, v := range vetor %7B%0A\n %09%09%09if \n-j\n+i\n  == \n-a-1%7B%0A%09%09%09%09%09b = vetor%5B0%5D%0A%09\n+index %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A\n %09%09%09%7D\n+ \n else\n+ \n %7B%0A%09%09%09%09\n-%09b = vetor%5Bj+1%5D%0A%09%09%09%09%7D%0A%09%09%09%09i = j%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%09%09%0A%09%7D%0A%0A\n+fmt.Printf(%22%25d %22, v)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println(%22%5D%22)%0A%0A%09%09// Remove o elemento %22index%22 do slice%0A%09%09vetor = append(vetor%5B:index%5D, vetor%5Bindex+1:%5D...)%0A%09%7D%0A%09%0A%09//fmt.Println(%22%3C%3C%3C%3C%3C%3C%3C%3C%22)\n %0A%7D%0A%0A\n-%0A\n func\n@@ -633,18 +633,28 @@\n var \n-a, b\n+n, k\n  int%0A%09\n+_, err := \n fmt.\n@@ -663,15 +663,33 @@\n an(&\n-a, &b\n+n, &k\n )%0A\n+%09if err == nil %7B%0A%09\n %09jos\n@@ -698,13 +698,14 @@\n hus(\n-a,b)%0A%09%0A\n+n, k)%0A%09%7D\n %0A%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-28_15-22-07",
+            "content": "@@ -318,184 +318,8 @@\n %0A%09%09%7D\n-%0A%09%09fmt.Printf(%22%5B %22)%0A%09%09for j := 0; j %3C a; j++ %7B%0A%09%09%09if vetor %5B j%5D == b%7B%0A%09%09%09%09fmt.Printf(%22%25v%3E %22, vetor%5Bj%5D)%0A%09%09%09%7Delse%7B%0A%09%09%09%09fmt.Printf(%22%25v %22, vetor%5Bj%5D)%0A%09%09%09%7D%0A%09%09%09%0A%09%09%7D %0A%09%09fmt.Printf(%22%5D%22)\n %09%09%0A%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-28_15-25-33",
+            "content": "@@ -492,10 +492,8 @@\n f(%22%5D\n-%5Cn\n %22)%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-28_15-25-58",
+            "content": "@@ -21,16 +21,17 @@\n  %22fmt%22%0A%0A\n+%0A\n func jos\n@@ -38,17 +38,16 @@\n ephus(a,\n- \n b int) %7B\n@@ -117,12 +117,11 @@\n  = i\n- + 1\n++1;\n %0A%09%7D%0A\n@@ -150,183 +150,8 @@\n ++ %7B\n-%0A%09%09fmt.Printf(%22%5B %22)%0A%09%09for j := 0; j %3C a; j++ %7B%0A%09%09%09if vetor%5Bj%5D == b %7B%0A%09%09%09%09fmt.Printf(%22%25v%3E %22, vetor%5Bj%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%25v %22, vetor%5Bj%5D)%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09%09fmt.Printf(%22%5D%5Cn%22)\n %0A%0A%09%09\n@@ -229,17 +229,16 @@\n j == a-1\n- \n %7B%0A%09%09%09%09%09b\n@@ -250,30 +250,28 @@\n tor%5B0%5D%0A%09%09%09%09%7D\n- \n else\n- \n %7B%0A%09%09%09%09%09b = v\n@@ -376,17 +376,18 @@\n etor\n-%5B\n+ %5B \n j%5D == b\n- \n %7B%0A%09%09\n@@ -425,14 +425,12 @@\n %09%09%09%7D\n- \n else\n- \n %7B%0A%09%09\n@@ -464,20 +464,24 @@\n %5D)%0A%09%09%09%7D%0A\n+%09%09%09\n %0A%09%09%7D\n+ \n %0A%09%09fmt.P\n@@ -496,16 +496,20 @@\n %5Cn%22)\n+%09%09\n %0A%09%7D%0A%0A\n+%0A\n %7D%0A%0A\n+%0A\n func\n@@ -566,11 +566,11 @@\n s(a,\n- \n b)%0A\n+%09%0A\n %0A%7D\n-%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-28_15-27-06",
+            "content": "@@ -605,33 +605,16 @@\n %09%7D else \n-if vetor%5Bj%5D != 0 \n %7B%0A%09%09%09%09fm\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-28-37",
+            "content": "@@ -564,17 +564,8 @@\n = b \n-&& b != 0\n %7B%0A%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-29-18",
+            "content": "@@ -336,20 +336,16 @@\n r j := i\n- + 1\n ; j %3C a;\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-30-21",
+            "content": "@@ -335,17 +335,17 @@\n or j := \n-b\n+i\n  + 1; j \n@@ -421,13 +421,33 @@\n %09%09%09%09\n-j = 0\n+b = vetor%5B0%5D%0A%09%09%09%09%7D else %7B\n %0A%09%09%09\n@@ -458,25 +458,46 @@\n = vetor%5B\n-0\n+j+1\n %5D%0A%09%09%09%09%7D\n- \n+%0A%09%09%09%09i = j%0A%09%09%09%09break\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-39-05",
+            "content": "@@ -337,16 +337,19 @@\n  j := b \n++ 1\n ; j %3C a;\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-28_15-39-51",
+            "content": "@@ -336,18 +336,17 @@\n r j := b\n--1\n+ \n ; j %3C a;\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-28_15-41-34",
+            "content": "@@ -113,17 +113,19 @@\n r%5Bi%5D = i\n-+\n+ + \n 1%0A%09%7D%0A%0A%09f\n@@ -327,33 +327,35 @@\n n%22)%0A%0A%09%09for j := \n-0\n+b-1\n ; j %3C a; j++ %7B%0A%09\n@@ -368,20 +368,21 @@\n etor%5Bj%5D \n-== b\n+!= 0 \n %7B%0A%09%09%09%09ve\n@@ -390,16 +390,44 @@\n or%5Bj\n-+1\n %5D = 0%0A\n+%09%09%09%09if j == a-1 %7B%0A%09%09%09%09%09j = 0%0A%09\n %09%09%09%09\n@@ -440,21 +440,22 @@\n tor%5B\n-b+2\n+0\n %5D%0A%09%09%09\n-%7D\n+%09%7D \n %0A%09%09%09\n+%7D\n %0A%09%09%7D\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-28_15-44-01",
+            "content": "@@ -353,75 +353,8 @@\n + %7B%0A\n-%09%09%09if j == a - 2%7B%0A%09%09%09%09vetor%5Bj+1%5D=0%0A%09%09%09%09b = vetor%5B0%5D%0A%09%09%09%09j = 0%0A%09%09%09%7D%0A\n %09%09%09i\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-28_15-47-05",
+            "content": "@@ -117,11 +117,9 @@\n  = i\n- + \n++\n 1%0A%09%7D\n@@ -365,11 +365,12 @@\n == a\n--2 \n+ - 2\n %7B%0A%09%09\n@@ -377,27 +377,25 @@\n %09%09vetor%5Bj+1%5D\n- = \n+=\n 0%0A%09%09%09%09b = ve\n@@ -415,28 +415,20 @@\n = 0%0A%09%09%09%7D\n- else %7B\n %0A%09%09%09\n-%09\n if vetor\n@@ -435,20 +435,18 @@\n %5Bj%5D == b\n- \n %7B%0A\n-%09\n %09%09%09%09veto\n@@ -460,17 +460,16 @@\n = 0%0A%09%09%09%09\n-%09\n b = veto\n@@ -482,15 +482,13 @@\n %0A%09%09%09\n-%09\n %7D%0A%09%09%09\n-%7D\n %0A%09%09%7D\n@@ -559,25 +559,24 @@\n  b && b != 0\n- \n %7B%0A%09%09%09%09fmt.Pr\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-47-47",
+            "content": "@@ -366,21 +366,11 @@\n  == \n-len(vetor) -1\n+a-2\n  %7B%0A%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-48-27",
+            "content": "@@ -354,16 +354,171 @@\n ++ %7B%0A%09%09%09\n+if j == len(vetor) -1 %7B%0A%09%09%09%09vetor%5Bj+1%5D = 0%0A%09%09%09%09b = vetor%5B0%5D%0A%09%09%09%09j = 0%0A%09%09%09%7D else %7B%0A%09%09%09%09if vetor%5Bj%5D == b %7B%0A%09%09%09%09%09vetor%5Bj+1%5D = 0%0A%09%09%09%09%09b = vetor%5Bb+2%5D%0A%09%09%09%09%7D%0A%09%09%09%7D\n %0A%09%09%7D%0A%09%09f\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_15-49-31",
+            "content": "@@ -18,142 +18,143 @@\n ort \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A// imprimirFila formata a sa%C3%ADda exatamente como os casos de teste exigem.%0Afunc imprimirFila(vivos %5B%5Dint, posEspada int)\n+%0Afunc josephus(a, b int) %7B%0A%09vetor := make(%5B%5Dint, a)%0A%0A%09for i := 0; i %3C a; i++ %7B%0A%09%09vetor%5Bi%5D = i + 1%0A%09%7D%0A%0A%09for i := 0; i %3C a; i++\n  %7B%0A\n+%09\n %09fmt\n@@ -163,66 +163,66 @@\n rint\n+f\n (%22%5B %22)%0A\n+%09\n %09for \n-i, val := range vivos\n+j := 0; j %3C a; j++\n  %7B%0A\n+%09\n %09%09if \n-i == posEspada\n+vetor%5Bj%5D == b\n  %7B%0A\n+%09\n %09%09%09f\n@@ -237,19 +237,25 @@\n f(%22%25\n-d\n+v\n %3E %22, v\n-al\n+etor%5Bj%5D\n )%0A\n+%09\n %09%09%7D \n@@ -264,16 +264,17 @@\n se %7B%0A%09%09%09\n+%09\n fmt.Prin\n@@ -282,25 +282,34 @@\n f(%22%25\n-d\n+v\n  %22, v\n-al\n+etor%5Bj%5D\n )%0A\n+%09\n %09%09%7D%0A\n+%0A%09\n %09%7D%0A\n+%09\n %09fmt\n@@ -318,981 +318,323 @@\n rint\n-ln\n+f\n (%22%5D\n+%5Cn\n %22)%0A\n-%7D%0A%0Afunc main() %7B%0A%09var n, e int%0A%0A%09// L%C3%AA a entrada pad%C3%A3o%0A%09_, err := fmt.Scan(&n, &e)%0A%09if err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09// Cria o slice com as pessoas de 1 at%C3%A9 N%0A%09vivos := make(%5B%5Dint, n\n+%0A%09%09for j := 0; j %3C a; j++ %7B%0A%09%09%09%0A%09%09%7D%0A%09%09fmt.Printf(%22%5B %22\n )%0A\n+%09\n %09for \n-i\n+j\n  := 0; \n-i %3C n; i\n+j %3C a; j\n ++ %7B%0A%09%09\n-vivos%5Bi%5D = i + 1%0A%09%7D%0A%0A%09// Encontra o %C3%ADndice inicial da pessoa com a espada (E)%0A%09posEspada := -1%0A%09for i, val := range vivos\n+%09if vetor%5Bj%5D == b && b != 0\n  %7B%0A%09%09\n-if val == e %7B%0A%09%09%09posEspada = i%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%0A%09// O jogo continua at%C3%A9 sobrar apenas 1 pessoa%0A%09for len(vivos) %3E 0 %7B%0A%09%09imprimirFila(vivos, posEspada)%0A%0A%09%09if len(vivos) == 1 %7B%0A%09%09%09break\n+%09%09fmt.Printf(%22%25v%3E %22, vetor%5Bj%5D)%0A%09%09%09%7D else if vetor%5Bj%5D != 0 %7B%0A%09%09%09%09fmt.Printf(%22%25v %22, vetor%5Bj%5D)%0A%09%09%09%7D%0A\n %0A%09%09%7D%0A\n-%0A\n %09%09\n-// Calcula a posi%C3%A7%C3%A3o de quem vai morrer (o pr%C3%B3ximo da fila circular)%0A%09%09posMorte := (posEspada + 1) %25 len(vivos)%0A%0A%09%09// Remove a pessoa do slice%0A%09%09// Pega tudo do in%C3%ADcio at%C3%A9 a posMorte e junta com tudo depois da posMorte%0A%09%09vivos = append(vivos%5B:posMorte%5D, vivos%5BposMorte+1:%5D...)%0A%0A%09%09// A espada passa p\n+fmt.Printf(%22%5D%5Cn%22)%0A%09%7D%0A%0A%7D%0A%0Afunc main() %7B%0A%09v\n ar\n-a\n  a\n- pr%C3%B3xima pessoa.%0A%09%09// Como o elemento foi removido, o pr%C3%B3ximo assume exatamente o %C3%ADndice 'posMorte'%0A%09%09posEspada = posMorte %25 len(vivos)%0A%09%7D\n+, b int%0A%09fmt.Scan(&a, &b)%0A%09josephus(a, b)%0A\n %0A%7D\n+%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-28_15-52-39",
+            "content": "@@ -361,16 +361,26 @@\n  pad%C3%A3o%0A%09\n+_, err := \n fmt.Scan\n@@ -389,16 +389,43 @@\n n, &e)%0A%09\n+if err != nil %7B%0A%09%09return%0A%09%7D\n %0A%0A%09// Cr\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-03-28_15-53-28",
+            "content": "@@ -651,16 +651,63 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09// O jogo continua at%C3%A9 sobrar apenas 1 pessoa%0A\n %09for len\n@@ -754,16 +754,53 @@\n spada)%0A%0A\n+%09%09if len(vivos) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A\n %09%09// Cal\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-28_15-55-05",
+            "content": "@@ -711,45 +711,8 @@\n a)%0A%0A\n-%09%09if len(vivos) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A\n %09%09//\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-28_15-58-10",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n// imprimirFila formata a sa\u00edda exatamente como os casos de teste exigem.\nfunc imprimirFila(vivos []int, posEspada int) {\n\tfmt.Print(\"[ \")\n\tfor i, val := range vivos {\n\t\tif i == posEspada {\n\t\t\tfmt.Printf(\"%d> \", val)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", val)\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n, e int\n\n\t// L\u00ea a entrada pad\u00e3o\n\tfmt.Scan(&n, &e)\n\t\n\n\t// Cria o slice com as pessoas de 1 at\u00e9 N\n\tvivos := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tvivos[i] = i + 1\n\t}\n\n\t// Encontra o \u00edndice inicial da pessoa com a espada (E)\n\tposEspada := -1\n\tfor i, val := range vivos {\n\t\tif val == e {\n\t\t\tposEspada = i\n\t\t\tbreak\n\t\t}\n\t}\n\n\tfor len(vivos) > 0 {\n\t\timprimirFila(vivos, posEspada)\n\n\t\tif len(vivos) == 1 {\n\t\t\tbreak\n\t\t}\n\n\t\t// Calcula a posi\u00e7\u00e3o de quem vai morrer (o pr\u00f3ximo da fila circular)\n\t\tposMorte := (posEspada + 1) % len(vivos)\n\n\t\t// Remove a pessoa do slice\n\t\t// Pega tudo do in\u00edcio at\u00e9 a posMorte e junta com tudo depois da posMorte\n\t\tvivos = append(vivos[:posMorte], vivos[posMorte+1:]...)\n\n\t\t// A espada passa para a pr\u00f3xima pessoa.\n\t\t// Como o elemento foi removido, o pr\u00f3ximo assume exatamente o \u00edndice 'posMorte'\n\t\tposEspada = posMorte % len(vivos)\n\t}\n}",
+            "lines": "60"
+        }
+    ]
+}

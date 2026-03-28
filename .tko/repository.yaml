@@ -13,10 +13,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
 - sandbox@sandbox
+- '@ed@analise-map_set-map_set-basic_sem_quest'
+- ed@analise-map_set-map_set-basic
 - sandbox@sandbox:00_rascunhos
-- ed@main-quest
 tasks:
   ed@pintando: '{self:1, rate:100, study:120, friend:N, concept:1}'
   ed@mumia: '{self:1, rate:100, study:50, friend:N, concept:1}'
@@ -24,6 +24,7 @@ tasks:
   ed@pedra: '{self:1, rate:100, study:120, friend:N, concept:1}'
   ed@casais: '{self:1, rate:100, study:60, friend:N, concept:1}'
   ed@baruel: '{self:1, rate:100, study:120, friend:N, guided:1, concept:1}'
+  ed@gomos: '{self:1, rate:100, study:50, friend:N, guided:1, concept:1}'
 flags:
   painel: 0
   quests: 0
@@ -32,4 +33,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@gomos
+selected: ed@princesa
