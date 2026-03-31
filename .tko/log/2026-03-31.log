@@ -1,0 +1,19 @@
+2026-03-31 16:01:52, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-03-31 16:06:46, MOVE, v:1, k:ed@fractais_png, mode:DOWN
+2026-03-31 16:07:43, MOVE, v:1, k:ed@triangulo, mode:DOWN
+2026-03-31 16:27:12, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-03-31 16:27:19, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:60
+2026-03-31 16:28:00, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:60
+2026-03-31 16:29:12, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:60
+2026-03-31 16:30:37, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:60
+2026-03-31 16:30:52, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:60
+2026-03-31 16:31:06, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:60
+2026-03-31 16:46:40, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:61
+2026-03-31 16:46:52, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:61
+2026-03-31 16:47:10, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:61
+2026-03-31 16:48:06, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:60, concept:1
+2026-03-31 16:50:23, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-03-31 16:50:33, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-03-31 16:51:06, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-03-31 16:53:44, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-31 16:53:49, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0, size:107

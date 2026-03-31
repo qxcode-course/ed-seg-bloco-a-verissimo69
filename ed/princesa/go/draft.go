@@ -16,21 +16,24 @@ func imprimirFila(vivos []int, posEspada int) {
 	}
 	fmt.Println("]")
 }
+func mostrarJogadore(jagadores []bool, espada int){
+	fmt.Printf("[")
+	for i, valor := true
+}
 
 func main() {
 	var n, e int
-
-	// Lê a entrada padão
+	
 	fmt.Scan(&n, &e)
 	
-
-	// Cria o slice com as pessoas de 1 até N
-	vivos := make([]int, n)
+	vivos := make([]bool, n)
 	for i := 0; i < n; i++ {
-		vivos[i] = i + 1
+		vivos[i] = true
 	}
+	espada := e
+	mostrarJogadore(vivos, espada)
 
-	// Encontra o índice inicial da pessoa com a espada (E)
+
 	posEspada := -1
 	for i, val := range vivos {
 		if val == e {
@@ -52,9 +55,6 @@ func main() {
 		// Remove a pessoa do slice
 		// Pega tudo do início até a posMorte e junta com tudo depois da posMorte
 		vivos = append(vivos[:posMorte], vivos[posMorte+1:]...)
-
-		// A espada passa para a próxima pessoa.
-		// Como o elemento foi removido, o próximo assume exatamente o índice 'posMorte'
 		posEspada = posMorte % len(vivos)
 	}
 }
