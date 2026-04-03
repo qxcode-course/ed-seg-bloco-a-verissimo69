@@ -4,57 +4,46 @@ import (
 	"fmt"
 )
 
-// imprimirFila formata a saída exatamente como os casos de teste exigem.
-func imprimirFila(vivos []int, posEspada int) {
+func print_jog(jogadores []int, espada int) {
 	fmt.Print("[ ")
-	for i, val := range vivos {
-		if i == posEspada {
-			fmt.Printf("%d> ", val)
-		} else {
-			fmt.Printf("%d ", val)
+	for i, elem := range jogadores {
+		if elem == 0 {
+			continue
 		}
+		fmt.Print(elem)
+		if i == espada {
+			fmt.Print(">")
+		}
+		fmt.Printf(" ")
 	}
-	fmt.Println("]")
-}
-func mostrarJogadore(jagadores []bool, espada int){
-	fmt.Printf("[")
-	for i, valor := true
+	fmt.Print("]\n")
 }
 
+func procurarVivo(jogadores []int, espada int) int {
+	for {
+		espada = (espada + 1) % len(jogadores)
+
+		if jogadores[espada] != 0 {
+			return espada
+		}
+	}
+}
+
+// imprimirFila formata a saída exatamente como os casos de teste exigem.
 func main() {
-	var n, e int
-	
-	fmt.Scan(&n, &e)
-	
-	vivos := make([]bool, n)
-	for i := 0; i < n; i++ {
-		vivos[i] = true
+	var a, b int
+	fmt.Scan(&a, &b)
+	jogadores := make([]int, 0, a)
+	for i := 1; i <= a; i++ {
+		jogadores = append(jogadores, i)
 	}
-	espada := e
-	mostrarJogadore(vivos, espada)
-
-
-	posEspada := -1
-	for i, val := range vivos {
-		if val == e {
-			posEspada = i
-			break
-		}
+	b -= 1
+	for range a - 1 {
+		print_jog(jogadores, b)
+		vaiMorrer := procurarVivo(jogadores, b)
+		jogadores[vaiMorrer] = 0
+		b = procurarVivo(jogadores, b)
 	}
+	print_jog(jogadores, b)
 
-	for len(vivos) > 0 {
-		imprimirFila(vivos, posEspada)
-
-		if len(vivos) == 1 {
-			break
-		}
-
-		// Calcula a posição de quem vai morrer (o próximo da fila circular)
-		posMorte := (posEspada + 1) % len(vivos)
-
-		// Remove a pessoa do slice
-		// Pega tudo do início até a posMorte e junta com tudo depois da posMorte
-		vivos = append(vivos[:posMorte], vivos[posMorte+1:]...)
-		posEspada = posMorte % len(vivos)
-	}
 }

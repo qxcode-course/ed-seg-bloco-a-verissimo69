@@ -15,9 +15,9 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@basic
 - ed@rec
 - ed@map_set
-- ed@basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:120, friend:N, concept:1}'
   ed@mumia: '{self:1, rate:100, study:50, friend:N, concept:1}'
@@ -119,4 +119,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@manipulacao
+selected: ed@princesa

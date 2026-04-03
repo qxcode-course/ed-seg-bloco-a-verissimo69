@@ -252,8 +252,38 @@
         },
         {
             "label": "2026-03-28_16-54-01",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n// imprimirFila formata a sa\u00edda exatamente como os casos de teste exigem.\nfunc imprimirFila(vivos []int, posEspada int) {\n\tfmt.Print(\"[ \")\n\tfor i, val := range vivos {\n\t\tif i == posEspada {\n\t\t\tfmt.Printf(\"%d> \", val)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", val)\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n, e int\n\n\t// L\u00ea a entrada pad\u00e3o\n\tfmt.Scan(&n, &e)\n\t\n\n\t// Cria o slice com as pessoas de 1 at\u00e9 N\n\tvivos := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tvivos[i] = i + 1\n\t}\n\n\t// Encontra o \u00edndice inicial da pessoa com a espada (E)\n\tposEspada := -1\n\tfor i, val := range vivos {\n\t\tif val == e {\n\t\t\tposEspada = i\n\t\t\tbreak\n\t\t}\n\t}\n\n\tfor len(vivos) > 0 {\n\t\timprimirFila(vivos, posEspada)\n\n\t\tif len(vivos) == 1 {\n\t\t\tbreak\n\t\t}\n\n\t\t// Calcula a posi\u00e7\u00e3o de quem vai morrer (o pr\u00f3ximo da fila circular)\n\t\tposMorte := (posEspada + 1) % len(vivos)\n\n\t\t// Remove a pessoa do slice\n\t\t// Pega tudo do in\u00edcio at\u00e9 a posMorte e junta com tudo depois da posMorte\n\t\tvivos = append(vivos[:posMorte], vivos[posMorte+1:]...)\n\n\t\t\n\t\t// A espada passa para a pr\u00f3xima pessoa.\n\t\t// Como o elemento foi removido, o pr\u00f3ximo assume exatamente o \u00edndice 'posMorte'\n\t\tposEspada = posMorte % len(vivos)\n\t}\n}",
+            "content": "@@ -30,31 +30,104 @@\n %0A)%0A%0A\n-func print_jog(jogadore\n+// imprimirFila formata a sa%C3%ADda exatamente como os casos de teste exigem.%0Afunc imprimirFila(vivo\n s %5B%5D\n@@ -131,17 +131,20 @@\n  %5B%5Dint, \n-e\n+posE\n spada in\n@@ -173,20 +173,19 @@\n %09for i, \n-elem\n+val\n  := rang\n@@ -186,24 +186,20 @@\n = range \n-jogadore\n+vivo\n s %7B%0A%09%09if\n@@ -203,17 +203,22 @@\n %09if \n-elem != 0\n+i == posEspada\n  %7B%0A%09\n@@ -232,35 +232,31 @@\n rint\n-(elem)%0A%09%09%7D%0A%09%09if i == espada\n+f(%22%25d%3E %22, val)%0A%09%09%7D else\n  %7B%0A%09\n@@ -270,19 +270,29 @@\n rint\n+f\n (%22\n-%3E%22\n+%25d %22, val\n )%0A%09%09%7D%0A%09\n+%7D%0A\n %09fmt\n@@ -301,287 +301,900 @@\n rint\n-f(%22 %22)%0A%09%7D%0A%09fmt.Print(%22%5D%5Cn%22)%0A%7D\n+ln(%22%5D%22)%0A%7D%0A%0Afunc main() %7B%0A%09var n, e int%0A%0A%09// L%C3%AA a entrada pad%C3%A3o%0A%09fmt.Scan(&n, &e)%0A%09\n %0A%0A\n+%09\n // \n-imprimirFila formata a sa%C3%ADda exatamente como os casos de teste exigem.%0Afunc main() %7B%0A%09var a, b int%0A%09fmt.Scan(&a, &b)%0A%09jogadores := make(%5B%5Dint, 0, a)%0A%09for i := 1; i %3C= a; i++ %7B%0A%09%09jogadores = append(jogadores, i)%0A%09%7D%0A%09b -= 1%0A%09print_jog(jogadores, b\n+Cria o slice com as pessoas de 1 at%C3%A9 N%0A%09vivos := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09vivos%5Bi%5D = i + 1%0A%09%7D%0A%0A%09// Encontra o %C3%ADndice inicial da pessoa com a espada (E)%0A%09posEspada := -1%0A%09for i, val := range vivos %7B%0A%09%09if val == e %7B%0A%09%09%09posEspada = i%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%0A%09for len(vivos) %3E 0 %7B%0A%09%09imprimirFila(vivos, posEspada)%0A%0A%09%09if len(vivos) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09// Calcula a posi%C3%A7%C3%A3o de quem vai morrer (o pr%C3%B3ximo da fila circular)%0A%09%09posMorte := (posEspada + 1) %25 len(vivos)%0A%0A%09%09// Remove a pessoa do slice%0A%09%09// Pega tudo do in%C3%ADcio at%C3%A9 a posMorte e junta com tudo depois da posMorte%0A%09%09vivos = append(vivos%5B:posMorte%5D, vivos%5BposMorte+1:%5D...)%0A%0A%09%09%0A%09%09// A espada passa para a pr%C3%B3xima pessoa.%0A%09%09// Como o elemento foi removido, o pr%C3%B3ximo assume exatamente o %C3%ADndice 'posMorte'%0A%09%09posEspada = posMorte %25 len(vivos\n )%0A\n+%09\n %7D%0A\n+%7D\n",
             "lines": "61"
+        },
+        {
+            "label": "2026-04-03_15-42-40",
+            "content": "@@ -250,164 +250,8 @@\n %0A%7D%0A%0A\n-func procurarVivo(jogadores %5B%5Dint, espada int) int%7B%0A%09for%7B%0A%09%09espada = (espada+1) %25 len(jogadores)%0A%09%09%0A%09%09if jogadores%5Bespada%5D != 0%7B%0A%09%09%09return espada%0A%09%09%7D%0A%09%7D%0A%7D%0A%0A\n // i\n@@ -475,26 +475,8 @@\n = 1%0A\n-%09for range a -1%7B%0A%09\n %09pri\n@@ -500,112 +500,6 @@\n  b)%0A\n-%09%09vaiMorrer := procurarVivo(jogadores, b)%0A%09%09jogadores%5BvaiMorrer%5D = 0%0A%09%09b = procurarVivo(jogadores, b)%0A%09%7D%0A%0A\n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-03_15-50-39",
+            "content": "@@ -237,17 +237,16 @@\n .Print(%22\n- \n %5D%5Cn%22)%0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-03_15-51-36",
+            "content": "@@ -237,16 +237,17 @@\n .Print(%22\n+ \n %5D%5Cn%22)%0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-03_15-51-52",
+            "content": "@@ -137,31 +137,16 @@\n lem \n-=\n+!\n = 0 %7B%0A%09\n-%09%09continue%0A%09%09%7D%0A\n %09%09fm\n@@ -159,16 +159,20 @@\n t(elem)%0A\n+%09%09%7D%0A\n %09%09if i =\n@@ -300,16 +300,14 @@\n  int\n- \n %7B%0A%09for\n- \n %7B%0A%09%09\n@@ -326,11 +326,9 @@\n pada\n- + \n++\n 1) %25\n@@ -343,16 +343,18 @@\n adores)%0A\n+%09%09\n %0A%09%09if jo\n@@ -369,25 +369,24 @@\n espada%5D != 0\n- \n %7B%0A%09%09%09return \n@@ -645,11 +645,9 @@\n  a -\n- 1 \n+1\n %7B%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-03_15-53-41",
+            "content": "@@ -794,33 +794,8 @@\n )%0A%09%7D\n-%0A%09print_jog(jogadores, b)\n %0A%0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-03_15-54-24",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc print_jog(jogadores []int, espada int) {\n\tfmt.Print(\"[ \")\n\tfor i, elem := range jogadores {\n\t\tif elem == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tfmt.Print(elem)\n\t\tif i == espada {\n\t\t\tfmt.Print(\">\")\n\t\t}\n\t\tfmt.Printf(\" \")\n\t}\n\tfmt.Print(\"]\\n\")\n}\n\nfunc procurarVivo(jogadores []int, espada int) int {\n\tfor {\n\t\tespada = (espada + 1) % len(jogadores)\n\n\t\tif jogadores[espada] != 0 {\n\t\t\treturn espada\n\t\t}\n\t}\n}\n\n// imprimirFila formata a sa\u00edda exatamente como os casos de teste exigem.\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tjogadores := make([]int, 0, a)\n\tfor i := 1; i <= a; i++ {\n\t\tjogadores = append(jogadores, i)\n\t}\n\tb -= 1\n\tfor range a - 1 {\n\t\tprint_jog(jogadores, b)\n\t\tvaiMorrer := procurarVivo(jogadores, b)\n\t\tjogadores[vaiMorrer] = 0\n\t\tb = procurarVivo(jogadores, b)\n\t}\n\tprint_jog(jogadores, b)\n\n}\n",
+            "lines": "49"
         }
     ]
 }
