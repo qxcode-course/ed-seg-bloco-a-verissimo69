@@ -15,9 +15,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@basic
 - ed@rec
 - ed@map_set
+- ed@basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:120, friend:N, concept:1}'
   ed@mumia: '{self:1, rate:100, study:50, friend:N, concept:1}'
@@ -30,23 +30,19 @@ tasks:
     debug:1, refactor:1}'
   ed@apagando: '{self:1, rate:100, study:30, concept:1}'
   ed@triangulo: '{self:1, rate:100, study:60, concept:1}'
-  ed@analise: '{}'
   ed@manipulacao: '{}'
   ed@especiais: '{}'
   ed@buscas: '{}'
   ed@rotacoes: '{}'
   ed@alternando: '{}'
-  ed@crec_view: '{}'
-  ed@rec_read: '{}'
-  ed@fractais_png: '{}'
   ed@treinando: '{}'
   ed@resto: '{}'
   ed@mdc: '{}'
   ed@queimada: '{}'
   ed@labirinto: '{}'
   ed@eh_primo: '{}'
-  ed@enesimo: '{}'
   ed@vetequals: '{}'
+  ed@enesimo: '{}'
   ed@priminhos: '{}'
   ed@escada: '{}'
   ed@binomiais: '{}'
@@ -60,7 +56,7 @@ tasks:
   ed@fib2: '{}'
   ed@santo: '{}'
   ed@bitcoin: '{}'
-  ed@fractais: '{}'
+  ed@fractais_png: '{}'
   ed@wordsearch: '{}'
   ed@subset_sum: '{}'
   ed@distancia: '{}'
@@ -77,9 +73,9 @@ tasks:
   ed@lista_d2: '{}'
   ed@lista_d4: '{}'
   ed@prin_list1: '{}'
-  ed@editor: '{}'
   ed@lista_d3: '{}'
   ed@prin_list2: '{}'
+  ed@editor: '{}'
   ed@controlz: '{}'
   ed@editorint: '{}'
   ed@bufferring: '{}'
@@ -102,7 +98,6 @@ tasks:
   ed@bst_insert: '{}'
   ed@bst_serial: '{}'
   ed@bst_remove: '{}'
-  ed@dfs_bfs_bak: '{}'
   ed@ilhas: '{}'
   ed@cercado: '{}'
   ed@pintura: '{}'
@@ -119,4 +114,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@manipulacao
+selected: ed@treinando
