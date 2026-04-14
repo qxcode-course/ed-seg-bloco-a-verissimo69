@@ -13,3 +13,13 @@
 2026-04-14 10:16:45, MOVE, v:1, k:ed@mdc, mode:EDIT
 2026-04-14 10:18:35, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100, size:25
 2026-04-14 10:19:04, SELF, v:1, k:ed@mdc, self:1, rate:100, study:20, concept:1
+2026-04-14 10:20:12, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-14 10:20:20, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-04-14 10:18:33, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-04-14 10:20:20, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-04-14 10:20:20, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-04-14 10:20:20, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-04-14 11:17:22, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-04-14 11:21:21, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-04-14 11:21:23, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100, size:50
+2026-04-14 11:21:53, SELF, v:1, k:ed@queimada, self:1, rate:100, study:120, guided:1, concept:1
