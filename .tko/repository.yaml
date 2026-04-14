@@ -23,9 +23,9 @@ sources:
   tasks: null
 expanded:
 - ed@rec
+- ed@map_set
 - eval1@teste-1
 - ed@basic
-- ed@map_set
 flags:
   inbox: inbox
   panel: help
@@ -33,4 +33,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@queimada
+selected: ed@labirinto
