@@ -1,0 +1,15 @@
+2026-04-14 10:08:23, MOVE, v:1, k:ed@mdc, mode:DOWN
+2026-04-14 10:08:29, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-14 10:08:23, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-04-14 10:08:23, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-04-14 10:12:22, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-04-14 10:12:44, EXEC, v:1, k:ed@mdc, mode:FULL, rate:20, size:23
+2026-04-14 10:13:05, EXEC, v:1, k:ed@mdc, mode:FULL, rate:20, size:23
+2026-04-14 10:15:34, EXEC, v:1, k:ed@mdc, mode:FULL, rate:20, size:24
+2026-04-14 10:15:54, EXEC, v:1, k:ed@mdc, mode:FULL, rate:0, size:24
+2026-04-14 10:16:16, EXEC, v:1, k:ed@mdc, mode:FULL, rate:20, size:24
+2026-04-14 10:16:30, EXEC, v:1, k:ed@mdc, mode:FULL, rate:20, size:25
+2026-04-14 10:16:46, EXEC, v:1, k:ed@mdc, mode:FULL, rate:0, size:25
+2026-04-14 10:16:45, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-04-14 10:18:35, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100, size:25
+2026-04-14 10:19:04, SELF, v:1, k:ed@mdc, self:1, rate:100, study:20, concept:1

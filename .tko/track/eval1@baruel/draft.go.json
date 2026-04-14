@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-22-00",
+            "content": "@@ -318,132 +318,14 @@\n or%5Bi\n++1\n %5D)%7B%0A\n-            j := i%0A            for%7B%0A                if aux == vetor%5Bj%5D%7B%0A                    break%0A                %7D%0A    \n     \n@@ -369,52 +369,14 @@\n     \n-    \n ind++%0A\n-                j++%0A            %7D%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_16-24-22",
+            "content": "@@ -340,10 +340,8 @@\n := i\n-+1\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_16-25-06",
+            "content": "@@ -379,17 +379,17 @@\n  if aux \n-!\n+=\n = vetor%5B\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_16-25-54",
+            "content": "@@ -336,16 +336,18 @@\n   j := i\n++1\n %0A       \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_16-26-38",
+            "content": "package main\nimport \"fmt\"\n\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n    var a,b int\n    fmt.Scan(&a, &b)\n\n    vetor := make([]int, b)\n    for i := 0; i < b; i++ {\n        fmt.Scan(vetor[i])\n    }\n    repetidos := make([]int,b)\n    ind := 0\n   for i := 0; i < b; i++ {\n    aux:= vetor[i]\n        if ( aux == vetor[i]){\n            j := i\n            for{\n                if aux != vetor[j]{\n                    break\n                }\n                repetidos[ind] = aux\n                ind++\n                j++\n            }\n        }\n   }\n   fmt.Println(repetidos)\n\n}\n",
+            "lines": "32"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-12-44",
+            "content": "@@ -117,11 +117,11 @@\n  := \n-b%25a\n+a%25b\n %0A%09re\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-14_10-13-05",
+            "content": "@@ -110,34 +110,18 @@\n %09%7D%0A%09\n-resto := a%25b%0A%09mdc(b,resto)\n+mdc := b%25a\n %0A%09re\n@@ -129,13 +129,11 @@\n urn \n-resto\n+mdc\n %0A%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-14_10-15-34",
+            "content": "@@ -150,10 +150,8 @@\n esto\n-*a\n %0A%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_10-15-54",
+            "content": "@@ -150,9 +150,9 @@\n esto\n-/\n+*\n a%0A%0A%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_10-16-16",
+            "content": "@@ -146,18 +146,18 @@\n rn resto\n-%0A%09\n+/a\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_10-16-30",
+            "content": "@@ -145,16 +145,15 @@\n urn \n-a/\n resto%0A\n+%09\n %0A%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_10-16-46",
+            "content": "@@ -120,16 +120,28 @@\n := a%25b%0A%09\n+mdc(b,resto)\n %0A%09return\n@@ -141,28 +141,23 @@\n %09return \n-mdc(b,\n+a/\n resto\n-)\n %0A%0A%0A%7D%0A%0Afu\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_10-18-35",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif a == 0 {\n\t\treturn b\n\t}\n\tif b == 0 {\n\t\treturn a\n\t}\n\tresto := a%b\n\t\n\treturn mdc(b,resto)\n\n\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "25"
+        }
+    ]
+}

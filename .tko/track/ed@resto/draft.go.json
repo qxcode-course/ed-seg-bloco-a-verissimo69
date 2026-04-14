@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-11_15-10-13",
+            "content": "@@ -162,23 +162,8 @@\n %252%7D%0A\n-    return aux%0A\n     \n@@ -180,16 +180,31 @@\n to(a/2)%0A\n+    return aux%0A\n %7D%0A%0Afunc \n@@ -251,20 +251,8 @@\n     \n-fmt.Println(\n divi\n@@ -262,12 +262,11 @@\n Resto(a)\n-)\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_15-11-07",
+            "content": "@@ -161,16 +161,27 @@\n a%252%7D%0A   \n+ return aux\n %0A    div\n@@ -195,31 +195,16 @@\n to(a/2)%0A\n-    return aux%0A\n %7D%0A%0Afunc \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_15-11-29",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -41,16 +41,17 @@\n esto\n+ \n (a int) \n %7B%0A%09i\n@@ -46,19 +46,27 @@\n (a int) \n-%7B%0A%09\n+%5B%5Dint%7B%0A    \n if a == \n@@ -70,84 +70,140 @@\n == 1\n- \n %7B%0A\n-%09%09fmt.Println(0, 1)%0A%0A%09%7D%0A%09fmt.Println(a/2, %22 %22, a%252)%0A%0A%09dividirResto(a / 2)\n+         aux := %5B%5Dint%7B0,1%7D %0A        return  aux       %0A    %7D%0A    aux := %5B%5D int %7Ba/2, a%252%7D%0A   %0A    dividirResto(a/2)%0A    return aux\n %0A%7D%0A%0A\n@@ -216,17 +216,20 @@\n ain() %7B%0A\n-%09\n+    \n var a in\n@@ -230,17 +230,20 @@\n r a int%0A\n-%09\n+    \n fmt.Scan\n@@ -251,9 +251,24 @@\n &a)%0A\n-%09\n+    fmt.Println(\n divi\n@@ -278,11 +278,12 @@\n Resto(a)\n+)\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-11_15-15-20",
+            "content": "@@ -85,16 +85,8 @@\n  1)%0A\n-%09%09return\n %0A%09%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-11_15-15-46",
+            "content": "@@ -97,32 +97,8 @@\n %0A%09%7D%0A\n-    dividirResto(a / 2)%0A\n %09fmt\n@@ -123,16 +123,35 @@\n  a%252)%0A%0A%09\n+dividirResto(a / 2)\n %0A%7D%0A%0Afunc\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-11_15-16-08",
+            "content": "@@ -134,16 +134,22 @@\n tln(a/2,\n+ %22 %22, \n a%252)%0A%0A%09%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_15-16-22",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc dividirResto(a int) {\n\tif a == 1 {\n\t\tfmt.Println(0, 1)\n\t\treturn\n\t}\n    dividirResto(a / 2)\n\tfmt.Println(a/2,a%2)\n\n\t\n}\n\nfunc main() {\n\tvar a int\n\tfmt.Scan(&a)\n\tdividirResto(a)\n}\n",
+            "lines": "20"
+        }
+    ]
+}
