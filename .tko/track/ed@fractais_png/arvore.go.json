@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-19_10-55-29",
+            "content": "@@ -10,341 +10,4 @@\n ain%0A\n-%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc randInt(min, max int) int %7B%0A%09return min + rand.Intn(max-min+1)%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(500, 500)%0A%09pen.SetRGB(255, 0, 0)%0A%09pen.SetPosition(100, 400)%0A%09pen.SetHeading(90)%0A%09for range 4 %7B%0A%09%09pen.Walk(100)%0A%09%09pen.Right(90)%0A%09%7D%0A%09pen.SavePNG(%22Quadrado%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A\n",
+            "lines": "1"
+        },
+        {
+            "label": "2026-04-19_11-13-05",
+            "content": "@@ -295,12 +295,8 @@\n rado\n-.png\n %22)%0A%09\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-19_11-13-23",
+            "content": "@@ -249,9 +249,9 @@\n alk(\n-3\n+1\n 00)%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-19_11-13-57",
+            "content": "@@ -245,17 +245,17 @@\n en.Walk(\n-2\n+3\n 00)%0A%09%09pe\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-19_11-14-27",
+            "content": "@@ -224,40 +224,22 @@\n 0)%0A%09\n-side := 300.0%0A%09for side %3E 10\n+for range 4\n  %7B%0A\n-%0A\n %09%09pe\n@@ -249,25 +249,12 @@\n alk(\n-side)%0A%09%09side = -5\n+200)\n %0A%09%09p\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-19_11-16-30",
+            "content": "@@ -281,10 +281,10 @@\n de =\n--\n  \n+-\n 5%0A%09%09\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-19_11-16-52",
+            "content": "@@ -280,10 +280,10 @@\n ide \n--\n =\n+-\n  5%0A%09\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-19_11-17-11",
+            "content": "@@ -27,137 +27,91 @@\n mt%22%0A\n-)%0A%0Afunc embuahhh(pen *Pen, dista float64) %7B%0A%09if dista %3C 10\n+%09%22math/rand%22%0A)%0A%0Afunc randInt(min, max int) int\n  %7B%0A\n-%09\n %09return\n-%0A%09%7D%0A%09pen.Walk(dista)%0A%09pen.Right(90)%0A%09embuahhh(pen, dista-5)%0A\n+ min + rand.Intn(max-min+1)\n %0A%7D%0A%0A\n@@ -239,27 +239,72 @@\n .0%0A%09\n-embuahhh(pen, side)\n+for side %3E 10 %7B%0A%0A%09%09pen.Walk(side)%0A%09%09side -= 5%0A%09%09pen.Right(90)%0A%09%7D\n %0A%09pe\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-19_11-24-58",
+            "content": "@@ -207,19 +207,19 @@\n .SetRGB(\n-300\n+255\n , 0, 0)%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-19_11-25-51",
+            "content": "@@ -100,36 +100,8 @@\n %0A%09%7D%0A\n-%09pen.SetLineWidth(dista/30)%0A\n %09pen\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-19_11-26-58",
+            "content": "@@ -177,18 +177,17 @@\n , dista-\n-10\n+5\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-19_11-27-05",
+            "content": "@@ -71,37 +71,8 @@\n ) %7B%0A\n-%09pen.SetRGB(100+dista, 0, 0)%0A\n %09if \n@@ -220,24 +220,47 @@\n n(500, 500)%0A\n+%09pen.SetRGB(300, 0, 0)%0A\n %09pen.SetPosi\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-19_11-39-02",
+            "content": "@@ -144,24 +144,27 @@\n eWidth(dista\n+/30\n )%0A%09pen.Walk(\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-19_11-39-27",
+            "content": "@@ -203,17 +203,18 @@\n , dista-\n-5\n+10\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-19_11-39-38",
+            "content": "@@ -130,10 +130,8 @@\n %09%7D%0A%09\n-//\n pen.\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-19_11-39-49",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc embuahhh(pen *Pen, dista float64) {\n\tpen.SetRGB(100+dista, 0, 0)\n\tif dista < 10 {\n\t\treturn\n\t}\n\t//pen.SetLineWidth(dista)\n\tpen.Walk(dista)\n\tpen.Right(90)\n\tembuahhh(pen, dista-5)\n\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)\n\tpen.SetPosition(100, 400)\n\tpen.SetHeading(90)\n\tside := 300.0\n\tembuahhh(pen, side)\n\tpen.SavePNG(\"Quadrado.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "27"
+        }
+    ]
+}

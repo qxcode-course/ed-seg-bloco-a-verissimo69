@@ -21,3 +21,34 @@
 2026-04-19 10:24:39, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:25
 2026-04-19 10:24:54, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:28
 2026-04-19 10:25:12, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:40, concept:1
+2026-04-19 10:24:52, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-19 10:53:48, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-19 10:55:24, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-19 10:55:29, EXEC, v:1, k:ed@fractais_png, mode:FULL, size:98, fail:COMP
+2026-04-19 11:04:11, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-19 11:04:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:13:05, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:120
+2026-04-19 11:13:23, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:120
+2026-04-19 11:13:57, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:120
+2026-04-19 11:14:27, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:120
+2026-04-19 11:14:24, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:13:05, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:14:27, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:16:30, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:123
+2026-04-19 11:16:52, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:123
+2026-04-19 11:17:11, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:123
+2026-04-19 11:17:09, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:17:11, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:24:23, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:24:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:123
+2026-04-19 11:25:51, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:123
+2026-04-19 11:26:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-19 11:27:05, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-19 11:27:04, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:27:05, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:39:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-19 11:39:27, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-19 11:39:26, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:39:27, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-19 11:39:38, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-19 11:39:49, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
