@@ -24,7 +24,6 @@ sources:
 expanded:
 - ed@rec
 - ed@map_set
-- eval1@teste-1
 - ed@basic
 flags:
   inbox: inbox
@@ -33,4 +32,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@labirinto
+selected: ed@eh_primo

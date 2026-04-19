@@ -51,3 +51,8 @@
 2026-04-14 15:00:54, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
 2026-04-14 15:03:16, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:97
 2026-04-14 15:05:07, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:120, concept:1, problem:1
+2026-04-14 15:03:15, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-04-14 15:17:31, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:93
+2026-04-14 15:19:32, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-14 15:49:03, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-14 15:49:06, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:91
