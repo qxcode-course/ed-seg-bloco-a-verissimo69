@@ -77,8 +77,83 @@
         },
         {
             "label": "2026-04-19_11-39-49",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc embuahhh(pen *Pen, dista float64) {\n\tpen.SetRGB(100+dista, 0, 0)\n\tif dista < 10 {\n\t\treturn\n\t}\n\t//pen.SetLineWidth(dista)\n\tpen.Walk(dista)\n\tpen.Right(90)\n\tembuahhh(pen, dista-5)\n\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)\n\tpen.SetPosition(100, 400)\n\tpen.SetHeading(90)\n\tside := 300.0\n\tembuahhh(pen, side)\n\tpen.SavePNG(\"Quadrado.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -31,22 +31,24 @@\n )%0A%0Afunc \n-arvore\n+embuahhh\n (pen *Pe\n@@ -71,21 +71,36 @@\n ) %7B%0A\n-%0A%09ang := 30.0\n+%09pen.SetRGB(100+dista, 0, 0)\n %0A%09if\n@@ -184,110 +184,34 @@\n ght(\n-ang)%0A%09arvore(pen, dista-10)%0A%09pen.Left(2 * ang)%0A%09arvore(pen, dista-10)%0A%09pen.Right(ang)%0A%09pen.Walk(-dista\n+90)%0A%09embuahhh(pen, dista-5\n )%0A%0A%7D\n@@ -272,9 +272,9 @@\n ion(\n-2\n+1\n 00, \n@@ -314,22 +314,24 @@\n  300.0%0A%09\n-arvore\n+embuahhh\n (pen, si\n@@ -352,14 +352,16 @@\n NG(%22\n-arvore\n+Quadrado\n .png\n",
             "lines": "27"
+        },
+        {
+            "label": "2026-04-19_11-48-26",
+            "content": "@@ -370,9 +370,10 @@\n  := \n-7\n+30\n 0.0%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-48-52",
+            "content": "@@ -78,10 +78,10 @@\n  := \n-25\n+30\n .0%0A%09\n@@ -304,16 +304,14 @@\n Pen(\n-10\n+5\n 00, \n-10\n+5\n 00)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-51-45",
+            "content": "@@ -368,18 +368,17 @@\n side := \n-10\n+7\n 0.0%0A%09arv\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-52-06",
+            "content": "@@ -329,17 +329,17 @@\n osition(\n-1\n+2\n 00, 400)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-52-18",
+            "content": "@@ -333,9 +333,9 @@\n ion(\n-3\n+1\n 00, \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-52-30",
+            "content": "@@ -334,17 +334,17 @@\n on(300, \n-6\n+4\n 00)%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-52-42",
+            "content": "@@ -329,17 +329,17 @@\n osition(\n-4\n+3\n 00, 600)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-52-53",
+            "content": "@@ -329,17 +329,17 @@\n osition(\n-5\n+4\n 00, 600)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-53-03",
+            "content": "@@ -83,22 +83,8 @@\n 5.0%0A\n-%09fator := 0.7%0A\n %09if \n@@ -182,30 +182,27 @@\n e(pen, dista\n-*fator\n+-10\n )%0A%09pen.Left(\n@@ -232,14 +232,11 @@\n ista\n-*fator\n+-10\n )%0A%09p\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-19_11-54-35",
+            "content": "@@ -350,26 +350,25 @@\n sition(500, \n-10\n+6\n 00)%0A%09pen.Set\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-19_11-55-16",
+            "content": "@@ -96,9 +96,8 @@\n  0.7\n-8\n %0A%09if\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-19_11-56-00",
+            "content": "@@ -91,16 +91,17 @@\n or := 0.\n+7\n 8%0A%09if di\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-19_11-56-10",
+            "content": "@@ -92,17 +92,16 @@\n r := 0.8\n-5\n %0A%09if dis\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-19_11-56-22",
+            "content": "@@ -92,17 +92,17 @@\n r := 0.8\n-2\n+5\n %0A%09if dis\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-19_11-56-36",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc arvore(pen *Pen, dista float64) {\n\n\tang := 25.0\n\tfator := 0.82\n\tif dista < 10 {\n\t\treturn\n\t}\n\t//pen.SetLineWidth(dista)\n\tpen.Walk(dista)\n\tpen.Right(ang)\n\tarvore(pen, dista*fator)\n\tpen.Left(2 * ang)\n\tarvore(pen, dista*fator)\n\tpen.Right(ang)\n\tpen.Walk(-dista)\n\n}\n\nfunc main() {\n\tpen := NewPen(1000, 1000)\n\tpen.SetPosition(500, 1000)\n\tpen.SetHeading(90)\n\tside := 100.0\n\tarvore(pen, side)\n\tpen.SavePNG(\"arvore.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "33"
         }
     ]
 }
