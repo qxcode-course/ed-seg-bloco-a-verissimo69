@@ -22,14 +22,15 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
 - ed@rec
+- ed@map_set
+- ed@vector
 flags:
-  inbox: all
+  inbox: inbox
   panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@padroes2
-selected_index: 27
+selected: ed@vetbuild
+selected_index: 2
