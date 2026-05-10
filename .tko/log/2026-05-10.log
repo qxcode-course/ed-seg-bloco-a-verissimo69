@@ -24,3 +24,17 @@
 2026-05-10 12:28:15, MOVE, v:1, k:ed@escada, mode:EDIT
 2026-05-10 12:30:31, EXEC, v:1, k:ed@escada, mode:FULL, rate:100, size:20
 2026-05-10 12:31:10, SELF, v:1, k:ed@escada, self:1, rate:100, study:30, concept:1, refactor:1
+2026-05-10 12:31:41, MOVE, v:1, k:ed@escada, mode:BACK
+2026-05-10 12:32:12, MOVE, v:1, k:ed@binomiais, mode:DOWN
+2026-05-10 12:32:16, MOVE, v:1, k:ed@binomiais, mode:PICK
+2026-05-10 12:30:28, MOVE, v:1, k:ed@escada, mode:EDIT
+2026-05-10 12:32:12, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-10 12:32:12, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-10 12:34:16, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-10 12:37:44, EXEC, v:1, k:ed@binomiais, mode:FULL, size:18, fail:COMP
+2026-05-10 12:38:02, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:0, size:18
+2026-05-10 12:37:54, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-10 12:40:46, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:100, size:18
+2026-05-10 12:41:14, SELF, v:1, k:ed@binomiais, self:1, rate:100, study:30, concept:1, refactor:1
+2026-05-10 12:41:15, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:100
+2026-05-10 12:41:18, MOVE, v:1, k:ed@binomiais, mode:BACK

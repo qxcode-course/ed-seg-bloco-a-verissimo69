@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_12-37-44",
+            "content": "@@ -130,17 +130,17 @@\n iais(a, \n-b\n+n\n -1)%0A%09ret\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-10_12-38-01",
+            "content": "@@ -56,17 +56,17 @@\n t %7B%0A%09if \n-b\n+a\n  == 0 %7C%7C\n@@ -70,14 +70,14 @@\n  %7C%7C \n-b\n+a\n  == \n-a\n+b\n  %7B%0A%09\n@@ -128,21 +128,21 @@\n omiais(a\n--1\n , b\n+-1\n )%0A%09retur\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-10_12-40-46",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc binomiais(a, b int) int {\n\tif b == 0 || b == a {\n\t\treturn 1\n\t}\n\tc := binomiais(a-1, b-1) + binomiais(a-1, b)\n\treturn c\n\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(binomiais(a, b))\n}\n",
+            "lines": "18"
+        }
+    ]
+}
