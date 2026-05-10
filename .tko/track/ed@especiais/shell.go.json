@@ -1,0 +1,244 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-09_15-17-57",
+            "content": "@@ -278,44 +278,16 @@\n var \n-newPair Pair%0A%09var vetorUax, vetorNew\n+vetorUax\n  %5B%5Di\n@@ -309,24 +309,32 @@\n nt%0A%09\n-var \n resul \n+:= make(\n %5B%5DPair\n+, 0)\n %0A%09fo\n@@ -388,35 +388,15 @@\n %0A%09%09%09\n-vetorNew = append(vetorNew,\n+aux := \n vet%5B\n@@ -406,51 +406,28 @@\n * -1\n-)\n %0A%09\n-%09%7D%0A\n %09%09vet\n-orNew = append(vetorNew, vet%5Bi%5D)\n+%5Bi%5D = aux%0A%09%09%7D\n %0A%09%09i\n@@ -511,16 +511,40 @@\n vet%5Bi%5D)%0A\n+%09%09resul%5Bi%5D.One = vet%5Bi%5D%0A\n %09%09count \n@@ -633,86 +633,28 @@\n %7D%0A%09%09\n-newPair.One = vet%5Bi%5D%0A%09%09newPair.Two = count%0A%09%09resul = append(resul, newPair)%0A%09%09\n+resul%5Bi%5D.Two = count\n %0A%09%7D%0A\n",
+            "lines": "162"
+        },
+        {
+            "label": "2026-05-09_15-32-09",
+            "content": "@@ -503,21 +503,16 @@\n fcar(vet\n-orNew\n %5Bi%5D, vet\n@@ -611,21 +611,16 @@\n  len(vet\n-orNew\n ); j++ %7B\n@@ -685,21 +685,16 @@\n ne = vet\n-orNew\n %5Bi%5D%0A%09%09ne\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-09_15-33-25",
+            "content": "@@ -639,21 +639,16 @@\n %09%09if vet\n-orNew\n %5Bi%5D == v\n@@ -649,21 +649,16 @@\n %5D == vet\n-orNew\n %5Bj%5D %7B%0A%09%09\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-09_15-34-26",
+            "content": "@@ -435,16 +435,17 @@\n New,\n- \n vet%5Bi%5D\n-*\n+ * \n -1)%0A\n@@ -574,21 +574,16 @@\n Uax, vet\n-orNew\n %5Bi%5D)%0A%09%09c\n@@ -769,16 +769,18 @@\n ewPair)%0A\n+%09%09\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-09_15-36-14",
+            "content": "@@ -450,31 +450,9 @@\n %0A%09%09%7D\n- else if vet%5Bi%5D %3E 0 %7B%0A%09\n+%0A\n %09%09ve\n@@ -485,20 +485,16 @@\n vet%5Bi%5D)%0A\n-%09%09%7D%0A\n %09%09if ver\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-05-09_15-39-05",
+            "content": "@@ -515,45 +515,8 @@\n %09%09%7D%0A\n-%09%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%0A\n %09%09if\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-05-09_15-41-34",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -843,88 +843,8 @@\n %0A%0A%09%7D\n-%0A%09sort.Slice(resul, func(i,j int) bool%7B%0A%09%09return resul%5Bi%5D.One %3C resul%5Bj%5D.One%0A%09%7D)\n %0A%0A%09r\n",
+            "lines": "169"
+        },
+        {
+            "label": "2026-05-09_15-47-34",
+            "content": "@@ -920,32 +920,33 @@\n esul%5Bj%5D.One%0A%09%7D)%0A\n+%0A\n %09return resul%0A%7D%0A\n@@ -982,670 +982,26 @@\n  %7B%0A%09\n-var newPair Pair%0A%09var vetorUax, vetorNew %5B%5Dint%0A%09var count int%0A%09var resul %5B%5DPair%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if vet%5Bi%5D %3C 0 %7B%0A%09%09%09vetorNew = append(vetorNew, vet%5Bi%5D*-1)%0A%09%09%7D else if vet%5Bi%5D %3E 0 %7B%0A%09%09%09vetorNew = append(vetorNew, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%0A%09%09if verifcar(vetorNew%5Bi%5D, vetorUax) %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09vetorUax = append(vetorUax, vetorNew%5Bi%5D)%0A%09%09count = 0%0A%09%09for j := 0; j %3C len(vetorNew); j++ %7B%0A%09%09%09if vetorNew%5Bi%5D == vetorNew%5Bj%5D %7B%0A%09%09%09%09count++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09newPair.One = vetorNew%5Bi%5D%0A%09%09newPair.Two = count%0A%09%09resul = append(resul, newPair)%0A%0A%09%7D%0A%09sort.Slice(resul, func(i,j int) bool%7B%0A%09%09return resul%5Bi%5D.One %3C resul%5Bj%5D.One%0A%09%7D)%0A%09return resu\n+_ = vet%0A%09return ni\n l%0A%7D%0A\n",
+            "lines": "173"
+        },
+        {
+            "label": "2026-05-09_15-50-32",
+            "content": "@@ -1464,13 +1464,8 @@\n %09%09%7D%0A\n-%09%09/*%0A\n %09%09ne\n@@ -1546,10 +1546,8 @@\n air)\n-*/\n %0A%0A%09%7D\n",
+            "lines": "202"
+        },
+        {
+            "label": "2026-05-09_15-52-39",
+            "content": "@@ -1462,16 +1462,18 @@\n %7D%0A%09%09%7D%0A%09%09\n+/*\n %0A%09%09newPa\n@@ -1551,17 +1551,15 @@\n air)\n+*/\n %0A%0A%09%7D%0A\n-%09/*%0A\n %09sor\n@@ -1637,12 +1637,8 @@\n %0A%09%7D)\n-*/%0A%09\n %0A%09re\n",
+            "lines": "203"
+        },
+        {
+            "label": "2026-05-09_15-53-30",
+            "content": "@@ -1455,58 +1455,8 @@\n t++%0A\n-%09%09%09%7Delse if vetorNew%5Bi%5D == vetorNew%5Bj%5D%7B%0A%09%09%09%09break%0A\n %09%09%09%7D\n@@ -1636,16 +1636,17 @@\n e%0A%09%7D)*/%0A\n+%09\n %0A%09return\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-05-09_15-54-54",
+            "content": "@@ -874,17 +874,16 @@\n  func(i,\n- \n j int) b\n@@ -885,17 +885,16 @@\n nt) bool\n- \n %7B%0A%09%09retu\n@@ -1455,17 +1455,16 @@\n t++%0A%09%09%09%7D\n- \n else if \n@@ -1485,25 +1485,24 @@\n  vetorNew%5Bj%5D\n- \n %7B%0A%09%09%09%09break%0A\n@@ -1510,17 +1510,19 @@\n %09%09%7D%0A%09%09%7D%0A\n+%09%09\n %0A\n-\n %09%09newPai\n@@ -1604,17 +1604,16 @@\n %0A%09%7D%0A%09/*%0A\n-%09\n %09sort.Sl\n@@ -1641,25 +1641,24 @@\n nt) bool%7B%0A%09%09\n-%09\n return resul\n@@ -1680,17 +1680,16 @@\n %5Bj%5D.One%0A\n-%09\n %09%7D)*/%0A%0A%09\n",
+            "lines": "207"
+        },
+        {
+            "label": "2026-05-09_15-55-13",
+            "content": "@@ -1478,17 +1478,17 @@\n rNew%5Bi%5D \n-!\n+=\n = vetorN\n",
+            "lines": "207"
+        },
+        {
+            "label": "2026-05-09_15-55-25",
+            "content": "@@ -1259,18 +1259,16 @@\n ++ %7B%0A%0A%09%09\n-/*\n if verif\n@@ -1288,32 +1288,32 @@\n i%5D, vetorUax) %7B%0A\n+\n %09%09%09continue%0A%09%09%7D*\n@@ -1311,19 +1311,16 @@\n inue%0A%09%09%7D\n-*/%0A\n %0A%09%09vetor\n@@ -1378,17 +1378,17 @@\n or j := \n-i\n+0\n ; j %3C le\n@@ -1506,32 +1506,33 @@\n %09break%0A%09%09%09%7D%0A%09%09%7D%0A\n+%0A\n %09%09newPair.One = \n@@ -1602,17 +1602,16 @@\n ir)%0A%0A%09%7D%0A\n-%0A\n %09/*%0A%09%09so\n@@ -1688,15 +1688,12 @@\n One%0A\n+\n %09%09%7D)\n-%0A%0A%09\n */%0A%0A\n",
+            "lines": "207"
+        },
+        {
+            "label": "2026-05-09_16-12-31",
+            "content": "@@ -1251,32 +1251,34 @@\n (vet); i++ %7B%0A%0A%09%09\n+/*\n if verifcar(veto\n@@ -1313,16 +1313,18 @@\n inue%0A%09%09%7D\n+*/\n %0A%0A%09%09veto\n",
+            "lines": "210"
+        },
+        {
+            "label": "2026-05-09_16-13-04",
+            "content": "@@ -1258,24 +1258,33 @@\n i++ %7B%0A%0A%09%09if \n+verifcar(\n vetorNew%5Bi%5D \n@@ -1286,25 +1286,19 @@\n w%5Bi%5D\n- ==\n+,\n  vetor\n-New%5Bi-1%5D\n+Uax)\n  %7B%0A%09\n",
+            "lines": "210"
+        },
+        {
+            "label": "2026-05-09_16-15-16",
+            "content": "@@ -1290,13 +1290,11 @@\n New%5B\n-(\n i-1\n-)\n %5D %7B%0A\n",
+            "lines": "210"
+        },
+        {
+            "label": "2026-05-09_16-15-33",
+            "content": "@@ -300,16 +300,25 @@\n ir%0A%09var \n+vetorUax,\n  vetorNe\n@@ -321,24 +321,39 @@\n orNew %5B%5Dint%0A\n+%09var count int%0A\n %09var resul %5B\n@@ -382,21 +382,16 @@\n  len(vet\n-orNew\n ); i++ %7B\n@@ -550,26 +550,102 @@\n (vet\n-orNew); %7B%0A%09%09au\n+); i++ %7B%0A%0A%09%09if verifcar(vetorNew%5Bi%5D, vetorUax) %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09vetorUa\n x \n-:\n =\n+ append(vetorUax,\n  vet\n@@ -652,16 +652,17 @@\n orNew%5Bi%5D\n+)\n %0A%09%09count\n@@ -666,28 +666,25 @@\n unt \n-:\n = 0%0A%09%09\n-J := i%0A%0A%09%09for\n+for j := 0;\n  j %3C\n@@ -701,11 +701,21 @@\n New)\n- &&\n+; j++ %7B%0A%09%09%09if\n  vet\n@@ -724,28 +724,37 @@\n New%5B\n-J\n+i\n %5D == \n-aux\n+vetorNew%5Bj%5D\n  %7B%0A\n+%09\n %09%09%09count\n  ++%0A\n@@ -753,25 +753,20 @@\n ount\n- \n ++%0A%09%09%09\n-j++\n+%7D\n %0A%09%09%7D%0A\n-%09%0A\n %09%09ne\n@@ -777,19 +777,27 @@\n r.One = \n-aux\n+vetorNew%5Bi%5D\n %0A%09%09newPa\n@@ -811,17 +811,16 @@\n = count%0A\n-%0A\n %09%09resul \n@@ -844,20 +844,62 @@\n ewPair)%0A\n+%0A\n %09%7D%0A\n+%09sort.Slice(resul, func(i, j int) bool %7B\n %0A\n+%09\n %09return \n@@ -907,16 +907,49 @@\n esul\n-%0A%09%09%0A%09%09%0A%09\n+%5Bi%5D.One %3C resul%5Bj%5D.One%0A%09%7D)%0A%09return resul%0A\n %7D%0A%0Af\n@@ -1262,16 +1262,46 @@\n %7B%0A%0A%09%09if \n+vetorNew%5Bi%5D == vetorNew%5B(i-1)%5D\n  %7B%0A%09%09%09co\n",
+            "lines": "210"
+        },
+        {
+            "label": "2026-05-09_16-34-30",
+            "content": "@@ -300,25 +300,16 @@\n ir%0A%09var \n-vetorUax,\n  vetorNe\n@@ -320,23 +320,8 @@\n int%0A\n-%09var count int%0A\n %09var\n@@ -350,32 +350,37 @@\n = 0; i %3C len(vet\n+orNew\n ); i++ %7B%0A%09%09if ve\n@@ -531,102 +531,26 @@\n (vet\n-); i++ %7B%0A%0A%09%09if verifcar(vetorNew%5Bi%5D, vetorUax) %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09vetorUa\n+orNew); %7B%0A%09%09au\n x \n+:\n =\n- append(vetorUax,\n  vet\n@@ -557,17 +557,16 @@\n orNew%5Bi%5D\n-)\n %0A%09%09count\n@@ -570,25 +570,28 @@\n unt \n+:\n = 0%0A%09%09\n-for j := 0;\n+J := i%0A%0A%09%09for\n  j %3C\n@@ -608,21 +608,11 @@\n New)\n-; j++ %7B%0A%09%09%09if\n+ &&\n  vet\n@@ -621,37 +621,28 @@\n New%5B\n-i\n+J\n %5D == \n-vetorNew%5Bj%5D\n+aux\n  %7B%0A\n-%09\n %09%09%09count\n ++%0A%09\n@@ -641,20 +641,25 @@\n ount\n+ \n ++%0A%09%09%09\n-%7D\n+j++\n %0A%09%09%7D%0A\n+%09%0A\n %09%09ne\n@@ -670,27 +670,19 @@\n r.One = \n-vetorNew%5Bi%5D\n+aux\n %0A%09%09newPa\n@@ -688,32 +688,33 @@\n air.Two = count%0A\n+%0A\n %09%09resul = append\n@@ -734,93 +734,11 @@\n ir)%0A\n-%0A\n %09%7D%0A\n-%09sort.Slice(resul, func(i, j int) bool %7B%0A%09%09return resul%5Bi%5D.One %3C resul%5Bj%5D.One%0A%09%7D)\n %0A%09re\n@@ -740,32 +740,39 @@\n %0A%0A%09return resul%0A\n+%09%09%0A%09%09%0A%09\n %7D%0A%0Afunc teams(ve\n@@ -813,30 +813,55 @@\n r%0A%09var vetor\n-New %5B%5D\n+Uax, vetorNew %5B%5Dint%0A%09var count \n int%0A%09var res\n@@ -1065,23 +1065,69 @@\n t); \n-%7B%0A%09%09estresse :=\n+i++ %7B%0A%0A%09%09if  %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09vetorUax = append(vetorUax,\n  vet\n@@ -1126,32 +1126,33 @@\n Uax, vetorNew%5Bi%5D\n+)\n %0A%09%09count := 0%0A%09%09\n@@ -1148,28 +1148,25 @@\n unt \n-:\n = 0%0A%09%09\n+for \n j := i\n-%0A%0A%09%09for\n+;\n  j %3C\n@@ -1171,35 +1171,45 @@\n  %3C len(vetorNew)\n- &&\n+; j++ %7B%0A%09%09%09if\n  vetorNew%5Bj%5D == \n@@ -1206,25 +1206,29 @@\n New%5B\n-j\n+i\n %5D == \n-estresse\n+vetorNew%5Bj%5D\n  %7B%0A\n+%09\n %09%09%09c\n@@ -1233,27 +1233,77 @@\n %09count++%0A%09%09%09\n-j++\n+%7D else if vetorNew%5Bi%5D != vetorNew%5Bj%5D %7B%0A%09%09%09%09break%0A%09%09%09%7D\n %0A%09%09%7D%0A%09%09newPa\n@@ -1315,16 +1315,19 @@\n e = \n-estresse\n+vetorNew%5Bi%5D\n %0A%09%09n\n@@ -1379,24 +1379,117 @@\n wPair)%0A%0A%09%7D%0A%0A\n+%09/*%0A%09%09sort.Slice(resul, func(i,j int) bool%7B%0A%09%09%09return resul%5Bi%5D.One %3C resul%5Bj%5D.One%0A%09%09%7D)%0A%0A%09*/%0A%0A\n %09return resu\n",
+            "lines": "207"
+        },
+        {
+            "label": "2026-05-09_16-39-19",
+            "content": "@@ -1434,16 +1434,8 @@\n air)\n-%0A%09%09i = j\n %0A%0A%09%7D\n",
+            "lines": "196"
+        },
+        {
+            "label": "2026-05-09_16-40-54",
+            "content": "@@ -978,17 +978,16 @@\n %5DPair %7B%0A\n-%0A\n %09var new\n@@ -1496,244 +1496,15 @@\n  %7B%0A%09\n-var newVetor %5B%5Dint%0A%09for i := 1; i %3C len(vet); i++ %7B%0A%09%09if i+1 %3C len(vet) %7B%0A%09%09%09if (vet%5Bi%5D %3E 0 && vet%5Bi+1%5D %3C 0) %7C%7C (vet%5Bi%5D %3E 0 && vet%5Bi-1%5D %3C 0) %7B%0A%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%7D else %7B%0A%09%09%09%09newVetor = append(newVetor, 0)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -1513,16 +1513,10 @@\n rn n\n-ewVetor%0A\n+il\n %0A%7D%0A%0A\n",
+            "lines": "197"
+        },
+        {
+            "label": "2026-05-09_20-16-54",
+            "content": "@@ -1514,33 +1514,33 @@\n %5B%5Dint%0A%09for i := \n-0\n+1\n ; i %3C len(vet); \n",
+            "lines": "208"
+        },
+        {
+            "label": "2026-05-09_20-17-45",
+            "content": "@@ -1554,95 +1554,8 @@\n %09if \n-i == 0 && (vet%5Bi%5D %3E 0 && vet%5Bi+1%5D %3C 0) %7B%0A%09%09%09newVetor = append(newVetor, 1)%0A%09%09%7D else if \n i+1 \n",
+            "lines": "208"
+        },
+        {
+            "label": "2026-05-09_20-19-51",
+            "content": "@@ -1557,24 +1557,20 @@\n  i == 0 \n-%7B%0A%09%09%09if \n+&& (\n vet%5Bi%5D %3E\n@@ -1591,59 +1591,12 @@\n  %3C 0\n- %7B%0A%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%7D else\n+)\n  %7B%0A\n-%09\n %09%09%09n\n@@ -1618,31 +1618,26 @@\n d(newVetor, \n-0)%0A%09%09%09%7D\n+1)\n %0A%09%09%7D else if\n",
+            "lines": "210"
+        },
+        {
+            "label": "2026-05-09_20-21-23",
+            "content": "@@ -1698,17 +1698,16 @@\n if i+1 %3C\n-=\n  len(vet\n",
+            "lines": "214"
+        },
+        {
+            "label": "2026-05-09_20-22-00",
+            "content": "@@ -1580,24 +1580,26 @@\n %3E 0 && vet%5Bi\n++1\n %5D %3C 0 %7B%0A%09%09%09%09\n",
+            "lines": "214"
+        },
+        {
+            "label": "2026-05-09_20-24-17",
+            "content": "@@ -1555,86 +1555,16 @@\n if i\n-+1\n  == \n-len(vet) %7B%0A%09%09%09newVetor = append(newVetor, 0)%0A%09%09%7D else %7B%0A%09%09%09if i == 0 %7B%0A%09\n+0 %7B%0A\n %09%09%09i\n@@ -1592,25 +1592,24 @@\n %5D %3C 0 %7B%0A%09%09%09%09\n-%09\n newVetor = a\n@@ -1622,33 +1622,32 @@\n newVetor, 1)%0A%09%09%09\n-%09\n %7D else %7B%0A%09%09%09%09%09ne\n@@ -1631,33 +1631,32 @@\n  1)%0A%09%09%09%7D else %7B%0A\n-%09\n %09%09%09%09newVetor = a\n@@ -1677,20 +1677,18 @@\n , 0)%0A%09%09%09\n-%09\n %7D%0A\n-%09\n %09%09%7D else\n@@ -1712,17 +1712,16 @@\n t) %7B%0A%09%09%09\n-%09\n if (vet%5B\n@@ -1778,25 +1778,24 @@\n  %3C 0) %7B%0A%09%09%09%09\n-%09\n newVetor = a\n@@ -1813,17 +1813,16 @@\n tor, 1)%0A\n-%09\n %09%09%09%7D els\n@@ -1829,17 +1829,16 @@\n e %7B%0A%09%09%09%09\n-%09\n newVetor\n@@ -1864,14 +1864,8 @@\n  0)%0A\n-%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "214"
+        },
+        {
+            "label": "2026-05-09_20-26-44",
+            "content": "@@ -1549,16 +1549,23 @@\n + %7B%0A%09%09if\n+ i+1 ==\n  len(vet\n@@ -1569,13 +1569,8 @@\n vet)\n- == 1\n  %7B%0A%09\n",
+            "lines": "218"
+        },
+        {
+            "label": "2026-05-09_20-29-13",
+            "content": "@@ -1553,15 +1553,8 @@\n %09%09if\n- i+1 ==\n  len\n@@ -1554,24 +1554,29 @@\n %09if len(vet)\n+ == 1\n  %7B%0A%09%09%09newVet\n",
+            "lines": "218"
+        },
+        {
+            "label": "2026-05-09_20-29-50",
+            "content": "@@ -1572,31 +1572,8 @@\n ) %7B%0A\n-%09%09%09if len(vet) == 1 %7B%0A%09\n %09%09%09n\n@@ -1606,90 +1606,8 @@\n  0)%0A\n-%09%09%09%7D else if vet%5Bi%5D %3E 0 && vet%5Bi-1%5D %3C 0 %7B%0A%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%7D%0A\n %09%09%7D \n",
+            "lines": "218"
+        },
+        {
+            "label": "2026-05-09_20-32-47",
+            "content": "@@ -1706,55 +1706,8 @@\n  1)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09newVetor = append(newVetor, 0)%0A\n %09%09%09%7D\n",
+            "lines": "222"
+        },
+        {
+            "label": "2026-05-09_20-33-54",
+            "content": "@@ -1549,140 +1549,277 @@\n + %7B%0A\n-        if vet%5Bi%5D %3E 0 %7B%0A            %0A            temMulherDoLado := false%0A%0A            \n+%09%09if i+1 == len(vet) %7B%0A%09%09%09if len(vet) == 1 %7B%0A%09%09%09%09newVetor = append(newVetor, 0)%0A%09%09%09%7D else if vet%5Bi%5D %3E 0 && vet%5Bi-1%5D %3C 0 %7B%0A%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%7D else %7B%0A%09%09%09%09newVetor = append(newVetor, 0)%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09\n if i \n-%3E\n+==\n  0 %7B%0A\n-                if\n+%09%09%09%09if vet%5Bi%5D %3E 0 &&\n  vet%5Bi\n--1\n %5D %3C 0 %7B%0A\n     \n@@ -1818,101 +1818,118 @@\n 0 %7B%0A\n-                    temMulherDoLado = true%0A                %7D%0A            %7D%0A           \n+%09%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09newVetor = append(newVetor, 0)%0A%09%09%09%09%7D%0A%09%09%09%7D else\n  if i\n++1\n  %3C\n+=\n  len\n@@ -1937,312 +1937,185 @@\n vet)\n--1\n  %7B%0A\n-                if\n+%09%09%09%09if (vet%5Bi%5D %3E 0 && vet%5Bi+1%5D %3C 0) %7C%7C (vet%5Bi%5D %3E 0 &&\n  vet%5Bi\n-+\n+-\n 1%5D %3C 0\n+)\n  %7B%0A\n-                    temMulherDoLado = true%0A                %7D%0A            %7D%0A            if temMulherDoLado == true %7B%0A                newVetor%5Bi%5D = 1%0A            %7D%0A        %7D%0A        // Se for mulher ou homem sozinho, o valor continua 0 (j%C3%A1 padr%C3%A3o do make)%0A    %7D%0A%0A    \n+%09%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09newVetor = append(newVetor, 0)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n retu\n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-09_20-41-09",
+            "content": "@@ -1493,16 +1493,20 @@\n %5Dint %7B%0A%09\n+var \n newVetor\n@@ -1510,32 +1510,13 @@\n tor \n-:= make(%5B%5Dint, len(vet))\n+%5B%5Dint\n %0A%09fo\n@@ -1537,34 +1537,40 @@\n len(vet); i++ %7B%0A\n-%09%09\n+        \n if vet%5Bi%5D %3E 0 %7B%0A\n@@ -1569,20 +1569,41 @@\n %5D %3E 0 %7B%0A\n-%0A%09%09%09\n+            %0A            \n temMulhe\n@@ -1624,86 +1624,152 @@\n se%0A%0A\n-%09%09%09if i %3E 0 %7B%0A%09%09%09%09if vet%5Bi-1%5D %3C 0 %7B%0A%09%09%09%09%09temMulherDoLado = true%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09\n+            if i %3E 0 %7B%0A                if vet%5Bi-1%5D %3C 0 %7B%0A                    temMulherDoLado = true%0A                %7D%0A            %7D%0A            \n if i\n@@ -1784,20 +1784,32 @@\n et)-1 %7B%0A\n-%09%09%09%09\n+                \n if vet%5Bi\n@@ -1822,13 +1822,28 @@\n 0 %7B%0A\n-%09%09%09%09%09\n+                    \n temM\n@@ -1865,82 +1865,145 @@\n rue%0A\n-%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09if temMulherDoLado == true %7B%0A%09%09%09%09newVetor%5Bi%5D = 1%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n+                %7D%0A            %7D%0A            if temMulherDoLado == true %7B%0A                newVetor%5Bi%5D = 1%0A            %7D%0A        %7D%0A        \n // S\n@@ -2072,21 +2072,27 @@\n o make)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n return n\n",
+            "lines": "221"
+        },
+        {
+            "label": "2026-05-09_20-42-20",
+            "content": "@@ -1964,339 +1964,27 @@\n  %7B%0A%09\n-newVetor := make(%5B%5Dint, len(vet))%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%0A%09%09if vet%5Bi%5D %3E 0 %7B%0A%09%09%09sohomem := true%0A%0A%09%09%09if i %3E 0 %7B%0A%09%09%09%09if vet%5Bi-1%5D %3C 0 %7B%0A%09%09%09%09%09sohomem = false%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09if i %3C len(vet)-1 %7B%0A%09%09%09%09if vet%5Bi+1%5D %3C 0 %7B%0A%09%09%09%09%09sohomem = false%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%09if sohomem %7B%0A%09%09%09%09newVetor = append(newVetor, 1)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return newVetor\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "221"
+        },
+        {
+            "label": "2026-05-09_20-53-29",
+            "content": "@@ -2244,15 +2244,30 @@\n etor\n-%5Bi%5D = 0\n+ = append(newVetor, 1)\n %0A%09%09%09\n",
+            "lines": "242"
+        },
+        {
+            "label": "2026-05-09_20-55-59",
+            "content": "@@ -2238,33 +2238,33 @@\n %09%09newVetor%5Bi%5D = \n-1\n+0\n %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09re\n",
+            "lines": "242"
+        },
+        {
+            "label": "2026-05-09_20-56-23",
+            "content": "@@ -2246,17 +2246,17 @@\n or%5Bi%5D = \n-0\n+1\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "242"
+        },
+        {
+            "label": "2026-05-09_20-56-41",
+            "content": "@@ -2238,33 +2238,33 @@\n %09%09newVetor%5Bi%5D = \n-1\n+0\n %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09re\n",
+            "lines": "242"
+        },
+        {
+            "label": "2026-05-09_20-56-54",
+            "content": "@@ -2314,168 +2314,15 @@\n  %7B%0A%09\n-cont := 0 %0A%09for i := 0; i%3C len(vet); i++%7B%0A%09%09aux := vet%5Bi%5D%0A%09%09for j := 0; j%3Clen(vet); j++%7B%0A%09%09%09if aux == vet%5Bj%5D && i!= j %7B%0A%09%09%09%09cont ++%0A%09%09%09%09vet %5Bi%5D = 0%0A%09%09%09%7D%0A%09%09%7D %0A%09%7D\n+_ = vet\n %0A%09re\n@@ -2326,20 +2326,17 @@\n %09return \n-cont\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "242"
+        },
+        {
+            "label": "2026-05-09_21-14-35",
+            "content": "@@ -2409,18 +2409,11 @@\n %09if \n-(\n aux\n- * -1)\n  == \n",
+            "lines": "251"
+        },
+        {
+            "label": "2026-05-09_21-15-25",
+            "content": "@@ -2319,16 +2319,17 @@\n ont := 0\n+ \n %0A%09for i \n@@ -2327,33 +2327,32 @@\n  %0A%09for i := 0; i\n- \n %3C len(vet); i++ \n@@ -2346,25 +2346,24 @@\n en(vet); i++\n- \n %7B%0A%09%09aux := v\n@@ -2379,27 +2379,25 @@\n or j := 0; j\n- %3C \n+%3C\n len(vet); j+\n@@ -2393,25 +2393,24 @@\n en(vet); j++\n- \n %7B%0A%09%09%09if (aux\n@@ -2409,17 +2409,19 @@\n %09if (aux\n-*\n+ * \n -1) == v\n@@ -2430,17 +2430,16 @@\n %5Bj%5D && i\n- \n != j %7B%0A%09\n@@ -2445,16 +2445,17 @@\n %09%09%09%09cont\n+ \n ++%0A%09%09%09%09v\n@@ -2460,25 +2460,11 @@\n %09vet\n+ \n %5Bi\n-%5D = 0%0A%09%09%09%09vet%5Bj\n %5D = \n@@ -2465,32 +2465,33 @@\n %5Bi%5D = 0%0A%09%09%09%7D%0A%09%09%7D\n+ \n %0A%09%7D%0A%09return cont\n",
+            "lines": "251"
+        },
+        {
+            "label": "2026-05-09_21-16-03",
+            "content": "@@ -2380,17 +2380,17 @@\n or j := \n-i\n+0\n ; j %3C le\n@@ -2466,16 +2466,31 @@\n %5Bi%5D = 0%0A\n+%09%09%09%09vet%5Bj%5D = 0%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "252"
+        },
+        {
+            "label": "2026-05-09_21-17-00",
+            "content": "@@ -2470,23 +2470,8 @@\n = 0%0A\n-%09%09%09%09vet%5Bj%5D = 0%0A\n %09%09%09%7D\n",
+            "lines": "251"
+        },
+        {
+            "label": "2026-05-09_21-17-54",
+            "content": "@@ -2313,58 +2313,8 @@\n t %7B%0A\n-%09copia := make(%5B%5Dint, len(vet))%0A%09copy(copia, vet)%0A\n %09con\n@@ -2357,45 +2357,8 @@\n + %7B%0A\n-%09%09if copia%5Bi%5D == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A\n %09%09au\n@@ -2485,18 +2485,8 @@\n = 0%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "252"
+        },
+        {
+            "label": "2026-05-09_21-25-20",
+            "content": "@@ -2748,882 +2748,24 @@\n  %7B%0A%09\n-// 1. Verifica%C3%A7%C3%A3o de seguran%C3%A7a: se a sequ%C3%AAncia for maior, n%C3%A3o cabe na fila%0A%09if len(seq) %3E len(vet) %7B%0A%09%09return -1%0A%09%7D%0A%0A%09// 2. Percorrer a fila original%0A%09// Usamos o limite (tamanho da fila - tamanho da sequ%C3%AAncia) para n%C3%A3o %22cair%22 do vetor%0A%09for i := 0; i %3C= len(vet)-len(seq); i++ %7B%0A%0A%09%09// Esta vari%C3%A1vel vai nos dizer se a tentativa atual deu certo%0A%09%09bateuTudo := true%0A%0A%09%09// 3. Comparar cada elemento da sequ%C3%AAncia a partir da posi%C3%A7%C3%A3o 'i'%0A%09%09for j := 0; j %3C len(seq); j++ %7B%0A%09%09%09// Comparamos o elemento da fila (i + deslocamento j) com a sequ%C3%AAncia%0A%09%09%09if vet%5Bi+j%5D != seq%5Bj%5D %7B%0A%09%09%09%09bateuTudo = false%0A%09%09%09%09break // Se um elemento for diferente, essa posi%C3%A7%C3%A3o 'i' n%C3%A3o serve%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09// 4. Se chegamos aqui e 'bateuTudo' ainda %C3%A9 true, encontramos a primeira ocorr%C3%AAncia!%0A%09%09if bateuTudo %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%0A%09// 5. Se os la%C3%A7os acabarem e nada for retornado, a sequ%C3%AAncia n%C3%A3o existe na fila\n+_ = vet%0A%09_ = seq\n %0A%09re\n",
+            "lines": "258"
+        },
+        {
+            "label": "2026-05-09_21-29-56",
+            "content": "@@ -3658,21 +3658,20 @@\n int, pos\n-icoes\n+List\n  %5B%5Dint) \n@@ -3683,719 +3683,39 @@\n  %7B%0A%09\n-// 1. Criamos um mapa de quem deve ser removido%0A%09// Usamos um slice de booleanos do mesmo tamanho do vetor original%0A%09deveRemover := make(%5B%5Dbool, len(vet))%0A%0A%09// 2. Marcamos as posi%C3%A7%C3%B5es que recebemos como 'true'%0A%09for i := 0; i %3C len(posicoes); i++ %7B%0A%09%09indiceParaApagar := posicoes%5Bi%5D%0A%0A%09%09// Verifica%C3%A7%C3%A3o de seguran%C3%A7a: s%C3%B3 marca se o %C3%ADndice existir no vetor%0A%09%09if indiceParaApagar %3E= 0 && indiceParaApagar %3C len(vet) %7B%0A%09%09%09deveRemover%5BindiceParaApagar%5D = true%0A%09%09%7D%0A%09%7D%0A%0A%09// 3. Criamos o vetor de resultado%0A%09resul := make(%5B%5Dint, 0)%0A%0A%09// 4. Percorremos o vetor original e s%C3%B3 guardamos quem N%C3%83O foi marcado%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if deveRemover%5Bi%5D == false %7B%0A%09%09%09resul = append(resul, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09return resu\n+_ = vet%0A%09_ = posList%0A%09return ni\n l%0A%7D%0A\n",
+            "lines": "284"
+        },
+        {
+            "label": "2026-05-09_21-31-43",
+            "content": "@@ -4421,18 +4421,18 @@\n int, val\n-or\n+ue\n  int) %5B%5D\n@@ -4442,519 +4442,37 @@\n  %7B%0A%09\n-// Criamos o vetor de resultado vazio%0A%09// Usamos o append, ent%C3%A3o come%C3%A7amos com tamanho 0%0A%09resul := make(%5B%5Dint, 0)%0A%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09// Pegamos o n%C3%ADvel de stress atual (valor absoluto)%0A%09%09stressAtual := vet%5Bi%5D%0A%09%09if stressAtual %3C 0 %7B%0A%09%09%09stressAtual = stressAtual * -1%0A%09%09%7D%0A%0A%09%09// Se o stress da pessoa for diferente do valor que queremos apagar,%0A%09%09// ela pode ficar na fila.%0A%09%09if stressAtual != valor %7B%0A%09%09%09resul = append(resul, vet%5Bi%5D) // Guardamos o valor original (com sinal)%0A%09%09%7D%0A%09%7D%0A%0A%09return resu\n+_ = vet%0A%09_ = value%0A%09return ni\n l%0A%7D%0A\n",
+            "lines": "306"
+        },
+        {
+            "label": "2026-05-09_21-32-45",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc verifcar(num int, vet []int) bool {\n\tfor i := 0; i < len(vet); i++ {\n\t\tif num == vet[i] {\n\t\t\treturn true\n\t\t}\n\t}\n\treturn false\n}\n\nfunc occurr(vet []int) []Pair {\n\tvar newPair Pair\n\tvar vetorUax, vetorNew []int\n\tvar count int\n\tvar resul []Pair\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] < 0 {\n\t\t\tvetorNew = append(vetorNew, vet[i]*-1)\n\t\t} else if vet[i] > 0 {\n\t\t\tvetorNew = append(vetorNew, vet[i])\n\t\t}\n\t}\n\tfor i := 0; i < len(vet); i++ {\n\n\t\tif verifcar(vetorNew[i], vetorUax) {\n\t\t\tcontinue\n\t\t}\n\t\tvetorUax = append(vetorUax, vetorNew[i])\n\t\tcount = 0\n\t\tfor j := 0; j < len(vetorNew); j++ {\n\t\t\tif vetorNew[i] == vetorNew[j] {\n\t\t\t\tcount++\n\t\t\t}\n\t\t}\n\t\tnewPair.One = vetorNew[i]\n\t\tnewPair.Two = count\n\t\tresul = append(resul, newPair)\n\n\t}\n\tsort.Slice(resul, func(i, j int) bool {\n\t\treturn resul[i].One < resul[j].One\n\t})\n\treturn resul\n}\n\nfunc teams(vet []int) []Pair {\n\n\tvar newPair Pair\n\tvar vetorNew []int\n\tvar resul []Pair\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] < 0 {\n\t\t\tvetorNew = append(vetorNew, vet[i]*-1)\n\t\t} else if vet[i] > 0 {\n\t\t\tvetorNew = append(vetorNew, vet[i])\n\t\t}\n\t}\n\tfor i := 0; i < len(vet); {\n\t\testresse := vetorNew[i]\n\t\tcount := 0\n\t\tj := i\n\n\t\tfor j < len(vetorNew) && vetorNew[j] == estresse {\n\t\t\tcount++\n\t\t\tj++\n\t\t}\n\t\tnewPair.One = estresse\n\t\tnewPair.Two = count\n\t\tresul = append(resul, newPair)\n\t\ti = j\n\n\t}\n\n\treturn resul\n}\n\nfunc mnext(vet []int) []int {\n\tnewVetor := make([]int, len(vet))\n\tfor i := 0; i < len(vet); i++ {\n\t\tif vet[i] > 0 {\n\n\t\t\ttemMulherDoLado := false\n\n\t\t\tif i > 0 {\n\t\t\t\tif vet[i-1] < 0 {\n\t\t\t\t\ttemMulherDoLado = true\n\t\t\t\t}\n\t\t\t}\n\t\t\tif i < len(vet)-1 {\n\t\t\t\tif vet[i+1] < 0 {\n\t\t\t\t\ttemMulherDoLado = true\n\t\t\t\t}\n\t\t\t}\n\t\t\tif temMulherDoLado == true {\n\t\t\t\tnewVetor[i] = 1\n\t\t\t}\n\t\t}\n\t\t// Se for mulher ou homem sozinho, o valor continua 0 (j\u00e1 padr\u00e3o do make)\n\t}\n\n\treturn newVetor\n\n}\n\nfunc alone(vet []int) []int {\n\tnewVetor := make([]int, len(vet))\n\tfor i := 0; i < len(vet); i++ {\n\n\t\tif vet[i] > 0 {\n\t\t\tsohomem := true\n\n\t\t\tif i > 0 {\n\t\t\t\tif vet[i-1] < 0 {\n\t\t\t\t\tsohomem = false\n\t\t\t\t}\n\t\t\t}\n\t\t\tif i < len(vet)-1 {\n\t\t\t\tif vet[i+1] < 0 {\n\t\t\t\t\tsohomem = false\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif sohomem {\n\t\t\t\tnewVetor[i] = 1\n\t\t\t}\n\t\t}\n\t}\n\treturn newVetor\n}\n\nfunc couple(vet []int) int {\n\tcopia := make([]int, len(vet))\n\tcopy(copia, vet)\n\tcont := 0\n\tfor i := 0; i < len(vet); i++ {\n\t\tif copia[i] == 0 {\n\t\t\tcontinue\n\t\t}\n\t\taux := vet[i]\n\t\tfor j := i; j < len(vet); j++ {\n\t\t\tif (aux*-1) == vet[j] && i != j {\n\t\t\t\tcont++\n\t\t\t\tvet[i] = 0\n\t\t\t\tvet[j] = 0\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\treturn cont\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t// 1. Verifica\u00e7\u00e3o de seguran\u00e7a: se a sequ\u00eancia for maior, n\u00e3o cabe na fila\n\tif len(seq) > len(vet) {\n\t\treturn -1\n\t}\n\n\t// 2. Percorrer a fila original\n\t// Usamos o limite (tamanho da fila - tamanho da sequ\u00eancia) para n\u00e3o \"cair\" do vetor\n\tfor i := 0; i <= len(vet)-len(seq); i++ {\n\n\t\t// Esta vari\u00e1vel vai nos dizer se a tentativa atual deu certo\n\t\tbateuTudo := true\n\n\t\t// 3. Comparar cada elemento da sequ\u00eancia a partir da posi\u00e7\u00e3o 'i'\n\t\tfor j := 0; j < len(seq); j++ {\n\t\t\t// Comparamos o elemento da fila (i + deslocamento j) com a sequ\u00eancia\n\t\t\tif vet[i+j] != seq[j] {\n\t\t\t\tbateuTudo = false\n\t\t\t\tbreak // Se um elemento for diferente, essa posi\u00e7\u00e3o 'i' n\u00e3o serve\n\t\t\t}\n\t\t}\n\n\t\t// 4. Se chegamos aqui e 'bateuTudo' ainda \u00e9 true, encontramos a primeira ocorr\u00eancia!\n\t\tif bateuTudo {\n\t\t\treturn i\n\t\t}\n\t}\n\n\t// 5. Se os la\u00e7os acabarem e nada for retornado, a sequ\u00eancia n\u00e3o existe na fila\n\treturn -1\n}\n\nfunc erase(vet []int, posicoes []int) []int {\n\t// 1. Criamos um mapa de quem deve ser removido\n\t// Usamos um slice de booleanos do mesmo tamanho do vetor original\n\tdeveRemover := make([]bool, len(vet))\n\n\t// 2. Marcamos as posi\u00e7\u00f5es que recebemos como 'true'\n\tfor i := 0; i < len(posicoes); i++ {\n\t\tindiceParaApagar := posicoes[i]\n\n\t\t// Verifica\u00e7\u00e3o de seguran\u00e7a: s\u00f3 marca se o \u00edndice existir no vetor\n\t\tif indiceParaApagar >= 0 && indiceParaApagar < len(vet) {\n\t\t\tdeveRemover[indiceParaApagar] = true\n\t\t}\n\t}\n\n\t// 3. Criamos o vetor de resultado\n\tresul := make([]int, 0)\n\n\t// 4. Percorremos o vetor original e s\u00f3 guardamos quem N\u00c3O foi marcado\n\tfor i := 0; i < len(vet); i++ {\n\t\tif deveRemover[i] == false {\n\t\t\tresul = append(resul, vet[i])\n\t\t}\n\t}\n\n\treturn resul\n}\n\nfunc clear(vet []int, valor int) []int {\n\t// Criamos o vetor de resultado vazio\n\t// Usamos o append, ent\u00e3o come\u00e7amos com tamanho 0\n\tresul := make([]int, 0)\n\n\tfor i := 0; i < len(vet); i++ {\n\t\t// Pegamos o n\u00edvel de stress atual (valor absoluto)\n\t\tstressAtual := vet[i]\n\t\tif stressAtual < 0 {\n\t\t\tstressAtual = stressAtual * -1\n\t\t}\n\n\t\t// Se o stress da pessoa for diferente do valor que queremos apagar,\n\t\t// ela pode ficar na fila.\n\t\tif stressAtual != valor {\n\t\t\tresul = append(resul, vet[i]) // Guardamos o valor original (com sinal)\n\t\t}\n\t}\n\n\treturn resul\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "322"
+        }
+    ]
+}
