@@ -38,3 +38,24 @@
 2026-05-10 12:41:14, SELF, v:1, k:ed@binomiais, self:1, rate:100, study:30, concept:1, refactor:1
 2026-05-10 12:41:15, EXEC, v:1, k:ed@binomiais, mode:FULL, rate:100
 2026-05-10 12:41:18, MOVE, v:1, k:ed@binomiais, mode:BACK
+2026-05-10 12:40:43, MOVE, v:1, k:ed@binomiais, mode:EDIT
+2026-05-10 15:32:33, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-05-10 15:32:36, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0, size:5
+2026-05-10 15:32:37, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0
+2026-05-10 15:33:45, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-05-10 15:33:47, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-05-10 15:33:48, EXEC, v:1, k:ed@diagonal, mode:FULL, rate:0
+2026-05-10 15:34:01, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-05-10 15:34:10, MOVE, v:1, k:ed@diagonal, mode:PICK
+2026-05-10 15:34:13, MOVE, v:1, k:ed@diagonal, mode:BACK
+2026-05-10 15:34:20, MOVE, v:1, k:ed@sufixos, mode:DOWN
+2026-05-10 15:34:21, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-05-10 15:34:20, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-10 15:34:20, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-10 15:39:02, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-10 15:44:05, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-10 15:45:18, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:17
+2026-05-10 15:46:23, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:16
+2026-05-10 15:47:05, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:17
+2026-05-10 15:47:27, SELF, v:1, k:ed@sufixos, self:1, rate:100, study:20, concept:1
+2026-05-10 15:47:29, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100

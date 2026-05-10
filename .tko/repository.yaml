@@ -22,8 +22,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
 - ed@map_set
+- ed@rec
 flags:
   inbox: inbox
   panel: skills
@@ -31,5 +31,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@binomiais
-selected_index: 6
+selected: ed@sufixos
+selected_index: 7

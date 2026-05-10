@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_15-45-18",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -41,20 +41,21 @@\n  string)\n- \n %7B%0A\n-%09\n+   \n if a == \n@@ -60,24 +60,29 @@\n = %22%22\n- \n %7B%0A\n-%09%09\n+    \n return%0A\n-%09%7D%0A%09\n+   %7D%0A   \n peda\n@@ -91,17 +91,19 @@\n (a%5B1:%5D)%0A\n-%09\n+   \n fmt.Prin\n@@ -112,16 +112,18 @@\n n(a)%0A%7D%0A%0A\n+%0A%0A\n func mai\n@@ -128,17 +128,20 @@\n ain() %7B%0A\n-%09\n+    \n var nome\n@@ -152,9 +152,12 @@\n ing%0A\n-%09\n+    \n peda\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-10_15-46-23",
+            "content": "@@ -140,25 +140,8 @@\n ing%0A\n-%09fmt.Scan(&nome)%0A\n %09ped\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-10_15-47-05",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc pedaco(a string) {\n\tif a == \"\" {\n\t\treturn\n\t}\n\tpedaco(a[1:])\n\tfmt.Println(a)\n}\n\nfunc main() {\n\tvar nome string\n\tfmt.Scan(&nome)\n\tpedaco(nome)\n}\n",
+            "lines": "17"
+        }
+    ]
+}
