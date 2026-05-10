@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_12-21-10",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,202 +23,53 @@\n mt%22%0A\n-%0Afunc escada(a, n int) int %7B%0A%09if a == 1 %7C%7C a == 2 %7B%0A%09%09return 1%0A%09%7D%0A%09if a == 3 %7B%0A%09%09return 2%0A%09%7D%0A%09c := escada(a-1, n-3)%0A%09return c%0A%7D%0A%0Afunc main() %7B%0A%09var a int%0A%09fmt.Scan(&a)%0A%09fmt.Println(escada(a, a))%0A\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-10_12-28-18",
+            "content": "@@ -34,16 +34,19 @@\n escada(a\n+, n\n  int) in\n@@ -133,20 +133,11 @@\n (a-1\n-) + escada(a\n+, n\n -3)%0A\n@@ -212,10 +212,14 @@\n ada(\n+a, \n a))%0A\n+%0A\n %7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-10_12-30-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc escada(a int) int {\n\tif a == 1 || a == 2 {\n\t\treturn 1\n\t}\n\tif a == 3 {\n\t\treturn 2\n\t}\n\tc := escada(a-1) + escada(a-3)\n\treturn c\n}\n\nfunc main() {\n\tvar a int\n\tfmt.Scan(&a)\n\tfmt.Println(escada(a))\n}\n",
+            "lines": "20"
+        }
+    ]
+}
