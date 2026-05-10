@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-09_21-35-44",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,1179 +23,53 @@\n mt%22%0A\n-%0A// 1. Sua fun%C3%A7%C3%A3o de apoio para verificar se %C3%A9 primo%0Afunc eh_primo(n int, divisor int) bool %7B%0A%09if n %3C 2 %7B%0A%09%09return false%0A%09%7D%0A%09if divisor == 1 %7B%0A%09%09return true%0A%09%7D%0A%09if n%25divisor == 0 %7B%0A%09%09return false%0A%09%7D%0A%09return eh_primo(n, divisor-1)%0A%7D%0A%0A// 2. Fun%C3%A7%C3%A3o auxiliar para chamar o eh_primo de forma f%C3%A1cil%0Afunc verificar(n int) bool %7B%0A%09return eh_primo(n, n/2)%0A%7D%0A%0A// 3. A fun%C3%A7%C3%A3o principal RECURSIVA para achar o n-%C3%A9simo primo%0A// n: quantos primos faltam encontrar%0A// atual: o n%C3%BAmero que estamos testando agora (come%C3%A7a em 2)%0Afunc enesimo_primo_rec(n int, atual int) int %7B%0A%09if verificar(atual) %7B%0A%09%09// Se achamos um primo e n era 1, encontramos o que quer%C3%ADamos!%0A%09%09if n == 1 %7B%0A%09%09%09return atual%0A%09%09%7D%0A%09%09// Se achamos um primo mas n %3E 1, continuamos procurando o pr%C3%B3ximo%0A%09%09// diminuindo o n (pois falta 1 a menos)%0A%09%09return enesimo_primo_rec(n-1, atual+1)%0A%09%7D%0A%0A%09// Se o n%C3%BAmero atual N%C3%83O %C3%A9 primo, apenas passamos para o pr%C3%B3ximo n%C3%BAmero%0A%09// mantendo o mesmo n (pois ainda n%C3%A3o encontramos um primo novo)%0A%09return enesimo_primo_rec(n, atual+1)%0A%7D%0A%0A// 4. Fun%C3%A7%C3%A3o que o usu%C3%A1rio chama%0Afunc enesimo_primo(n int) int %7B%0A%09return enesimo_primo_rec(n, 2)%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%09enesimo_primo(n\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-09_21-45-23",
+            "content": "@@ -1180,25 +1180,8 @@\n n)%0A%09\n-fmt.Printf(%22%25d%22, \n enes\n@@ -1192,12 +1192,11 @@\n primo(n)\n-)\n %0A%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-09_21-47-09",
+            "content": "@@ -1194,10 +1194,8 @@\n (%22%25d\n-%5Cn\n %22, e\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-09_21-47-27",
+            "content": "package main\n\nimport \"fmt\"\n\n// 1. Sua fun\u00e7\u00e3o de apoio para verificar se \u00e9 primo\nfunc eh_primo(n int, divisor int) bool {\n\tif n < 2 {\n\t\treturn false\n\t}\n\tif divisor == 1 {\n\t\treturn true\n\t}\n\tif n%divisor == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(n, divisor-1)\n}\n\n// 2. Fun\u00e7\u00e3o auxiliar para chamar o eh_primo de forma f\u00e1cil\nfunc verificar(n int) bool {\n\treturn eh_primo(n, n/2)\n}\n\n// 3. A fun\u00e7\u00e3o principal RECURSIVA para achar o n-\u00e9simo primo\n// n: quantos primos faltam encontrar\n// atual: o n\u00famero que estamos testando agora (come\u00e7a em 2)\nfunc enesimo_primo_rec(n int, atual int) int {\n\tif verificar(atual) {\n\t\t// Se achamos um primo e n era 1, encontramos o que quer\u00edamos!\n\t\tif n == 1 {\n\t\t\treturn atual\n\t\t}\n\t\t// Se achamos um primo mas n > 1, continuamos procurando o pr\u00f3ximo\n\t\t// diminuindo o n (pois falta 1 a menos)\n\t\treturn enesimo_primo_rec(n-1, atual+1)\n\t}\n\n\t// Se o n\u00famero atual N\u00c3O \u00e9 primo, apenas passamos para o pr\u00f3ximo n\u00famero\n\t// mantendo o mesmo n (pois ainda n\u00e3o encontramos um primo novo)\n\treturn enesimo_primo_rec(n, atual+1)\n}\n\n// 4. Fun\u00e7\u00e3o que o usu\u00e1rio chama\nfunc enesimo_primo(n int) int {\n\treturn enesimo_primo_rec(n, 2)\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tfmt.Printf(\"%d\\n\", enesimo_primo(n))\n}\n",
+            "lines": "52"
+        }
+    ]
+}

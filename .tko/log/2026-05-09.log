@@ -99,3 +99,17 @@
 2026-05-09 21:32:45, EXEC, v:1, k:ed@especiais, mode:FULL, rate:100, size:322
 2026-05-09 21:33:30, SELF, v:1, k:ed@especiais, self:1, rate:100, study:180, concept:1, problem:1
 2026-05-09 21:33:34, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-05-09 21:35:40, MOVE, v:1, k:ed@enesimo, mode:DOWN
+2026-05-09 21:35:42, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-05-09 21:35:44, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0, size:5
+2026-05-09 21:32:42, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-09 21:35:40, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-09 21:35:40, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-09 21:37:09, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-09 21:39:23, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-09 21:45:23, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0, size:52
+2026-05-09 21:45:26, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0
+2026-05-09 21:47:09, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:0, size:52
+2026-05-09 21:47:05, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-09 21:47:27, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:100, size:52
+2026-05-09 21:49:18, SELF, v:1, k:ed@enesimo, self:1, rate:100, study:60, concept:1, problem:1
