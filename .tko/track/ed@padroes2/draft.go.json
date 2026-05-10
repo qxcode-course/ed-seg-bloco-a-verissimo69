@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_15-51-42",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,157 +23,53 @@\n mt%22%0A\n-%0A\n func \n-padroes(n int) int %7B%0A%09if n == 1 %7B%0A%09%09return 3%0A%09%7D%0A%0A%09return 2*n + padroes(n-1)%0A%7D%0Afunc main() %7B%0A%09var n int%0A%09fmt.Println(&n)%0A%09fmt.Println(padroes(n)\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-10_16-08-38",
+            "content": "@@ -82,16 +82,22 @@\n %0A%09return\n+ 2*n +\n  padroes\n@@ -105,14 +105,8 @@\n n-1)\n- + n*2\n %0A%7D%0Af\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-10_16-09-50",
+            "content": "@@ -105,14 +105,8 @@\n  n*2\n- + n*n\n %0A%7D%0Af\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-10_16-13-35",
+            "content": "@@ -78,26 +78,8 @@\n %0A%09%7D%0A\n-    a := n*2 + n*n\n %0A%09re\n@@ -102,10 +102,17 @@\n ) + \n-a \n+n*2 + n*n\n %0A%7D%0Af\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-10_16-14-24",
+            "content": "@@ -89,17 +89,19 @@\n = n*2 + \n-1\n+n*n\n %0A%09return\n@@ -117,16 +117,17 @@\n n-1) + a\n+ \n %0A%7D%0Afunc \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-10_16-15-24",
+            "content": "@@ -74,17 +74,20 @@\n rn 3%0A%09%7D%0A\n-%09\n+    \n a := n*2\n@@ -152,11 +152,14 @@\n fmt.\n-Sca\n+Printl\n n(&n\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-10_16-16-09",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc padroes(n int) int {\n\tif n == 1 {\n\t\treturn 3\n\t}\n\ta := n*2 + 1\n\treturn padroes(n-1) + a\n}\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tfmt.Println(padroes(n))\n}\n",
+            "lines": "16"
+        }
+    ]
+}

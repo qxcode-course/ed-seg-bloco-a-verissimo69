@@ -25,11 +25,11 @@ expanded:
 - ed@map_set
 - ed@rec
 flags:
-  inbox: inbox
+  inbox: all
   panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@sufixos
-selected_index: 7
+selected: ed@padroes2
+selected_index: 27
