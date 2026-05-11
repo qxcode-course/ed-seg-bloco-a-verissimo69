@@ -32,5 +32,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetbuild
-selected_index: 2
+selected: ed@bettersearch
+selected_index: 3

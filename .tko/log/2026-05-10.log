@@ -137,3 +137,9 @@
 2026-05-10 17:57:50, MOVE, v:1, k:ed@vetbuild, mode:EDIT
 2026-05-10 17:58:46, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:100, size:238
 2026-05-10 17:59:10, SELF, v:1, k:ed@vetbuild, self:1, rate:100, study:90
+2026-05-10 18:00:02, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-10 18:00:27, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-05-10 18:00:28, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-10 18:00:27, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-10 18:00:27, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-10 18:00:27, MOVE, v:1, k:ed@bettersearch, mode:EDIT

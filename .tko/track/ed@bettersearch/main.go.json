@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-11_10-38-00",
+            "content": "@@ -263,20 +263,21 @@\n n true, \n-meio\n+value\n %0A%09%09%7D%0A%09%09i\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-11_10-39-30",
+            "content": "@@ -154,29 +154,8 @@\n ice)\n- - 1 // Ajustado aqui\n %0A%0A%09f\n@@ -177,131 +177,8 @@\n o %7B%0A\n-%09%09// Uma forma mais segura de calcular o meio para evitar overflow em listas gigantes:%0A%09%09// meio := baixo + (alto-baixo)/2%0A\n %09%09me\n@@ -202,17 +202,16 @@\n to) / 2%0A\n-%0A\n %09%09chute \n@@ -225,17 +225,16 @@\n e%5Bmeio%5D%0A\n-%0A\n %09%09if chu\n@@ -271,62 +271,8 @@\n meio\n- // Geralmente retornamos o %C3%ADndice 'meio', n%C3%A3o o valor\n %0A%09%09%7D\n@@ -369,58 +369,9 @@\n se, \n--1 // Retornar -1 %C3%A9 o padr%C3%A3o para %22n%C3%A3o encontrado%22\n+0\n %0A%7D%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-11_10-40-08",
+            "content": "@@ -154,17 +154,34 @@\n ice) - 1\n+ // Ajustado aqui\n %0A\n-\n %0A%09for ba\n@@ -194,16 +194,139 @@\n  alto %7B%0A\n+%09%09// Uma forma mais segura de calcular o meio para evitar overflow em listas gigantes:%0A%09%09// meio := baixo + (alto-baixo)/2%0A\n %09%09meio :\n@@ -346,16 +346,17 @@\n to) / 2%0A\n+%0A\n %09%09chute \n@@ -370,16 +370,17 @@\n e%5Bmeio%5D%0A\n+%0A\n %09%09if chu\n@@ -413,16 +413,70 @@\n ue, meio\n+ // Geralmente retornamos o %C3%ADndice 'meio', n%C3%A3o o valor\n %0A%09%09%7D%0A%09%09i\n@@ -565,17 +565,66 @@\n  false, \n-0\n+-1 // Retornar -1 %C3%A9 o padr%C3%A3o para %22n%C3%A3o encontrado%22\n %0A%7D%0A%0Afunc\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-11_10-40-41",
+            "content": "@@ -177,17 +177,16 @@\n  alto %7B%0A\n-%0A\n %09%09meio :\n@@ -255,74 +255,8 @@\n e %7B%0A\n-%09%09%09for i := 0; i %3C len(slice); i++ %7B%0A%09%09%09%09if value == slice%5Bi%5D %7B%0A%09%09\n %09%09%09r\n@@ -271,20 +271,12 @@\n ue, \n-i%0A%09%09%09%09%7D%0A%09%09%09%7D\n+meio\n %0A%09%09%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-11_10-44-51",
+            "content": "@@ -374,20 +374,20 @@\n lue %7B%0A%09%09\n-baix\n+%09alt\n o = meio\n@@ -387,17 +387,17 @@\n  = meio \n-+\n+-\n  1%0A%09%09%7D e\n@@ -401,27 +401,28 @@\n %7D else %7B%0A%09%09%09\n-alt\n+baix\n o = meio %0A%09%09\n@@ -418,16 +418,19 @@\n  = meio \n++ 1\n %0A%09%09%7D%0A%09%7D%0A\n@@ -444,20 +444,17 @@\n  false, \n-alto\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-11_10-49-42",
+            "content": "@@ -374,17 +374,16 @@\n lue %7B%0A%09%09\n-%09\n baixo = \n@@ -416,16 +416,17 @@\n o = meio\n+ \n %0A%09%09%7D%0A%09%7D%0A\n@@ -440,20 +440,19 @@\n  false, \n-baix\n+alt\n o%0A%7D%0A%0Afun\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-11_10-50-15",
+            "content": "@@ -151,16 +151,19 @@\n (slice) \n+- 1\n %0A%0A%09for b\n@@ -168,16 +168,17 @@\n  baixo %3C\n+=\n  alto %7B%0A\n@@ -192,30 +192,21 @@\n  := \n+(\n baixo +\n- (\n  alto\n- - baixo\n ) / \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-11_10-53-18",
+            "content": "@@ -150,16 +150,17 @@\n n(slice)\n+ \n %0A%0A%09for b\n@@ -197,20 +197,25 @@\n  + (\n+ \n alto\n--\n+ - \n baixo)\n-/\n+ / \n 2%0A%09%09\n@@ -367,17 +367,17 @@\n f chute \n-%3C\n+%3E\n  value %7B\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-11_10-53-37",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tbaixo := 0\n\talto := len(slice)\n\n\tfor baixo < alto {\n\n\t\tmeio := baixo + (alto-baixo)/2\n\t\tchute := slice[meio]\n\t\tif chute == value {\n\t\t\tfor i := 0; i < len(slice); i++ {\n\t\t\t\tif value == slice[i] {\n\t\t\t\t\treturn true, i\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tif chute < value {\n\t\t\tbaixo = meio + 1\n\t\t} else {\n\t\t\talto = meio\n\t\t}\n\t}\n\treturn false, baixo\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "52"
+        }
+    ]
+}

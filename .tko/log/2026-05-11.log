@@ -1,0 +1,16 @@
+2026-05-11 10:26:39, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-11 10:29:49, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-11 10:36:28, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-11 10:38:00, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:0, size:47
+2026-05-11 10:39:30, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:0, size:47
+2026-05-11 10:40:08, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:51
+2026-05-11 10:40:41, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:47
+2026-05-11 10:40:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-11 10:44:51, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:52
+2026-05-11 10:46:12, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-11 10:49:42, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:9, size:52
+2026-05-11 10:50:15, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:52
+2026-05-11 10:50:13, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-11 10:53:18, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:52
+2026-05-11 10:53:37, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:52
+2026-05-11 10:53:54, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:30
