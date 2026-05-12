@@ -14,3 +14,13 @@
 2026-05-11 10:53:18, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:52
 2026-05-11 10:53:37, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:52
 2026-05-11 10:53:54, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:30
+2026-05-11 10:54:37, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-11 10:54:55, MOVE, v:1, k:ed@setbuild, mode:DOWN
+2026-05-11 10:54:56, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-11 10:53:34, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-11 10:54:54, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-11 10:54:54, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-11 10:54:55, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-11 10:54:55, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-11 11:01:25, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-11 11:06:11, MOVE, v:1, k:ed@setbuild, mode:EDIT
