@@ -34,3 +34,60 @@
 2026-05-12 11:35:10, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:143
 2026-05-12 11:35:06, MOVE, v:1, k:ed@setbuild, mode:EDIT
 2026-05-12 11:37:28, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:120
+2026-05-12 11:38:17, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-05-12 11:45:43, MOVE, v:1, k:ed@multiset, mode:DOWN
+2026-05-12 11:45:45, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 11:45:43, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 11:45:43, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 11:45:43, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 11:55:34, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 12:00:31, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 12:04:04, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:14:11, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:17:49, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:19:29, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 16:20:53, EXEC, v:1, k:ed@multiset, mode:FULL, size:102, fail:COMP
+2026-05-12 16:22:14, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-05-12 16:23:27, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:102
+2026-05-12 16:24:02, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:104
+2026-05-12 16:23:57, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:24:43, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:104
+2026-05-12 16:25:00, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:104
+2026-05-12 16:25:08, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:104
+2026-05-12 16:25:26, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:104
+2026-05-12 16:25:48, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 16:25:49, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0
+2026-05-12 16:30:32, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:105
+2026-05-12 16:30:25, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:32:09, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:105
+2026-05-12 16:33:06, EXEC, v:1, k:ed@multiset, mode:FULL, rate:16, size:108
+2026-05-12 16:33:30, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:40:20, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:118
+2026-05-12 16:40:18, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:43:40, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:49:35, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:136
+2026-05-12 16:50:18, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:137
+2026-05-12 16:50:12, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:51:31, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:137
+2026-05-12 16:52:39, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:137
+2026-05-12 16:53:57, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:140
+2026-05-12 16:54:39, EXEC, v:1, k:ed@multiset, mode:FULL, rate:33, size:140
+2026-05-12 16:54:37, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 16:58:06, EXEC, v:1, k:ed@multiset, mode:FULL, rate:50, size:141
+2026-05-12 16:59:16, EXEC, v:1, k:ed@multiset, mode:FULL, rate:50, size:142
+2026-05-12 17:00:43, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 17:05:21, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 17:10:35, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 17:11:08, EXEC, v:1, k:ed@multiset, mode:FULL, rate:50, size:160
+2026-05-12 17:12:03, EXEC, v:1, k:ed@multiset, mode:FULL, rate:50, size:160
+2026-05-12 17:12:43, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:157
+2026-05-12 17:15:47, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 17:16:59, EXEC, v:1, k:ed@multiset, mode:FULL, size:172, fail:COMP
+2026-05-12 17:17:34, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:172
+2026-05-12 17:18:13, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:172
+2026-05-12 17:18:26, EXEC, v:1, k:ed@multiset, mode:FULL, rate:83, size:172
+2026-05-12 17:20:19, EXEC, v:1, k:ed@multiset, mode:FULL, rate:83, size:178
+2026-05-12 17:20:17, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 17:21:33, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100, size:181
+2026-05-12 17:21:48, SELF, v:1, k:ed@multiset, self:1, rate:100, study:120
+2026-05-12 17:21:50, MOVE, v:1, k:ed@multiset, mode:BACK
