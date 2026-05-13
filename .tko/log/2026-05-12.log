@@ -91,3 +91,21 @@
 2026-05-12 17:21:33, EXEC, v:1, k:ed@multiset, mode:FULL, rate:100, size:181
 2026-05-12 17:21:48, SELF, v:1, k:ed@multiset, self:1, rate:100, study:120
 2026-05-12 17:21:50, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 17:23:56, MOVE, v:1, k:ed@iterador, mode:DOWN
+2026-05-12 17:23:57, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-05-12 17:23:58, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:82
+2026-05-12 17:21:31, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-05-12 17:23:56, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 17:23:56, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 17:23:56, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 21:04:46, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-05-12 21:04:48, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33
+2026-05-12 21:06:05, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 21:08:32, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 21:17:19, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 21:22:14, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 21:22:37, EXEC, v:1, k:ed@iterador, mode:FULL, size:108, fail:COMP
+2026-05-12 21:23:31, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:108
+2026-05-12 21:26:16, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:108
+2026-05-12 21:26:41, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:108
+2026-05-12 21:27:00, SELF, v:1, k:ed@iterador, self:1, rate:100, study:30
