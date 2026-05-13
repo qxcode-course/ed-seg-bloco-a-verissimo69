@@ -109,3 +109,7 @@
 2026-05-12 21:26:16, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:108
 2026-05-12 21:26:41, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:108
 2026-05-12 21:27:00, SELF, v:1, k:ed@iterador, self:1, rate:100, study:30
+2026-05-12 21:26:39, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-12 21:27:38, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-05-12 21:27:58, MOVE, v:1, k:ed@lista_d1, mode:DOWN
+2026-05-12 21:28:00, MOVE, v:1, k:ed@lista_d1, mode:PICK

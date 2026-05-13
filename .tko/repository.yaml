@@ -22,10 +22,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@list
 - ed@rec
-- ed@map_set
 - ed@vector
+- ed@list
+- ed@map_set
 flags:
   inbox: all
   panel: skills
@@ -33,5 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@iterador
-selected_index: 42
+selected: ed@lista_d1
+selected_index: 44

@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-13_10-11-38",
+            "content": "@@ -249,153 +249,8 @@\n %0A%7D%0A%0A\n-func (l *List)PushFront(num int)%7B%0A%09n:= &Node%7B%0A%09%09data: num,%0A%09%7D%0A%0A%09first := l.sentinel.next%0A%09n.prev = l.sentinel%0A%0A%09n.next =first%0A%09first.prev = n%0A%7D%0A%0A\n func\n@@ -458,16 +458,17 @@\n urn txt%0A\n+%09\n %0A%7D%0Afunc \n@@ -973,16 +973,19 @@\n nt%22:%0A%09%09%09\n+// \n for _, v\n@@ -1008,16 +1008,18 @@\n :%5D %7B%0A%09%09%09\n+//\n  %09num, _\n@@ -1041,16 +1041,18 @@\n i(v)%0A%09%09%09\n+//\n  %09ll.Pus\n@@ -1066,16 +1066,19 @@\n num)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-13_10-14-58",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -259,17 +259,16 @@\n l *List)\n- \n PushFron\n@@ -281,14 +281,12 @@\n int)\n- \n %7B%0A%09n\n- \n := &\n@@ -365,17 +365,16 @@\n n.next =\n- \n first%0A%09f\n@@ -1149,16 +1149,17 @@\n :%5D %7B%0A%09%09%09\n+ \n %09num, _ \n@@ -1180,16 +1180,17 @@\n i(v)%0A%09%09%09\n+ \n %09ll.Push\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-05-13_10-15-23",
+            "content": "@@ -351,30 +351,8 @@\n next\n-%0A%0A%09l.sentinel.next = n\n %0A%09n.\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-05-13_10-30-01",
+            "content": "@@ -614,9 +614,9 @@\n xt)-\n-2\n+1\n %5D%0A%09%7D\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-13_10-30-21",
+            "content": "@@ -431,140 +431,8 @@\n %0A%7D%0A%0A\n-func (l *List) Size() int %7B%0A%0A%09count := 0%0A%09for i := l.sentinel.next; i != l.sentinel; i = i.sentinel %7B%0A%09%09count++%0A%09%7D%0A%09return count%0A%7D%0A%0A\n func\n@@ -981,24 +981,26 @@\n  %22size%22:%0A%09%09%09\n+//\n fmt.Println(\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-13_10-34-30",
+            "content": "@@ -514,28 +514,32 @@\n inel; i = i.\n-next\n+sentinel\n  %7B%0A%09%09count++\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-05-13_10-34-59",
+            "content": "@@ -431,98 +431,8 @@\n %0A%7D%0A%0A\n-func (l *List) Clear() %7B%0A%0A%09l.sentinel.next = l.sentinel%0A%09l.sentinel.prev = l.sentinel%0A%0A%7D%0A%0A\n func\n@@ -1463,16 +1463,19 @@\n ar%22:%0A%09%09%09\n+// \n ll.Clear\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-05-13_10-39-40",
+            "content": "@@ -260,174 +260,8 @@\n %0A%7D%0A%0A\n-func (l *List) PushBack(num int) %7B%0A%09n := &Node%7B%0A%09%09data: num,%0A%09%7D%0A%09last := l.sentinel.prev%0A%0A%09l.sentinel.prev = n%0A%09n.next = l.sentinel%0A%0A%09n.prev = last%0A%09last.next = n%0A%7D%0A%0A\n func\n@@ -1245,24 +1245,27 @@\n h_back%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1276,32 +1276,35 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+// \n %09num, _ := strco\n@@ -1309,32 +1309,35 @@\n conv.Atoi(v)%0A%09%09%09\n+// \n %09ll.PushBack(num\n@@ -1333,32 +1333,35 @@\n ushBack(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22push_f\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-05-13_10-43-53",
+            "content": "@@ -815,288 +815,8 @@\n %0A%7D%0A%0A\n-func (l *List) PopBack() (int, error) %7B%0A%09last := l.sentinel.prev%0A%0A%09if last == l.sentinel %7B%0A%09%09return 0, fmt.Errorf(%22Lista vasia%22)%0A%09%7D%0A%0A%09value := last.data%0A%09prev := last.prev%0A%0A%09prev.next = l.sentinel%0A%09l.sentinel.prev = prev%0A%0A%09last.next = nil%0A%09last.prev = nil%0A%0A%09return value, nil%0A%0A%7D%0A%0A\n func\n@@ -1636,111 +1636,22 @@\n %0A%09%09%09\n-valor, err := ll.PopBack()%0A%09%09%09if err != nil %7B%0A%09%09%09%09fmt.Println(err)%0A%09%09%09%09return%0A%09%09%09%7D%0A%09%09%09fmt.Println(valor\n+// ll.PopBack(\n )%0A%09%09\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-05-13_10-50-53",
+            "content": "@@ -815,388 +815,8 @@\n %0A%7D%0A%0A\n-func (l *List) PopFront() (int, error) %7B%0A%09first := l.sentinel.next%0A%0A%09if first == l.sentinel %7B // lista vazia%0A%09%09return 0, fmt.Errorf(%22lista vazia%22)%0A%09%7D%0A%0A%09value := first.data%0A%09next := first.next%0A%0A%09// remover 'first'%0A%09l.sentinel.next = next%0A%09next.prev = l.sentinel%0A%0A%09// limpar ponteiros do n%C3%B3 removido (opcional, mas seguro)%0A%09first.next = nil%0A%09first.prev = nil%0A%0A%09return value, nil%0A%7D%0A%0A\n func\n@@ -2044,112 +2044,23 @@\n %0A%09%09%09\n-valor, err := ll.PopFront()%0A%09%09%09if err != nil %7B%0A%09%09%09%09fmt.Println(err)%0A%09%09%09%09return%0A%09%09%09%7D%0A%09%09%09fmt.Println(valor\n+// ll.PopFront(\n )%0A%09%09\n",
+            "lines": "154"
+        },
+        {
+            "label": "2026-05-13_10-53-26",
+            "content": "@@ -836,22 +836,29 @@\n pFront()\n+ (int,\n  error\n+)\n  %7B%0A%09firs\n@@ -928,16 +928,19 @@\n %09%09return\n+ 0,\n  fmt.Err\n@@ -1176,16 +1176,23 @@\n %0A%09return\n+ value,\n  nil%0A%7D%0A%0A\n@@ -2420,16 +2420,23 @@\n nt%22:%0A%09%09%09\n+valor, \n err := l\n@@ -2500,24 +2500,46 @@\n return%0A%09%09%09%7D%0A\n+%09%09%09fmt.Println(valor)%0A\n %09%09case %22clea\n",
+            "lines": "180"
+        },
+        {
+            "label": "2026-05-13_10-54-50",
+            "content": "@@ -952,16 +952,37 @@\n a%22)%0A%09%7D%0A%0A\n+%09value := first.data%0A\n %09next :=\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-13_10-55-01",
+            "content": "@@ -877,10 +877,8 @@\n t%0A%0A%09\n-/*\n if f\n@@ -954,10 +954,8 @@\n )%0A%09%7D\n-*/\n %0A%0A%09n\n@@ -2382,16 +2382,23 @@\n nt%22:%0A%09%09%09\n+err := \n ll.PopFr\n@@ -2403,16 +2403,71 @@\n Front()%0A\n+%09%09%09if err != nil %7B%0A%09%09%09%09fmt.Println(err)%0A%09%09%09%09return%0A%09%09%09%7D\n %0A%09%09case \n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-13_10-56-01",
+            "content": "@@ -836,16 +836,22 @@\n pFront()\n+ error\n  %7B%0A%09firs\n@@ -873,16 +873,18 @@\n .next%0A%0A%09\n+/*\n if first\n@@ -923,19 +923,47 @@\n %09%09return\n+ fmt.Errorf(%22lista vazia%22)\n %0A%09%7D\n+*/\n %0A%0A%09next \n@@ -1149,16 +1149,20 @@\n %0A%09return\n+ nil\n %0A%7D%0A%0Afunc\n@@ -2400,16 +2400,17 @@\n Front()%0A\n+%0A\n %09%09case %22\n",
+            "lines": "175"
+        },
+        {
+            "label": "2026-05-13_10-56-53",
+            "content": "@@ -1104,16 +1104,25 @@\n ev = nil\n+%0A%0A%09return\n %0A%7D%0A%0Afunc\n@@ -1141,16 +1141,29 @@\n opBack()\n+ (int, error)\n  %7B%0A%09last\n@@ -1216,19 +1216,69 @@\n %09%09return\n-%0A%09%7D\n+ 0, fmt.Errorf(%22Lista vasia%22)%0A%09%7D%0A%0A%09value := last.data\n %0A%09prev :\n@@ -1374,16 +1374,36 @@\n  = nil%0A%0A\n+%09return value, nil%0A%0A\n %7D%0A%0Afunc \n@@ -2222,19 +2222,111 @@\n %0A%09%09%09\n-ll.PopBack(\n+valor, err := ll.PopBack()%0A%09%09%09if err != nil %7B%0A%09%09%09%09fmt.Println(err)%0A%09%09%09%09return%0A%09%09%09%7D%0A%09%09%09fmt.Println(valor\n )%0A%09%09\n",
+            "lines": "174"
+        },
+        {
+            "label": "2026-05-13_10-57-53",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tdata int\n\tnext *Node\n\tprev *Node\n}\n\ntype List struct {\n\tsentinel *Node\n}\n\nfunc NewLList() *List {\n\ts := &Node{data: 0}\n\ts.next = s\n\ts.prev = s\n\treturn &List{sentinel: s}\n}\n\nfunc (l *List) PushBack(num int) {\n\tn := &Node{\n\t\tdata: num,\n\t}\n\tlast := l.sentinel.prev\n\n\tl.sentinel.prev = n\n\tn.next = l.sentinel\n\n\tn.prev = last\n\tlast.next = n\n}\n\nfunc (l *List) PushFront(num int) {\n\tn := &Node{\n\t\tdata: num,\n\t}\n\n\tfirst := l.sentinel.next\n\n\tl.sentinel.next = n\n\tn.prev = l.sentinel\n\n\tn.next = first\n\tfirst.prev = n\n}\n\nfunc (l *List) Clear() {\n\n\tl.sentinel.next = l.sentinel\n\tl.sentinel.prev = l.sentinel\n\n}\n\nfunc (l *List) Size() int {\n\n\tcount := 0\n\tfor i := l.sentinel.next; i != l.sentinel; i = i.next {\n\t\tcount++\n\t}\n\treturn count\n}\n\nfunc (l *List) PopFront() {\n\tfirst := l.sentinel.next\n\n\tif first == l.sentinel { // lista vazia\n\t\treturn\n\t}\n\n\tnext := first.next\n\n\t// remover 'first'\n\tl.sentinel.next = next\n\tnext.prev = l.sentinel\n\n\t// limpar ponteiros do n\u00f3 removido (opcional, mas seguro)\n\tfirst.next = nil\n\tfirst.prev = nil\n}\n\nfunc (l *List) PopBack() {\n\tlast := l.sentinel.prev\n\n\tif last == l.sentinel {\n\t\treturn\n\t}\n\tprev := last.prev\n\n\tprev.next = l.sentinel\n\tl.sentinel.prev = prev\n\n\tlast.next = nil\n\tlast.prev = nil\n\n}\n\nfunc (l *List) String() string {\n\ttxt := \"[\"\n\tfor i := l.sentinel.next; i != l.sentinel; i = i.next {\n\t\ttxt += fmt.Sprintf(\"%d, \", i.data)\n\t}\n\tif len(txt) > 1 {\n\t\ttxt = txt[:len(txt)-2]\n\t}\n\ttxt += \"]\"\n\treturn txt\n\n}\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewLList()\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tfmt.Println(ll.String())\n\t\tcase \"size\":\n\t\t\tfmt.Println(ll.Size())\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushBack(num)\n\t\t\t}\n\t\tcase \"push_front\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushFront(num)\n\t\t\t}\n\t\tcase \"pop_back\":\n\t\t\tll.PopBack()\n\t\tcase \"pop_front\":\n\t\t\tll.PopFront()\n\t\tcase \"clear\":\n\t\t\tll.Clear()\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "163"
+        }
+    ]
+}
