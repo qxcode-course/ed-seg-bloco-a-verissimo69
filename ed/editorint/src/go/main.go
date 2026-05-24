@@ -33,10 +33,19 @@ func (e *Editor) KeyLeft() {
 
 func (e *Editor) KeyEnter() {
 	newLine := NewList[rune]()
+	for e.cursor != e.line.Value.End() {
+		val := e.cursor.Value
+		next := e.cursor.Next()
+
+		e.line.Value.Erase(e.cursor)
+		newLine.PushBack(val)
+
+		e.cursor = next
+	}
+
 	e.lines.Insert(e.line.Next(), newLine)
 	e.line = e.line.Next()
 	e.cursor = e.line.Value.Front()
-
 }
 
 func (e *Editor) KeyRight() {
@@ -49,12 +58,36 @@ func (e *Editor) KeyRight() {
 }
 
 func (e *Editor) KeyUp() {
-	e.line = e.line.Prev()
+	if e.line != e.lines.Front() {
+		// Descobre a posição atual do cursor na linha
+		x := e.line.Value.IndexOf(e.cursor)
+
+		// Sobe a linha
+		e.line = e.line.Prev()
+		e.cursor = e.line.Value.Front()
+
+		// Avança o cursor na nova linha até chegar no 'x' original ou no fim da linha
+		for i := 0; i < x && e.cursor != e.line.Value.End(); i++ {
+			e.cursor = e.cursor.Next()
+		}
+	}
 }
 
 func (e *Editor) KeyDown() {
-}
+	if e.line.Next() != e.lines.End() {
+		// Descobre a posição atual do cursor na linha
+		x := e.line.Value.IndexOf(e.cursor)
 
+		// Desce a linha
+		e.line = e.line.Next()
+		e.cursor = e.line.Value.Front()
+
+		// Avança o cursor na nova linha até chegar no 'x' original ou no fim da linha
+		for i := 0; i < x && e.cursor != e.line.Value.End(); i++ {
+			e.cursor = e.cursor.Next()
+		}
+	}
+}
 func (e *Editor) KeyBackspace() {
 	// 1. Caso comum: Apagar caratere à esquerda
 	if e.cursor != e.line.Value.Front() {
@@ -105,7 +138,7 @@ func (e *Editor) KeyDelete() {
 		e.cursor = e.line.Value.Erase(e.cursor)
 		return
 	}
-	
+
 	if e.line != e.lines.Front() {
 		prevLineNode := e.line.Prev()
 		lineAcima := prevLineNode.Value
