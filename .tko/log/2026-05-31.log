@@ -36,3 +36,27 @@
 2026-05-31 13:12:25, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:52
 2026-05-31 13:12:22, MOVE, v:1, k:ed@permutacoes, mode:EDIT
 2026-05-31 13:14:44, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:40, concept:1, problem:1
+2026-05-31 13:15:46, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-31 13:16:24, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-05-31 13:16:24, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:16:24, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:29:28, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:34:30, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:39:35, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:44:34, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:49:35, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:54:14, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-31 13:54:16, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:54:07, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 13:55:32, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:56:14, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:56:28, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:56:35, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:56:45, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:57:07, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:57:18, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:57:44, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:48
+2026-05-31 13:57:38, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-31 14:11:08, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:87
+2026-05-31 14:11:38, SELF, v:1, k:ed@distancia, self:1, rate:100, study:90, concept:1, code:1
+2026-05-31 14:11:44, MOVE, v:1, k:ed@distancia, mode:BACK

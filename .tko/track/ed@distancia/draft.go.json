@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-31_13-54-16",
+            "content": "@@ -193,18 +193,16 @@\n atual%5Bpr\n--1\n %5D = atua\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-55-32",
+            "content": "@@ -193,16 +193,18 @@\n atual%5Bpr\n+-1\n %5D = atua\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-56-14",
+            "content": "@@ -186,11 +186,8 @@\n  %25 3\n- +1\n %0A%09%09a\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-56-28",
+            "content": "@@ -183,17 +183,17 @@\n ice %25 3 \n--\n++\n 1%0A%09%09atua\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-56-35",
+            "content": "@@ -172,17 +172,16 @@\n %09%09pr := \n-(\n indice %25\n@@ -186,12 +186,10 @@\n  %25 3\n-)\n  -\n- \n 1%0A%09%09\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-56-45",
+            "content": "@@ -177,19 +177,23 @@\n := (\n-3 %25 \n indice\n-)\n+ %25 3) - 1\n %0A%09%09a\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-57-07",
+            "content": "@@ -172,16 +172,17 @@\n %09%09pr := \n+(\n 3 %25 indi\n@@ -183,16 +183,17 @@\n %25 indice\n+)\n %0A%09%09atual\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-57-18",
+            "content": "@@ -175,19 +175,19 @@\n r :=\n+ 3 %25\n  indice\n- %25 3\n %0A%09%09a\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_13-57-44",
+            "content": "@@ -16,16 +16,25 @@\n mport (%0A\n+%09%22bufio%22%0A\n %09%22fmt%22%0A%09\n@@ -34,22 +34,17 @@\n %22fmt%22%0A%09%22\n-string\n+o\n s%22%0A)%0A%0Afu\n@@ -50,194 +50,341 @@\n unc \n-main() %7B%0A%09var s string%0A%09var l int%0A%0A%09// L%C3%AA a string e o valor limite L%0A%09if _, err := fmt.Scan(&s, &l); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09chars := %5B%5Drune(s)%0A%09atual := make(%5B%5Dint, len(chars)\n+distancia(atual %5B%5Dint, n, indice int) %5B%5Dint %7B%0A%09if indice == len(atual) %7B%0A%09%09return atual%0A%09%7D%0A%0A%09if atual%5Bindice%5D != -1 %7B%0A%09%09pr := indice %25 3%0A%09%09atual%5Bpr%5D = atual%5Bindice%5D%0A%09%7D%0A%09distancia(atual, n, indice+1)%0A%0A%09return atual%0A%7D%0A%0Afunc main() %7B%0A%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A%09s := scanner.Text(\n )%0A%0A%09//\n+ 1.\n  Con\n@@ -388,16 +388,17 @@\n Converte\n+r\n  a strin\n@@ -408,56 +408,125 @@\n ara \n-o nosso vetor de inteiros (-1 para os pontos '.'\n+um slice de caracteres (runes ou bytes)%0A%09chars := %5B%5Drune(s)%0A%09var n int%0A%09fmt.Scan(&n)%0A%09atual := make(%5B%5Dint, len(chars)\n )%0A%09f\n@@ -563,24 +563,31 @@\n  %7B%0A%09%09if \n+string(\n chars%5Bi%5D\n  != '.' \n@@ -582,15 +582,16 @@\n s%5Bi%5D\n+)\n  != \n-'.'\n+%22.%22\n  %7B%0A%09\n@@ -659,1747 +659,61 @@\n %09%09%7D%0A\n-%09%7D%0A%0A%09// Dispara o Backtracking iniciando do %C3%ADndice 0%0A%09if resolver(atual, l, 0) %7B%0A%09%09// Se encontrou a solu%C3%A7%C3%A3o, reconverte para string e imprime%0A%09%09var resultado strings.Builder%0A%09%09for _, num := range atual %7B%0A%09%09%09resultado.WriteByte(byte(num) + '0')%0A%09%09%7D%0A%09%09fmt.Println(resultado.String())%0A%09%7D%0A%7D%0A%0A// Fun%C3%A7%C3%A3o de Backtracking%0Afunc resolver(atual %5B%5Dint, l, indice int) bool %7B%0A%09// Caso Base: se chegamos ao fim do vetor, encontramos a %C3%BAnica solu%C3%A7%C3%A3o v%C3%A1lida!%0A%09if indice == len(atual) %7B%0A%09%09return true%0A%09%7D%0A%0A%09// Se a posi%C3%A7%C3%A3o atual J%C3%81 TIVER um n%C3%BAmero fixo de f%C3%A1brica, apenas valida e avan%C3%A7a%0A%09if atual%5Bindice%5D != -1 %7B%0A%09%09if podeColocar(atual, l, indice, atual%5Bindice%5D) %7B%0A%09%09%09return resolver(atual, l, indice+1)%0A%09%09%7D%0A%09%09return false // Se o n%C3%BAmero fixo violar a regra de dist%C3%A2ncia, o caminho %C3%A9 inv%C3%A1lido%0A%09%7D%0A%0A%09// Se for um espa%C3%A7o vazio (-1), tenta colocar cada d%C3%ADgito de 0 at%C3%A9 L%0A%09for num := 0; num %3C= l; num++ %7B%0A%09%09if podeColocar(atual, l, indice, num) %7B%0A%09%09%09// Decis%C3%A3o: coloca o n%C3%BAmero%0A%09%09%09atual%5Bindice%5D = num%0A%0A%09%09%09// Recurs%C3%A3o: vai para o pr%C3%B3ximo %C3%ADndice. Se der certo at%C3%A9 o final, retorna true%0A%09%09%09if resolver(atual, l, indice+1) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%09// Backtracking: Se deu errado mais para a frente, limpa a posi%C3%A7%C3%A3o e tenta o pr%C3%B3ximo 'num'%0A%09%09%09atual%5Bindice%5D = -1%0A%09%09%7D%0A%09%7D%0A%0A%09// Se testou todos os n%C3%BAmeros de 0 a L e nenhum serviu, volta na %C3%A1rvore de decis%C3%A3o%0A%09return false%0A%7D%0A%0A// Fun%C3%A7%C3%A3o que valida a dist%C3%A2ncia m%C3%ADnima de L casas %C3%A0 esquerda%0Afunc podeColocar(atual %5B%5Dint, l, indice, num int) bool %7B%0A%09// Verifica as posi%C3%A7%C3%B5es anteriores. N%C3%A3o precisamos olhar al%C3%A9m de 'l' casas para tr%C3%A1s.%0A%09for i := 1; i %3C= l; i++ %7B%0A%09%09anterior := indice - i%0A%09%09if anterior %3E= 0 %7B%0A%09%09%09if atual%5Banterior%5D == num %7B%0A%09%09%09%09return false // Encontrou o mesmo n%C3%BAmero perto demais!%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return true\n+%0A%09%7D%0A%0A%09txt := distancia(atual, n, 0)%0A%09fmt.Println(txt)%0A\n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-31_14-11-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar s string\n\tvar l int\n\n\t// L\u00ea a string e o valor limite L\n\tif _, err := fmt.Scan(&s, &l); err != nil {\n\t\treturn\n\t}\n\n\tchars := []rune(s)\n\tatual := make([]int, len(chars))\n\n\t// Converte a string para o nosso vetor de inteiros (-1 para os pontos '.')\n\tfor i := 0; i < len(chars); i++ {\n\t\tif chars[i] != '.' {\n\t\t\tatual[i] = int(chars[i] - '0')\n\t\t} else {\n\t\t\tatual[i] = -1\n\t\t}\n\t}\n\n\t// Dispara o Backtracking iniciando do \u00edndice 0\n\tif resolver(atual, l, 0) {\n\t\t// Se encontrou a solu\u00e7\u00e3o, reconverte para string e imprime\n\t\tvar resultado strings.Builder\n\t\tfor _, num := range atual {\n\t\t\tresultado.WriteByte(byte(num) + '0')\n\t\t}\n\t\tfmt.Println(resultado.String())\n\t}\n}\n\n// Fun\u00e7\u00e3o de Backtracking\nfunc resolver(atual []int, l, indice int) bool {\n\t// Caso Base: se chegamos ao fim do vetor, encontramos a \u00fanica solu\u00e7\u00e3o v\u00e1lida!\n\tif indice == len(atual) {\n\t\treturn true\n\t}\n\n\t// Se a posi\u00e7\u00e3o atual J\u00c1 TIVER um n\u00famero fixo de f\u00e1brica, apenas valida e avan\u00e7a\n\tif atual[indice] != -1 {\n\t\tif podeColocar(atual, l, indice, atual[indice]) {\n\t\t\treturn resolver(atual, l, indice+1)\n\t\t}\n\t\treturn false // Se o n\u00famero fixo violar a regra de dist\u00e2ncia, o caminho \u00e9 inv\u00e1lido\n\t}\n\n\t// Se for um espa\u00e7o vazio (-1), tenta colocar cada d\u00edgito de 0 at\u00e9 L\n\tfor num := 0; num <= l; num++ {\n\t\tif podeColocar(atual, l, indice, num) {\n\t\t\t// Decis\u00e3o: coloca o n\u00famero\n\t\t\tatual[indice] = num\n\n\t\t\t// Recurs\u00e3o: vai para o pr\u00f3ximo \u00edndice. Se der certo at\u00e9 o final, retorna true\n\t\t\tif resolver(atual, l, indice+1) {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\t// Backtracking: Se deu errado mais para a frente, limpa a posi\u00e7\u00e3o e tenta o pr\u00f3ximo 'num'\n\t\t\tatual[indice] = -1\n\t\t}\n\t}\n\n\t// Se testou todos os n\u00fameros de 0 a L e nenhum serviu, volta na \u00e1rvore de decis\u00e3o\n\treturn false\n}\n\n// Fun\u00e7\u00e3o que valida a dist\u00e2ncia m\u00ednima de L casas \u00e0 esquerda\nfunc podeColocar(atual []int, l, indice, num int) bool {\n\t// Verifica as posi\u00e7\u00f5es anteriores. N\u00e3o precisamos olhar al\u00e9m de 'l' casas para tr\u00e1s.\n\tfor i := 1; i <= l; i++ {\n\t\tanterior := indice - i\n\t\tif anterior >= 0 {\n\t\t\tif atual[anterior] == num {\n\t\t\t\treturn false // Encontrou o mesmo n\u00famero perto demais!\n\t\t\t}\n\t\t}\n\t}\n\treturn true\n}\n",
+            "lines": "87"
+        }
+    ]
+}
