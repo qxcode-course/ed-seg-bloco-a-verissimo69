@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-31_13-12-07",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n )%0A%0Af\n@@ -732,17 +732,20 @@\n une(s)%0A%0A\n-%09\n+    \n sort.Sli\n@@ -863,17 +863,20 @@\n  %5B%5Drune%0A\n-%09\n+    \n dfsPermu\n@@ -903,8 +903,9 @@\n ual)%0A%0A%7D%0A\n+%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-31_13-12-25",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n)\n\nfunc dfsPermutar(chars []rune, usado []bool, atual []rune) {\n\tif len(atual) == len(chars) {\n\t\tfmt.Println(string(atual))\n\t\treturn\n\t}\n\n\tfor i := 0; i < len(chars); i++ {\n\t\tif usado[i] {\n\t\t\tcontinue\n\t\t}\n\n\t\t// Decis\u00e3o\n\t\tusado[i] = true\n\t\tatual = append(atual, chars[i])\n\n\t\t// Recurs\u00e3o (vai mais fundo na \u00e1rvore de decis\u00f5es)\n\t\tdfsPermutar(chars, usado, atual)\n\n\t\t// Backtracking (desfaz a decis\u00e3o para tentar o pr\u00f3ximo caractere do loop)\n\t\tusado[i] = false\n\t\tatual = atual[:len(atual)-1]\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\ts := scanner.Text()\n\n\t// 1. Converter a string para um slice de caracteres (runes ou bytes)\n\tchars := []rune(s)\n\n\tsort.Slice(chars, func(i, j int) bool {\n\t\treturn chars[i] < chars[j]\n\t})\n\n\tusado := make([]bool, len(chars))\n\tvar atual []rune\n\tdfsPermutar(chars, usado, atual)\n\n}\n",
+            "lines": "52"
+        }
+    ]
+}

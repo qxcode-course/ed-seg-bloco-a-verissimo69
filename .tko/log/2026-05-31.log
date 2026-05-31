@@ -24,3 +24,15 @@
 2026-05-31 12:49:24, MOVE, v:1, k:ed@subset_sum, mode:EDIT
 2026-05-31 12:51:29, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:49
 2026-05-31 12:52:05, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:30, concept:1
+2026-05-31 12:53:45, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-31 12:54:06, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-05-31 12:51:14, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-31 12:54:06, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-31 12:54:06, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-31 13:09:34, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-31 13:12:06, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-31 13:12:07, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:52, fail:COMP
+2026-05-31 13:12:09, EXEC, v:1, k:ed@permutacoes, mode:FULL, fail:COMP
+2026-05-31 13:12:25, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:52
+2026-05-31 13:12:22, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-31 13:14:44, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:40, concept:1, problem:1
