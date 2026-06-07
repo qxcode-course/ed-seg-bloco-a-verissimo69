@@ -60,3 +60,4 @@
 2026-05-31 14:11:08, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:87
 2026-05-31 14:11:38, SELF, v:1, k:ed@distancia, self:1, rate:100, study:90, concept:1, code:1
 2026-05-31 14:11:44, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-31 14:11:06, MOVE, v:1, k:ed@distancia, mode:EDIT

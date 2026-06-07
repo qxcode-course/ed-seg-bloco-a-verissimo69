@@ -19,22 +19,22 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
-- ed@list
-- ed@dfs
-- ed@bfs
-- ed@vector
-- ed@linear
-- ed@tree
 - ed@map_set
+- ed@list
+- ed@vector
+- ed@tree
 - eval1@eval1
+- ed@rec
+- ed@dfs
+- ed@linear
 - ed@backtrack
+- ed@bfs
 flags:
   inbox: inbox
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@distancia
-selected_index: 22
+selected: ed@bufferring
+selected_index: 15

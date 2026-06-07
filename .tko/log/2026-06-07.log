@@ -1,0 +1,35 @@
+2026-06-07 10:21:06, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-07 10:21:08, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100
+2026-06-07 10:21:52, MOVE, v:1, k:ed@bufferring, mode:DOWN
+2026-06-07 10:21:55, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-07 10:21:58, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:110
+2026-06-07 10:21:52, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:21:52, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:21:52, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:26:32, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:28:58, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:114
+2026-06-07 10:31:32, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:31:59, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:119
+2026-06-07 10:31:56, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:41:31, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:42:16, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:120
+2026-06-07 10:43:12, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:51:22, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:53:26, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:126
+2026-06-07 10:56:07, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:130
+2026-06-07 10:56:04, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 10:58:31, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:135
+2026-06-07 11:00:18, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16
+2026-06-07 11:00:16, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 11:02:09, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:135
+2026-06-07 11:05:16, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:163
+2026-06-07 11:05:13, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 11:11:33, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 11:12:33, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:176
+2026-06-07 11:15:33, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:183
+2026-06-07 11:16:31, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 11:17:09, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:190
+2026-06-07 11:18:01, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:190
+2026-06-07 11:18:25, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:189
+2026-06-07 11:18:32, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:188
+2026-06-07 11:18:48, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:189
