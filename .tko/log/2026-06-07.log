@@ -33,3 +33,38 @@
 2026-06-07 11:18:25, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:189
 2026-06-07 11:18:32, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:188
 2026-06-07 11:18:48, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:189
+2026-06-07 11:20:12, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:90, concept:1
+2026-06-07 11:20:13, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100
+2026-06-07 11:18:40, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-07 11:28:52, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-07 11:29:39, MOVE, v:1, k:ed@queimando, mode:DOWN
+2026-06-07 11:29:42, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-07 11:29:42, EXEC, v:1, k:ed@queimando, mode:FULL, size:77, fail:COMP
+2026-06-07 11:29:43, EXEC, v:1, k:ed@queimando, mode:FULL, fail:COMP
+2026-06-07 11:29:43, EXEC, v:1, k:ed@queimando, mode:FULL, fail:COMP
+2026-06-07 11:29:45, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-07 11:30:02, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-06-07 11:30:04, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-06-07 11:30:06, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-06-07 11:30:06, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-06-07 11:30:09, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-06-07 11:31:23, MOVE, v:1, k:ed@fila_enc, mode:DOWN
+2026-06-07 11:31:24, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-07 11:31:25, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:0, size:82
+2026-06-07 11:29:39, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-07 11:29:39, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-07 11:29:39, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-07 11:29:39, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-07 11:31:23, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:31:23, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:31:23, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:34:10, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:39:47, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:46:34, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:48:36, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:110, fail:COMP
+2026-06-07 11:48:55, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:33, size:110
+2026-06-07 11:51:32, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-07 11:52:42, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:33, size:124
+2026-06-07 11:52:43, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:33
+2026-06-07 11:53:15, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100, size:124
+2026-06-07 11:53:26, SELF, v:1, k:ed@fila_enc, self:1, rate:100, study:30
