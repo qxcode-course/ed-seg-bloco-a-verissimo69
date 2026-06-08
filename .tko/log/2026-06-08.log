@@ -1,0 +1,19 @@
+2026-06-08 10:28:38, MOVE, v:1, k:ed@pilha, mode:DOWN
+2026-06-08 10:28:41, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-08 10:28:38, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:28:38, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:28:38, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:31:20, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:37:50, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:41:30, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:91
+2026-06-08 10:43:00, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:44:07, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:96
+2026-06-08 10:44:37, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:96
+2026-06-08 10:46:37, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:99
+2026-06-08 10:47:47, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:99
+2026-06-08 10:48:01, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:48:44, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:102
+2026-06-08 10:49:13, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:102
+2026-06-08 10:52:55, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-08 10:53:27, EXEC, v:1, k:ed@pilha, mode:FULL, rate:100, size:115
+2026-06-08 10:53:47, SELF, v:1, k:ed@pilha, self:1, rate:100, study:40

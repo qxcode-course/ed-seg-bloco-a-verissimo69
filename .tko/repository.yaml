@@ -19,22 +19,22 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@map_set
-- ed@list
-- ed@vector
-- ed@tree
 - eval1@eval1
-- ed@rec
 - ed@dfs
 - ed@linear
-- ed@backtrack
+- ed@tree
+- ed@list
 - ed@bfs
+- ed@rec
+- ed@map_set
+- ed@backtrack
+- ed@vector
 flags:
   inbox: inbox
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fila_enc
+selected: ed@pilha
 selected_index: 15

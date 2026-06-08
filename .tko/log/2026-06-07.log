@@ -68,3 +68,4 @@
 2026-06-07 11:52:43, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:33
 2026-06-07 11:53:15, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100, size:124
 2026-06-07 11:53:26, SELF, v:1, k:ed@fila_enc, self:1, rate:100, study:30
+2026-06-07 11:54:14, MOVE, v:1, k:ed@fila_enc, mode:BACK
