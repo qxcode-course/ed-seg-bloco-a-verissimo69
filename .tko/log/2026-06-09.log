@@ -1,0 +1,8 @@
+2026-06-09 09:53:17, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-09 09:53:41, EXEC, v:1, k:ed@queimando, mode:FULL, fail:COMP
+2026-06-09 10:04:13, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-09 10:09:13, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-09 10:14:05, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-09 10:17:52, EXEC, v:1, k:ed@queimando, mode:FULL, rate:100, size:112
+2026-06-09 10:17:48, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-06-09 10:37:51, SELF, v:1, k:ed@queimando, self:1, rate:100, study:60, concept:1
