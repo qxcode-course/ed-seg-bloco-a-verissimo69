@@ -1,0 +1,41 @@
+2026-06-30 08:44:37, MOVE, v:1, k:ed@detonate, mode:DOWN
+2026-06-30 08:44:37, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 08:49:04, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 08:52:19, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:08:51, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:09:29, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-06-30 09:09:31, EXEC, v:1, k:ed@detonate, mode:FULL, size:37, fail:COMP
+2026-06-30 09:09:34, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-06-30 09:14:05, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:14:09, EXEC, v:1, k:ed@detonate, mode:FULL, size:64, fail:COMP
+2026-06-30 09:19:04, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:23:08, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:85
+2026-06-30 09:23:04, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:28:22, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:86
+2026-06-30 09:28:56, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:87
+2026-06-30 09:28:53, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:30:12, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:88
+2026-06-30 09:33:52, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:92
+2026-06-30 09:33:49, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:34:17, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0
+2026-06-30 09:34:45, EXEC, v:1, k:ed@detonate, mode:FULL, size:89, fail:COMP
+2026-06-30 09:35:01, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:89
+2026-06-30 09:34:59, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:42:55, EXEC, v:1, k:ed@detonate, mode:FULL, rate:0, size:92
+2026-06-30 09:43:29, EXEC, v:1, k:ed@detonate, mode:FULL, rate:100, size:104
+2026-06-30 09:43:26, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-30 09:44:10, SELF, v:1, k:ed@detonate, self:1, rate:100, study:100, concept:1, debug:1, refactor:1
+2026-06-30 09:44:12, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-06-30 09:45:18, MOVE, v:1, k:ed@serial, mode:DOWN
+2026-06-30 09:45:18, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-30 09:45:18, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-30 10:34:05, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-30 10:35:45, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-30 10:35:47, EXEC, v:1, k:ed@serial, mode:FULL, rate:0, size:83
+2026-06-30 10:36:32, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-30 10:36:33, EXEC, v:1, k:ed@serial, mode:FULL, rate:0
+2026-06-30 10:38:21, EXEC, v:1, k:ed@serial, mode:FULL, rate:100, size:83
+2026-06-30 10:38:41, SELF, v:1, k:ed@serial, self:1, rate:100, study:40, concept:1
+2026-06-30 10:38:46, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-30 10:39:14, MOVE, v:1, k:ed@formatada, mode:DOWN
+2026-06-30 10:39:18, MOVE, v:1, k:ed@formatada, mode:PICK

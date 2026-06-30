@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-30_09-09-31",
+            "content": "@@ -492,593 +492,8 @@\n    %7D\n-%0A    maxBombs := 0%0A%0A    for i := 0; i%3Cn; i++%7B%0A        visited := make(%5B%5Dbool, n)%0A        queue := %5B%5Dint%7Bi%7D%0A        visited%5Bi%5D = true%0A        count := 0%0A%0A%0A        for len(queue) %3E 0%7B%0A%0A            curr := queue%5B0%5D%0A            queue = queue%5B1:%5D%0A            count ++%0A            for _, next := range adj%5Bcurr%5D%7B%0A                if !visited %5Bnext%5D%7B%0A                    visited%5Bnext%5D =  true%0A                    queue = append(queue, next)%0A                %7D%0A            %7D%0A%0A            if count %3E maxBombs%7B%0A                maxBombs = count%0A            %7D%0A        %7D%0A        return maxBombs%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-30_09-14-09",
+            "content": "@@ -22,23 +22,29 @@\n (%0A%09%22\n-bufio%22%0A%09%22fmt%22%0A%09\n+fmt%22%0A    %22bufio%22%0A    \n %22os%22\n@@ -67,18 +67,18 @@\n ruct\n- \n %7B%0A\n-%09\n+    \n x,\n- \n y,\n- \n r in\n@@ -102,17 +102,16 @@\n nate(b1,\n- \n b2 Bomb)\n@@ -119,15 +119,16 @@\n bool\n- \n %7B%0A\n-%09\n+    \n dx\n- \n := b\n@@ -136,15 +136,17 @@\n .x -\n- \n b2.x%0A\n-%09\n+    \n dy :\n@@ -159,17 +159,20 @@\n  - b2.y%0A\n-%09\n+    \n return (\n@@ -177,17 +177,19 @@\n  (dx*dx)\n-+\n+ + \n (dy*dy) \n@@ -200,24 +200,25 @@\n 1.r*b1.r%0A%7D%0A%0A\n+%0A\n func maxinum\n@@ -233,19 +233,19 @@\n on(bombs\n- \n %5B%5D\n+ \n Bomb) in\n@@ -249,17 +249,20 @@\n  int %7B%0A%0A\n-%09\n+    \n n := len\n@@ -270,17 +270,20 @@\n bombs)%0A%0A\n-%09\n+    \n adj := m\n@@ -294,16 +294,17 @@\n %5B%5D%5B%5D\n+ \n int, n)%0A\n %09for\n@@ -299,17 +299,20 @@\n int, n)%0A\n-%09\n+    \n for i :=\n@@ -316,30 +316,33 @@\n  := 0; i\n- %3C \n+%3C\n n; i++\n- \n %7B%0A\n-%09%09\n+        \n for j :=\n@@ -358,19 +358,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n if i != \n@@ -414,23 +414,34 @@\n ombs%5Bj%5D)\n- \n %7B%0A\n-%09%09%09%09\n+                \n adj%5Bi%5D =\n@@ -463,21 +463,42 @@\n  j)%0A\n-%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n+            %7D%0A        %7D%0A    %7D%0A    \n maxB\n@@ -508,17 +508,20 @@\n s := 0%0A%0A\n-%09\n+    \n for i :=\n@@ -525,30 +525,33 @@\n  := 0; i\n- %3C \n+%3C\n n; i++\n- \n %7B%0A\n-%09%09\n+        \n visited \n@@ -569,18 +569,24 @@\n ool, n)%0A\n-%09%09\n+        \n queue :=\n@@ -595,18 +595,24 @@\n %5Dint%7Bi%7D%0A\n-%09%09\n+        \n visited%5B\n@@ -621,18 +621,24 @@\n  = true%0A\n-%09%09\n+        \n count :=\n@@ -641,18 +641,25 @@\n t := 0%0A%0A\n+%0A\n-%09%09\n+        \n for len(\n@@ -672,15 +672,23 @@\n  %3E 0\n- \n %7B%0A%0A\n-%09%09%09\n+            \n curr\n@@ -700,19 +700,28 @@\n ueue%5B0%5D%0A\n-%09%09%09\n+            \n queue = \n@@ -734,22 +734,41 @@\n 1:%5D%0A\n-%09%09%09\n+            \n count\n+ \n ++%0A\n-%09%09%09\n+            \n for \n@@ -793,23 +793,34 @@\n dj%5Bcurr%5D\n- \n %7B%0A\n-%09%09%09%09\n+                \n if !visi\n@@ -826,22 +826,37 @@\n ited\n+ \n %5Bnext%5D\n- \n %7B%0A\n-%09%09%09%09%09\n+                    \n visi\n@@ -870,19 +870,35 @@\n t%5D =\n+ \n  true%0A\n-%09%09%09%09%09\n+                    \n queu\n@@ -925,25 +925,53 @@\n xt)%0A\n-%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n+                %7D%0A            %7D%0A%0A            \n if c\n@@ -985,22 +985,34 @@\n maxBombs\n- \n %7B%0A\n-%09%09%09\n+                \n maxBombs\n@@ -1024,559 +1024,108 @@\n unt%0A\n-%09%09%7D%0A%0A%09%7D%0A%09return maxBombs%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Split(bufio.ScanWords)%0A%09for %7B%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09var n int%0A%09%09fmt.Scanf(scanner.Text(), %22%25d%22, &n)%0A%0A%09%09bombs := make(%5B%5DBomb, n)%0A%09%09for i := 0; i %3C n; i++ %7B%0A%09%09%09var x, y, r int%0A%09%09%09scanner.Scan()%0A%09%09%09fmt.Scanf(scanner.Text(), %22%25d%22, &x)%0A%09%09%09scanner.Scan()%0A%09%09%09fmt.Scanf(scanner.Text(), %22%25d%22, &y)%0A%09%09%09scanner.Scan()%0A%09%09%09fmt.Scanf(scanner.Text(), %22%25d%22, &r)%0A%09%09%09bombs%5Bi%5D = Bomb%7Bx, y, r%7D%0A%09%09%7D%0A%0A%09%09resultado :=\n+            %7D%0A        %7D%0A        return maxBombs%0A    %7D%0A%0A%7D%0A%0Afunc\n  ma\n-x\n in\n-umDetonation(bombs)%0A%09%09fmt.Println(resultado)%0A%09%7D\n+() %7B%0A%09fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-06-30_09-23-08",
+            "content": "@@ -424,17 +424,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %09maxBomb\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-06-30_09-28-22",
+            "content": "@@ -573,16 +573,17 @@\n ) %3E 0 %7B%0A\n+%0A\n %09%09%09curr \n@@ -626,17 +626,16 @@\n count++%0A\n-%0A\n %09%09%09for _\n@@ -760,17 +760,16 @@\n %09%09%7D%0A%09%09%7D%0A\n-%0A\n %09%09if cou\n@@ -808,20 +808,20 @@\n unt%0A%09%09%7D%0A\n+%0A\n %09%7D%0A\n-%0A\n %09return \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-06-30_09-28-56",
+            "content": "@@ -918,17 +918,16 @@\n nWords)%0A\n-%0A\n %09for %7B%0A%09\n@@ -960,31 +960,14 @@\n reak\n- // Fim da entrada\n %0A%09%09%7D%0A\n+%0A\n %09%09va\n@@ -977,25 +977,24 @@\n  int%0A%09%09fmt.S\n-s\n canf(scanner\n@@ -1104,33 +1104,32 @@\n .Scan()%0A%09%09%09fmt.S\n-s\n canf(scanner.Tex\n@@ -1161,33 +1161,32 @@\n .Scan()%0A%09%09%09fmt.S\n-s\n canf(scanner.Tex\n@@ -1226,17 +1226,16 @@\n %09%09%09fmt.S\n-s\n canf(sca\n@@ -1257,17 +1257,16 @@\n d%22, &r)%0A\n-%0A\n %09%09%09bombs\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-06-30_09-30-12",
+            "content": "@@ -222,21 +222,20 @@\n bombs %5B%5D\n-%5B%5Dint\n+Bomb\n ) int %7B%0A\n@@ -257,243 +257,8 @@\n s)%0A%0A\n-%09canDetonate := func(i, j int) bool %7B%0A%09%09x1, y1, r1 := int64(bombs%5Bi%5D%5B0%5D), int64(bombs%5Bi%5D%5B1%5D), int64(bombs%5Bi%5D%5B2%5D)%0A%09%09x2, y2 := int64(bombs%5Bj%5D%5B0%5D), int64(bombs%5Bj%5D%5B1%5D)%0A%0A%09%09dx := x1 - x2%0A%09%09dy := y1 - y2%0A%09%09return (dx*dx)+(dy*dy) %3C= r1*r1%0A%09%7D%0A%0A\n %09adj\n@@ -363,12 +363,26 @@\n ate(\n-i, j\n+bombs%5Bi%5D, bombs%5Bj%5D\n ) %7B%0A\n@@ -1046,29 +1046,28 @@\n s := make(%5B%5D\n-%5B%5Dint\n+Bomb\n , n)%0A%09%09for i\n@@ -1093,66 +1093,143 @@\n %0A%09%09%09\n-bombs%5Bi%5D = make(%5B%5Dint, 3)%0A%09%09%09for j := 0; j %3C 3; j++ %7B\n+var x, y, r int%0A%09%09%09scanner.Scan()%0A%09%09%09fmt.Sscanf(scanner.Text(), %22%25d%22, &x)%0A%09%09%09scanner.Scan()%0A%09%09%09fmt.Sscanf(scanner.Text(), %22%25d%22, &y)\n %0A%09%09%09\n-%09\n scan\n@@ -1239,17 +1239,16 @@\n .Scan()%0A\n-%09\n %09%09%09fmt.S\n@@ -1276,24 +1276,31 @@\n  %22%25d%22, &\n+r)%0A%0A%09%09%09\n bombs%5Bi%5D\n %5Bj%5D)%0A%09%09%09\n@@ -1295,22 +1295,30 @@\n s%5Bi%5D\n-%5Bj%5D)%0A%09%09%09\n+ = Bomb%7Bx, y, r\n %7D%0A%09%09%7D%0A\n+%0A\n %09%09re\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-06-30_09-33-52",
+            "content": "@@ -200,17 +200,17 @@\n unc maxi\n-m\n+n\n umDetona\n@@ -235,16 +235,17 @@\n ) int %7B%0A\n+%0A\n %09n := le\n@@ -982,16 +982,17 @@\n %09%09%7D%0A%09%09%7D%0A\n+%0A\n %09%09if cou\n@@ -1034,16 +1034,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09return \n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-30_09-34-45",
+            "content": "@@ -1457,25 +1457,25 @@\n tado := maxi\n-m\n+n\n umDetonation\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-06-30_09-35-01",
+            "content": "@@ -257,74 +257,8 @@\n s)%0A%0A\n-%09// Fun%C3%A7%C3%A3o inline para calcular a dist%C3%A2ncia e verificar o alcance%0A\n %09can\n@@ -291,16 +291,16 @@\n  bool %7B%0A\n+\n %09%09x1, y1\n@@ -492,44 +492,8 @@\n %09%7D%0A%0A\n-%09// Constru%C3%A7%C3%A3o do Grafo Direcionado%0A\n %09adj\n@@ -666,32 +666,8 @@\n  0%0A%0A\n-%09// BFS para cada bomba%0A\n %09for\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-06-30_09-42-55",
+            "content": "@@ -1177,16 +1177,17 @@\n Bombs%0A%7D%0A\n+%0A\n func mai\n@@ -1196,81 +1196,8 @@\n ) %7B%0A\n-%09// Scanner configurado para ler palavra por palavra (n%C3%BAmero por n%C3%BAmero)%0A\n %09sca\n@@ -1275,46 +1275,8 @@\n r %7B%0A\n-%09%09// 1. L%C3%AA a quantidade de bombas (N)%0A\n %09%09if\n@@ -1324,14 +1324,8 @@\n rada\n- (EOF)\n %0A%09%09%7D\n@@ -1381,222 +1381,8 @@\n n)%0A%0A\n-%09%09// 2. L%C3%AA a quantidade de colunas (M) -%3E Sempre ser%C3%A1 3 neste problema%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09var m int%0A%09%09fmt.Sscanf(scanner.Text(), %22%25d%22, &m)%0A%0A%09%09// 3. Aloca e l%C3%AA a matriz de bombas baseado em N e M%0A\n %09%09bo\n@@ -1458,17 +1458,17 @@\n (%5B%5Dint, \n-m\n+3\n )%0A%09%09%09for\n@@ -1480,17 +1480,17 @@\n  0; j %3C \n-m\n+3\n ; j++ %7B%0A\n@@ -1493,19 +1493,16 @@\n + %7B%0A%09%09%09%09\n-if \n scanner.\n@@ -1507,20 +1507,17 @@\n r.Scan()\n- %7B%0A%09\n+%0A\n %09%09%09%09fmt.\n@@ -1566,81 +1566,13 @@\n %0A%09%09%09\n-%09\n %7D%0A%09%09\n-%09%7D%0A%09%09%7D%0A%0A%09%09// 4. Executa a l%C3%B3gica e imprime o resultado do caso atual\n+%7D\n %0A%09%09r\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-30_09-43-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Bomb struct {\n\tx, y, r int\n}\n\nfunc canDetonate(b1, b2 Bomb) bool {\n\tdx := b1.x - b2.x\n\tdy := b1.y - b2.y\n\treturn (dx*dx)+(dy*dy) <= b1.r*b1.r\n}\n\nfunc maximumDetonation(bombs [][]int) int {\n\tn := len(bombs)\n\n\t// Fun\u00e7\u00e3o inline para calcular a dist\u00e2ncia e verificar o alcance\n\tcanDetonate := func(i, j int) bool {\n\t\tx1, y1, r1 := int64(bombs[i][0]), int64(bombs[i][1]), int64(bombs[i][2])\n\t\tx2, y2 := int64(bombs[j][0]), int64(bombs[j][1])\n\n\t\tdx := x1 - x2\n\t\tdy := y1 - y2\n\t\treturn (dx*dx)+(dy*dy) <= r1*r1\n\t}\n\n\t// Constru\u00e7\u00e3o do Grafo Direcionado\n\tadj := make([][]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif i != j && canDetonate(i, j) {\n\t\t\t\tadj[i] = append(adj[i], j)\n\t\t\t}\n\t\t}\n\t}\n\n\tmaxBombs := 0\n\n\t// BFS para cada bomba\n\tfor i := 0; i < n; i++ {\n\t\tvisited := make([]bool, n)\n\t\tqueue := []int{i}\n\t\tvisited[i] = true\n\t\tcount := 0\n\n\t\tfor len(queue) > 0 {\n\t\t\tcurr := queue[0]\n\t\t\tqueue = queue[1:]\n\t\t\tcount++\n\n\t\t\tfor _, next := range adj[curr] {\n\t\t\t\tif !visited[next] {\n\t\t\t\t\tvisited[next] = true\n\t\t\t\t\tqueue = append(queue, next)\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tif count > maxBombs {\n\t\t\tmaxBombs = count\n\t\t}\n\t}\n\treturn maxBombs\n}\nfunc main() {\n\t// Scanner configurado para ler palavra por palavra (n\u00famero por n\u00famero)\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Split(bufio.ScanWords)\n\n\tfor {\n\t\t// 1. L\u00ea a quantidade de bombas (N)\n\t\tif !scanner.Scan() {\n\t\t\tbreak // Fim da entrada (EOF)\n\t\t}\n\t\tvar n int\n\t\tfmt.Sscanf(scanner.Text(), \"%d\", &n)\n\n\t\t// 2. L\u00ea a quantidade de colunas (M) -> Sempre ser\u00e1 3 neste problema\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tvar m int\n\t\tfmt.Sscanf(scanner.Text(), \"%d\", &m)\n\n\t\t// 3. Aloca e l\u00ea a matriz de bombas baseado em N e M\n\t\tbombs := make([][]int, n)\n\t\tfor i := 0; i < n; i++ {\n\t\t\tbombs[i] = make([]int, m)\n\t\t\tfor j := 0; j < m; j++ {\n\t\t\t\tif scanner.Scan() {\n\t\t\t\t\tfmt.Sscanf(scanner.Text(), \"%d\", &bombs[i][j])\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\t// 4. Executa a l\u00f3gica e imprime o resultado do caso atual\n\t\tresultado := maximumDetonation(bombs)\n\t\tfmt.Println(resultado)\n\t}\n}\n",
+            "lines": "104"
+        }
+    ]
+}

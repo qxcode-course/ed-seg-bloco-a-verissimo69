@@ -19,22 +19,23 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- eval1@eval1
-- ed@tree
-- ed@rec
-- ed@vector
-- ed@bfs
-- ed@linear
 - ed@dfs
+- ed@bfs
+- ed@tree
+- ed@vector
+- ed@linear
+- eval1@eval1
 - ed@backtrack
-- ed@map_set
+- ed@rec
+- ed@list
 flags:
-  inbox: inbox
-  panel: skills
-  show_panel: 'true'
+  inbox: all
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@queimando
-selected_index: 15
+selected: ed@serial
+selected_index: 63
