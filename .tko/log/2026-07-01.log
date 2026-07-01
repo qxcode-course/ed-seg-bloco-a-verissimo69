@@ -1,0 +1,68 @@
+2026-07-01 08:44:51, MOVE, v:1, k:ed@compare, mode:DOWN
+2026-07-01 08:44:53, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-01 08:44:57, EXEC, v:1, k:ed@compare, mode:FULL, rate:25, size:83
+2026-07-01 08:44:51, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-01 08:44:51, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-01 09:38:54, EXEC, v:1, k:ed@compare, mode:FULL, rate:25
+2026-07-01 09:41:26, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-01 09:43:39, EXEC, v:1, k:ed@compare, mode:FULL, rate:62, size:101
+2026-07-01 09:45:11, EXEC, v:1, k:ed@compare, mode:FULL, rate:62, size:104
+2026-07-01 09:45:08, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-01 09:47:47, EXEC, v:1, k:ed@compare, mode:FULL, rate:100, size:110
+2026-07-01 09:48:33, EXEC, v:1, k:ed@compare, mode:FULL, rate:100, size:103
+2026-07-01 09:48:44, SELF, v:1, k:ed@compare, self:1, rate:100, study:60
+2026-07-01 09:48:45, EXEC, v:1, k:ed@compare, mode:FULL, rate:100
+2026-07-01 09:48:47, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-01 09:48:30, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-01 09:51:58, MOVE, v:1, k:ed@arvore-path, mode:DOWN
+2026-07-01 09:52:00, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-01 09:52:01, EXEC, v:1, k:ed@arvore-path, mode:FULL, size:80, fail:COMP
+2026-07-01 09:52:27, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:0, size:80
+2026-07-01 09:51:58, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-01 09:52:23, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-01 10:36:31, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-01 10:38:58, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100, size:97
+2026-07-01 10:39:23, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:40
+2026-07-01 10:39:25, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-01 10:39:41, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-01 10:39:43, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100
+2026-07-01 10:40:28, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:12, size:97
+2026-07-01 10:40:25, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-01 10:44:17, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-01 10:44:25, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-01 10:44:27, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100, size:97
+2026-07-01 10:44:28, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-01 10:44:16, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-01 18:23:55, MOVE, v:1, k:ed@dfs_read, mode:DOWN
+2026-07-01 18:23:55, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-07-01 18:23:58, EXEC, v:1, k:ed@dfs_read, mode:LOCK, rate:0, size:5
+2026-07-01 18:24:05, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-07-01 18:24:07, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-07-01 18:24:09, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-01 18:24:10, EXEC, v:1, k:ed@ilhas, mode:FULL, size:31, fail:COMP
+2026-07-01 18:24:38, EXEC, v:1, k:ed@ilhas, mode:FULL, fail:COMP
+2026-07-01 18:25:56, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:0, size:30
+2026-07-01 18:23:55, MOVE, v:1, k:ed@dfs_read, mode:EDIT
+2026-07-01 18:24:07, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 18:25:55, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 18:53:10, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 19:03:11, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 19:04:00, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-01 19:04:12, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-01 19:04:14, EXEC, v:1, k:ed@ilhas, mode:FULL, size:43, fail:COMP
+2026-07-01 19:03:52, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 19:10:41, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-01 20:10:40, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-01 20:10:41, EXEC, v:1, k:ed@ilhas, mode:FULL, size:52, fail:COMP
+2026-07-01 20:14:04, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 20:14:59, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:59
+2026-07-01 20:15:17, SELF, v:1, k:ed@ilhas, self:1, rate:100, study:90
+2026-07-01 20:15:18, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-01 20:14:54, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 20:23:46, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-07-01 20:23:49, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
+2026-07-01 20:23:51, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-07-01 20:23:54, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-07-01 20:23:55, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
+2026-07-01 20:24:05, SELF, v:1, k:ed@queimada, self:1, rate:100, friend:120, guided:1, concept:1
+2026-07-01 20:24:07, MOVE, v:1, k:ed@queimada, mode:BACK

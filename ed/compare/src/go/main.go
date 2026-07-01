@@ -15,20 +15,32 @@ type Node struct {
 	Right *Node
 }
 
-// MyShow imprime a árvore binária de forma formatada.
-func MyShow(node *Node, nivel int) {
-	if node == nil {
-	
-		return
+func compare(a, b *Node) int {
+	if a == nil && b == nil {
+		return 0
 	}
-	MyShow(node.Left, nivel+1)
-	pontos := strings.Repeat(".", nivel*4)
-	fmt.Println(pontos + strconv.Itoa(node.Value))
-	MyShow(node.Right, nivel+1)
+	if a == nil && b != nil {
+		return -1
+	}
+	if a != nil && b == nil {
+		return 1
+	}
+	if a.Value < b.Value {
+		return -1
+	}
+	if a.Value > b.Value {
+		return 1
+	}
 
+	resEsquerda := compare(a.Left, b.Left)
+	if resEsquerda != 0 {
+		return resEsquerda
+	}
+
+	return compare(a.Right, b.Right)
 }
 
-// -----------------------------------------------------------------------------------
+// ----------------------------------------------------------------------
 func BShow(node *Node, history string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
 		BShow(node.Left, history+"l")
@@ -40,7 +52,6 @@ func BShow(node *Node, history string) {
 			fmt.Print("    ")
 		}
 	}
-
 	if history != "" {
 		if history[len(history)-1] == 'l' {
 			fmt.Print("╭───")
@@ -48,12 +59,10 @@ func BShow(node *Node, history string) {
 			fmt.Print("╰───")
 		}
 	}
-
 	if node == nil {
 		fmt.Println("#")
 		return
 	}
-
 	fmt.Println(node.Value)
 	if node.Left != nil || node.Right != nil {
 		BShow(node.Right, history+"r")
@@ -61,18 +70,11 @@ func BShow(node *Node, history string) {
 }
 
 func create(parts *[]string) *Node {
-	if len(*parts) == 0 {
-		return nil
-	}
-
 	elem := (*parts)[0]
 	*parts = (*parts)[1:]
-
 	if elem == "#" {
 		return nil
-
 	}
-
 	value, _ := strconv.Atoi(elem)
 	node := &Node{Value: value}
 	node.Left = create(parts)
@@ -82,14 +84,20 @@ func create(parts *[]string) *Node {
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	if scanner.Scan() {
-		// Divide tratando múltiplos espaços consecutivos caso existam
-		parts := strings.Fields(scanner.Text())
-		if len(parts) > 0 {
-			root := create(&parts)
-			BShow(root, "")
-			// Se o seu avaliador pedir a saída de MyShow separada, você pode testá-la aqui:
-			MyShow(root, 0)
-		}
+	scanner.Scan()
+	parts := strings.Split(scanner.Text(), " ")
+	a := create(&parts)
+	BShow(a, "")
+	scanner.Scan()
+	parts = strings.Split(scanner.Text(), " ")
+	b := create(&parts)
+	BShow(b, "")
+	result := compare(a, b)
+	if result == 0 {
+		fmt.Println("iguais")
+	} else if result < 0 {
+		fmt.Println("menor")
+	} else {
+		fmt.Println("maior")
 	}
 }

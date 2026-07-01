@@ -19,15 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@dfs
-- ed@bfs
+- ed@list
 - ed@tree
-- ed@vector
+- ed@backtrack
 - ed@linear
 - eval1@eval1
-- ed@backtrack
+- ed@dfs
 - ed@rec
-- ed@list
+- ed@vector
+- ed@bfs
 flags:
   inbox: all
   panel: graph
@@ -37,5 +37,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@serial
-selected_index: 63
+selected: ed@queimada
+selected_index: 8

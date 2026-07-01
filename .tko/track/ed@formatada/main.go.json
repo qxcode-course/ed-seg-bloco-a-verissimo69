@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-30_10-46-25",
+            "content": "@@ -220,217 +220,38 @@\n  %7B%0A%09\n-if node == nil %7B%0A%09%09fmt.Println(strings.Repeat(%22 %22, nivel) + %22#%22)%0A%09%09return%0A%09%7D%0A%0A%09fmt.Println(strings.Repeat(%22 %22, nivel) + strconv.Itoa((node.Value)))%0A%09MyShow(node.Left, nivel+1)%0A%09MyShow(node.Right, nivel+1)%0A\n+_, _ = node, nivel%0A%09// TODO\n %0A%7D%0A\n-%0A\n // -\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-30_11-07-52",
+            "content": "@@ -778,26 +778,24 @@\n   %22)%0A%09%09%7D%0A%09%7D%0A\n-%09%0A\n %09if history \n@@ -802,16 +802,16 @@\n != %22%22 %7B%0A\n+\n %09%09if his\n@@ -900,18 +900,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09%0A\n %09if node\n@@ -949,18 +949,16 @@\n turn%0A%09%7D%0A\n-%09%0A\n %09fmt.Pri\n@@ -1098,49 +1098,8 @@\n e %7B%0A\n-%09if len(*parts) == 0%7B%0A%09%09return nil%0A%09%7D%09%0A%09%0A\n %09ele\n@@ -1138,18 +1138,16 @@\n ts)%5B1:%5D%0A\n-%09%0A\n %09if elem\n@@ -1170,21 +1170,17 @@\n rn nil%0A%09\n-%0A%09%7D%0A%09\n+%7D\n %0A%09value,\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-30_11-13-28",
+            "content": "@@ -778,25 +778,26 @@\n   %22)%0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A\n-\n %09if history \n@@ -902,17 +902,18 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A\n-\n %09if node\n@@ -945,33 +945,34 @@\n #%22)%0A%09%09return%0A%09%7D%0A\n+%09\n %0A\n-\n %09fmt.Println(nod\n@@ -1120,17 +1120,16 @@\n ts) == 0\n- \n %7B%0A%09%09retu\n@@ -1137,17 +1137,19 @@\n n nil%0A%09%7D\n-%0A\n+%09%0A%09\n %0A%09elem :\n@@ -1185,17 +1185,18 @@\n ts)%5B1:%5D%0A\n+%09\n %0A\n-\n %09if elem\n@@ -1218,21 +1218,23 @@\n urn nil%0A\n+%09\n %0A\n-\n %09%7D%0A\n+%09\n %0A\n-\n %09value, \n@@ -1448,14 +1448,13 @@\n ngs.\n-Fields\n+Split\n (sca\n@@ -1468,33 +1468,15 @@\n xt()\n-)%0A%0A%09if len(parts) %3E 0 %7B%0A%09\n+, %22 %22)%0A\n %09roo\n@@ -1495,17 +1495,16 @@\n &parts)%0A\n-%09\n %09BShow(r\n@@ -1553,21 +1553,33 @@\n rmatada%0A\n-%0A%09%7D%0A%09\n+%09MyShow(root, 0) \n // Chama\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-30_11-17-58",
+            "content": "@@ -1404,19 +1404,16 @@\n Stdin)%0A%09\n-if \n scanner.\n@@ -1422,77 +1422,9 @@\n an()\n- %7B%0A%09%09// Divide tratando m%C3%BAltiplos espa%C3%A7os consecutivos caso existam%0A%09\n+%0A\n %09par\n@@ -1460,17 +1460,17 @@\n Text())%0A\n+%0A\n-%09\n %09if len(\n@@ -1482,17 +1482,16 @@\n ) %3E 0 %7B%0A\n-%09\n %09%09root :\n@@ -1507,17 +1507,16 @@\n &parts)%0A\n-%09\n %09%09BShow(\n@@ -1528,120 +1528,98 @@\n  %22%22)\n-%0A%09%09%09// Se o seu avaliador pedir a sa%C3%ADda de MyShow separada, voc%C3%AA pode test%C3%A1-la aqui:%0A%09%09%09// MyShow(root, 0)%0A%09%09%7D%0A%09%7D\n+ // Chama a fun%C3%A7%C3%A3o de impress%C3%A3o formatada%0A%0A%09%7D%0A%09// Chama a fun%C3%A7%C3%A3o de impress%C3%A3o personalizada\n %0A%7D%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-30_11-18-32",
+            "content": "@@ -1685,16 +1685,19 @@\n qui:%0A%09%09%09\n+// \n MyShow(r\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-30_11-25-03",
+            "content": "@@ -233,16 +233,64 @@\n = nil %7B%0A\n+%09%09fmt.Println(strings.Repeat(%22 %22, nivel) + %22#%22)%0A\n %09%09return\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-30_11-28-04",
+            "content": "@@ -245,16 +245,17 @@\n turn%0A%09%7D%0A\n+%0A\n %09fmt.Pri\n@@ -251,32 +251,75 @@\n %7D%0A%0A%09fmt.Println(\n+strings.Repeat(%22 %22, nivel) + strconv.Itoa((\n node.Value)%0A%09MyS\n@@ -313,16 +313,18 @@\n e.Value)\n+))\n %0A%09MyShow\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-30_11-29-05",
+            "content": "@@ -246,16 +246,41 @@\n urn%0A%09%7D%0A%09\n+fmt.Println(node.Value)%0A%09\n MyShow(n\n@@ -300,96 +300,8 @@\n el+1\n-)%0A%09pontos := strings.Repeat(%22.%22, nivel*4)%0A%09fmt.Println(pontos + strconv.Itoa(node.Value)\n )%0A%09M\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-06-30_11-33-18",
+            "content": "@@ -237,77 +237,8 @@\n l %7B%0A\n-%09%09pontos := strings.Repeat(%22.%22, nivel*4)%0A%09%09fmt.Println(pontos + %22#%22)%0A\n %09%09re\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-30_11-33-57",
+            "content": "@@ -233,16 +233,85 @@\n = nil %7B%0A\n+%09%09pontos := strings.Repeat(%22.%22, nivel*4)%0A%09%09fmt.Println(pontos + %22#%22)%0A\n %09%09return\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-30_11-34-09",
+            "content": "@@ -237,109 +237,8 @@\n l %7B%0A\n-%09%09pontos := strings.Repeat(%22.%22, nivel*4)%0A%09%09if nivel == 0 %7B%0A%09%09%09return%0A%09%09%7D%0A%09%09fmt.Println(pontos + %22#%22)%0A\n %09%09re\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-30_11-35-21",
+            "content": "@@ -234,16 +234,115 @@\n  nil %7B%0A%09\n+%09pontos := strings.Repeat(%22.%22, nivel*4)%0A%09%09if nivel == 0 %7B%0A%09%09%09return%0A%09%09%7D%0A%09%09fmt.Println(pontos + %22#%22)\n %0A%09%09retur\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-06-30_11-35-45",
+            "content": "@@ -182,270 +182,76 @@\n da.%0A\n-// MyShow imprime a %C3%A1rvore bin%C3%A1ria no percurso In-order com indenta%C3%A7%C3%A3o de pontos para TODOS os n%C3%B3s.%0Afunc MyShow(node *Node, nivel int) %7B%0A%09if node == nil %7B%0A%09%09pontos := strings.Repeat(%22.%22, nivel*4)%0A%09%09fmt.Println(pontos + %22#%22)%0A%09%09return%0A%09%7D%0A%0A%09// 1. Sub%C3%A1rvore Esquerda\n+func MyShow(node *Node, nivel int) %7B%0A%09if node == nil %7B%0A%09%0A%09%09return%0A%09%7D\n %0A%09My\n@@ -278,27 +278,8 @@\n l+1)\n-%0A%0A%09// 2. Raiz atual\n %0A%09po\n@@ -366,34 +366,8 @@\n ue))\n-%0A%0A%09// 3. Sub%C3%A1rvore Direita\n %0A%09My\n@@ -392,16 +392,17 @@\n ivel+1)%0A\n+%0A\n %7D%0A%0A// --\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-30_11-39-27",
+            "content": "@@ -525,21 +525,17 @@\n , nivel*\n-nivel\n+4\n )%0A%09fmt.P\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-06-30_11-40-01",
+            "content": "@@ -371,21 +371,17 @@\n , nivel*\n-nivel\n+4\n )%0A%09%09fmt.\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-06-30_11-40-32",
+            "content": "@@ -182,76 +182,274 @@\n da.%0A\n-func MyShow(node *Node, nivel int) %7B%0A%09if node == nil %7B%0A%09%0A%09%09return%0A%09%7D\n+// MyShow imprime a %C3%A1rvore bin%C3%A1ria no percurso In-order com indenta%C3%A7%C3%A3o de pontos para TODOS os n%C3%B3s.%0Afunc MyShow(node *Node, nivel int) %7B%0A%09if node == nil %7B%0A%09%09pontos := strings.Repeat(%22.%22, nivel*nivel)%0A%09%09fmt.Println(pontos + %22#%22)%0A%09%09return%0A%09%7D%0A%0A%09// 1. Sub%C3%A1rvore Esquerda\n %0A%09My\n@@ -472,16 +472,35 @@\n nivel+1)\n+%0A%0A%09// 2. Raiz atual\n %0A%09pontos\n@@ -533,9 +533,13 @@\n vel*\n-4\n+nivel\n )%0A%09f\n@@ -583,16 +583,42 @@\n .Value))\n+%0A%0A%09// 3. Sub%C3%A1rvore Direita\n %0A%09MyShow\n@@ -639,17 +639,16 @@\n ivel+1)%0A\n-%0A\n %7D%0A%0A// --\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-06-30_11-41-03",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// MyShow imprime a \u00e1rvore bin\u00e1ria de forma formatada.\nfunc MyShow(node *Node, nivel int) {\n\tif node == nil {\n\t\n\t\treturn\n\t}\n\tMyShow(node.Left, nivel+1)\n\tpontos := strings.Repeat(\".\", nivel*4)\n\tfmt.Println(pontos + strconv.Itoa(node.Value))\n\tMyShow(node.Right, nivel+1)\n\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\tif len(*parts) == 0 {\n\t\treturn nil\n\t}\n\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\n\tif elem == \"#\" {\n\t\treturn nil\n\n\t}\n\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\t// Divide tratando m\u00faltiplos espa\u00e7os consecutivos caso existam\n\t\tparts := strings.Fields(scanner.Text())\n\t\tif len(parts) > 0 {\n\t\t\troot := create(&parts)\n\t\t\tBShow(root, \"\")\n\t\t\t// Se o seu avaliador pedir a sa\u00edda de MyShow separada, voc\u00ea pode test\u00e1-la aqui:\n\t\t\tMyShow(root, 0)\n\t\t}\n\t}\n}\n",
+            "lines": "95"
+        }
+    ]
+}

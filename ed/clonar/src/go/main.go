@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-
 	"strconv"
 	"strings"
 )
@@ -14,17 +13,16 @@ type Node struct {
 	Left  *Node
 	Right *Node
 }
-
-// MyShow imprime a árvore binária de forma formatada.
-func MyShow(node *Node, nivel int) {
+func Clone(node *Node) *Node {
 	if node == nil {
-	
-		return
+		return nil
+	} // TODO
+
+	return &Node{
+		Value: node.Value,
+		Left:  Clone(node.Left),
+		Right: Clone(node.Right),
 	}
-	MyShow(node.Left, nivel+1)
-	pontos := strings.Repeat(".", nivel*4)
-	fmt.Println(pontos + strconv.Itoa(node.Value))
-	MyShow(node.Right, nivel+1)
 
 }
 
@@ -40,7 +38,6 @@ func BShow(node *Node, history string) {
 			fmt.Print("    ")
 		}
 	}
-
 	if history != "" {
 		if history[len(history)-1] == 'l' {
 			fmt.Print("╭───")
@@ -48,12 +45,10 @@ func BShow(node *Node, history string) {
 			fmt.Print("╰───")
 		}
 	}
-
 	if node == nil {
 		fmt.Println("#")
 		return
 	}
-
 	fmt.Println(node.Value)
 	if node.Left != nil || node.Right != nil {
 		BShow(node.Right, history+"r")
@@ -61,18 +56,11 @@ func BShow(node *Node, history string) {
 }
 
 func create(parts *[]string) *Node {
-	if len(*parts) == 0 {
-		return nil
-	}
-
 	elem := (*parts)[0]
 	*parts = (*parts)[1:]
-
 	if elem == "#" {
 		return nil
-
 	}
-
 	value, _ := strconv.Atoi(elem)
 	node := &Node{Value: value}
 	node.Left = create(parts)
@@ -82,14 +70,13 @@ func create(parts *[]string) *Node {
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	if scanner.Scan() {
-		// Divide tratando múltiplos espaços consecutivos caso existam
-		parts := strings.Fields(scanner.Text())
-		if len(parts) > 0 {
-			root := create(&parts)
-			BShow(root, "")
-			// Se o seu avaliador pedir a saída de MyShow separada, você pode testá-la aqui:
-			MyShow(root, 0)
-		}
-	}
+	scanner.Scan()
+	parts := strings.Split(scanner.Text(), " ")
+	root := create(&parts)
+	fmt.Println("original:")
+	BShow(root, "")        // Chama a função de impressão formatada
+	newRoot := Clone(root) // Clona a árvore
+	root.Value = 4         // Modifica o valor do nó raiz original
+	fmt.Println("clone:")
+	BShow(newRoot, "") // Chama novamente para mostrar a árvore invertida
 }

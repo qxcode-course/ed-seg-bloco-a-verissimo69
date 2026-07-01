@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_08-44-57",
+            "content": "@@ -159,290 +159,29 @@\n  %7B%0A%09\n-if a == nil %7C%7C b == nil %7B%0A%09%09return 0%0A%09%7D%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%0A%09if a.Value %3C b.Value %7B%0A%09%09return -1%0A%09%7D%0A%09if a.Value %3E b.Value %7B%0A%09%09return 1%0A%09%7D%0A%0A%09resEsquerda := compare(a.Left, b.Left)%0A%0A%09if resEsquerda != 0 %7B%0A%09%09return resEsquerda%0A%09%7D%0A%09return compare(a.Right, b.Right)\n+_, _ = a, b%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-01_09-43-39",
+            "content": "@@ -240,49 +240,8 @@\n 1%0A%09%7D\n-%0A%09if a != nil && b == nil %7B%0A%09%09return 1%0A%09%7D\n %0A%0A%09i\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_09-45-11",
+            "content": "@@ -158,52 +158,8 @@\n t %7B%0A\n-%09// Se ambos s%C3%A3o nulos, s%C3%A3o iguais at%C3%A9 aqui%0A\n %09if \n@@ -163,26 +163,26 @@\n if a == nil \n-&&\n+%7C%7C\n  b == nil %7B%0A\n@@ -200,293 +200,90 @@\n %09%7D%0A%09\n-// Se a primeira %C3%A9 nula e a segunda n%C3%A3o, a primeira %C3%A9 %22menor%22 (pois termina antes)%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%09// Se a primeira existe e a segunda %C3%A9 nula, a primeira %C3%A9 %22maior%22%0A%09if a != nil && b == nil %7B%0A%09%09return 1%0A%09%7D%0A%0A%09// Se ambos existem, compara os valores armazenados\n+if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%09if a != nil && b == nil %7B%0A%09%09return 1%0A%09%7D%0A\n %0A%09if\n@@ -361,67 +361,8 @@\n %09%7D%0A%0A\n-%09// Se os valores s%C3%A3o iguais, compara a sub%C3%A1rvore esquerda%0A\n %09res\n@@ -397,16 +397,17 @@\n b.Left)%0A\n+%0A\n %09if resE\n@@ -448,83 +448,8 @@\n a%0A%09%7D\n-%0A%0A%09// Se a sub%C3%A1rvore esquerda tamb%C3%A9m for igual, decide na sub%C3%A1rvore direita\n %0A%09re\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-07-01_09-47-47",
+            "content": "@@ -159,130 +159,378 @@\n  %7B%0A%09\n-if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%09if a != nil && b == nil %7B%0A%09%09return 1%0A%09%7D\n+// Se ambos s%C3%A3o nulos, s%C3%A3o iguais at%C3%A9 aqui%0A%09if a == nil && b == nil %7B%0A%09%09return 0%0A%09%7D%0A%09// Se a primeira %C3%A9 nula e a segunda n%C3%A3o, a primeira %C3%A9 %22menor%22 (pois termina antes)%0A%09if a == nil && b != nil %7B%0A%09%09return -1%0A%09%7D%0A%09// Se a primeira existe e a segunda %C3%A9 nula, a primeira %C3%A9 %22maior%22%0A%09if a != nil && b == nil %7B%0A%09%09return 1%0A%09%7D%0A%0A%09// Se ambos existem, compara os valores armazenados\n %0A%09if\n@@ -604,16 +604,75 @@\n n 1%0A%09%7D%0A%0A\n+%09// Se os valores s%C3%A3o iguais, compara a sub%C3%A1rvore esquerda%0A\n %09resEsqu\n@@ -751,16 +751,90 @@\n rda%0A%09%7D%0A%0A\n+%09// Se a sub%C3%A1rvore esquerda tamb%C3%A9m for igual, decide na sub%C3%A1rvore direita%0A\n %09return \n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-07-01_09-48-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc compare(a, b *Node) int {\n\tif a == nil && b == nil {\n\t\treturn 0\n\t}\n\tif a == nil && b != nil {\n\t\treturn -1\n\t}\n\tif a != nil && b == nil {\n\t\treturn 1\n\t}\n\tif a.Value < b.Value {\n\t\treturn -1\n\t}\n\tif a.Value > b.Value {\n\t\treturn 1\n\t}\n\n\tresEsquerda := compare(a.Left, b.Left)\n\tif resEsquerda != 0 {\n\t\treturn resEsquerda\n\t}\n\n\treturn compare(a.Right, b.Right)\n}\n\n// ----------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\ta := create(&parts)\n\tBShow(a, \"\")\n\tscanner.Scan()\n\tparts = strings.Split(scanner.Text(), \" \")\n\tb := create(&parts)\n\tBShow(b, \"\")\n\tresult := compare(a, b)\n\tif result == 0 {\n\t\tfmt.Println(\"iguais\")\n\t} else if result < 0 {\n\t\tfmt.Println(\"menor\")\n\t} else {\n\t\tfmt.Println(\"maior\")\n\t}\n}\n",
+            "lines": "103"
+        }
+    ]
+}

@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-
 	"strconv"
 	"strings"
 )
@@ -15,17 +14,14 @@ type Node struct {
 	Right *Node
 }
 
-// MyShow imprime a árvore binária de forma formatada.
-func MyShow(node *Node, nivel int) {
+func Reverse(node *Node) {
 	if node == nil {
-	
 		return
 	}
-	MyShow(node.Left, nivel+1)
-	pontos := strings.Repeat(".", nivel*4)
-	fmt.Println(pontos + strconv.Itoa(node.Value))
-	MyShow(node.Right, nivel+1)
 
+	node.Left, node.Right = node.Right, node.Left
+	Reverse(node.Left)
+	Reverse(node.Right)
 }
 
 // -----------------------------------------------------------------------------------
@@ -40,7 +36,6 @@ func BShow(node *Node, history string) {
 			fmt.Print("    ")
 		}
 	}
-
 	if history != "" {
 		if history[len(history)-1] == 'l' {
 			fmt.Print("╭───")
@@ -48,12 +43,10 @@ func BShow(node *Node, history string) {
 			fmt.Print("╰───")
 		}
 	}
-
 	if node == nil {
 		fmt.Println("#")
 		return
 	}
-
 	fmt.Println(node.Value)
 	if node.Left != nil || node.Right != nil {
 		BShow(node.Right, history+"r")
@@ -61,18 +54,11 @@ func BShow(node *Node, history string) {
 }
 
 func create(parts *[]string) *Node {
-	if len(*parts) == 0 {
-		return nil
-	}
-
 	elem := (*parts)[0]
 	*parts = (*parts)[1:]
-
 	if elem == "#" {
 		return nil
-
 	}
-
 	value, _ := strconv.Atoi(elem)
 	node := &Node{Value: value}
 	node.Left = create(parts)
@@ -82,14 +68,10 @@ func create(parts *[]string) *Node {
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	if scanner.Scan() {
-		// Divide tratando múltiplos espaços consecutivos caso existam
-		parts := strings.Fields(scanner.Text())
-		if len(parts) > 0 {
-			root := create(&parts)
-			BShow(root, "")
-			// Se o seu avaliador pedir a saída de MyShow separada, você pode testá-la aqui:
-			MyShow(root, 0)
-		}
-	}
+	scanner.Scan()
+	parts := strings.Split(scanner.Text(), " ")
+	root := create(&parts)
+	BShow(root, "") // Chama a função de impressão formatada
+	Reverse(root)   // Inverte a árvore
+	BShow(root, "") // Chama novamente para mostrar a árvore invertida
 }

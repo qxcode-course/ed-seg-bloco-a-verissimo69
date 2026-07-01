@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_18-24-10",
+            "content": "@@ -205,16 +205,27 @@\n t %7B%0A%09//%0A\n+%09_ := grid%0A\n %09return \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-01_18-25-56",
+            "content": "@@ -206,52 +206,11 @@\n  %7B%0A%09\n-var nome int%0A%09nome ++%0A%09if len(grid) == 0 %7B%0A%09\n+//%0A\n %09ret\n@@ -219,118 +219,41 @@\n n 0%0A\n-%09\n %7D%0A%0A\n-%09count := 0 %0A%0A%09for r := 0; r%3Clen(grid); r++%7B%0A%09%09for c := 0; c%3C len(grid%5B0%5D); c++%7B%0A%09%09%09%0A%09%09%7D%0A%09%7D%0A%0A%09return 0%0A%0A%7D%0A\n+// N%C3%A3o modifique a fun%C3%A7%C3%A3o main\n %0Afun\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-01_19-04-14",
+            "content": "@@ -274,18 +274,16 @@\n  := 0 %0A%0A\n-%0A%0A\n %09for r :\n@@ -348,68 +348,8 @@\n %0A%09%09%09\n-if grid%5Br%5D%5Bc%5D == '1'%7B%0A%09%09%09%09count ++%0A%09%09%09%09dfs(grid, r,  c)%0A%09%09%09%7D\n %0A%09%09%7D\n@@ -365,20 +365,12 @@\n urn \n-count%0A%0A%7D%0A%0A%0A%0A\n+0%0A%0A%7D\n %0A%0Afu\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-01_20-10-41",
+            "content": "@@ -220,16 +220,17 @@\n nt%0A%09nome\n+ \n ++%0A%09if l\n@@ -271,16 +271,19 @@\n unt := 0\n+ %0A%0A\n %0A%0A%09for r\n@@ -290,19 +290,17 @@\n  := 0; r\n- %3C \n+%3C\n len(grid\n@@ -305,17 +305,16 @@\n id); r++\n- \n %7B%0A%09%09for \n@@ -322,17 +322,16 @@\n  := 0; c\n- \n %3C len(gr\n@@ -341,17 +341,16 @@\n 0%5D); c++\n- \n %7B%0A%09%09%09if \n@@ -366,17 +366,16 @@\n %5D == '1'\n- \n %7B%0A%09%09%09%09co\n@@ -377,16 +377,17 @@\n %09%09%09count\n+ \n ++%0A%09%09%09%09d\n@@ -397,16 +397,17 @@\n grid, r,\n+ \n  c)%0A%09%09%09%7D\n@@ -437,238 +437,10 @@\n %0A%7D%0A%0A\n-func dfs(grid %5B%5D%5B%5Dbyte, r int, c int) %7B%0A%09if r %3C 0 %7C%7C c %3C 0 %7C%7C r %3E= len(grid) %7C%7C c %3E= len(grid%5B0%5D) %7C%7C grid%5Br%5D%5Bc%5D == '0' %7B%0A%09%09return%0A%09%7D%0A%09grid%5Br%5D%5Bc%5D = '0'%0A%0A%09dfs(grid, r-1, c)%0A%09dfs(grid, r+1, c)%0A%09dfs(grid, r, c-1)%0A%09dfs(grid, r, c+1)%0A%0A%7D\n+%0A%0A\n %0A%0Afu\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-01_20-14-59",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tvar nome int\n\tnome++\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\n\tcount := 0\n\n\tfor r := 0; r < len(grid); r++ {\n\t\tfor c := 0; c < len(grid[0]); c++ {\n\t\t\tif grid[r][c] == '1' {\n\t\t\t\tcount++\n\t\t\t\tdfs(grid, r, c)\n\t\t\t}\n\t\t}\n\t}\n\n\treturn count\n\n}\n\nfunc dfs(grid [][]byte, r int, c int) {\n\tif r < 0 || c < 0 || r >= len(grid) || c >= len(grid[0]) || grid[r][c] == '0' {\n\t\treturn\n\t}\n\tgrid[r][c] = '0'\n\n\tdfs(grid, r-1, c)\n\tdfs(grid, r+1, c)\n\tdfs(grid, r, c-1)\n\tdfs(grid, r, c+1)\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "59"
+        }
+    ]
+}
