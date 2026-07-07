@@ -9,7 +9,9 @@ import (
 	"strings"
 )
 
-// 1. DEFINIÇÃO DA FILA GENÉRICA (O código precisa disso para compilar)
+// ==========================================
+// 1. DEFINIÇÃO DA FILA GENÉRICA
+// ==========================================
 type Queue[T any] struct {
 	items *list.List
 }
@@ -40,16 +42,40 @@ func (q *Queue[T]) Size() int {
 	return q.items.Len()
 }
 
-// 2. FUNÇÃO PRINCIPAL
-func main() {
-	scanner := bufio.NewScanner(os.Stdin)
+func inicializarTimes() *Queue[string] {
 	fila := NewQueue[string]()
-
-	// Coloca as 16 letras (de 'A' até 'P') na fila
 	for c := 'A'; c <= 'P'; c++ {
 		fila.Enqueue(string(c))
 	}
+	return fila
+}
 
+func processarPartida(linha string, fila *Queue[string]) {
+	gols := strings.Fields(linha)
+	if len(gols) < 2 {
+		return
+	}
+
+	golsEsquerda, _ := strconv.Atoi(gols[0])
+	golsDireita, _ := strconv.Atoi(gols[1])
+
+	// Remove os dois times que estão jogando nesta chave
+	timeEsquerda := fila.Dequeue()
+	timeDireita := fila.Dequeue()
+
+	// O vencedor volta para o fim da fila para a próxima fase
+	if golsEsquerda > golsDireita {
+		fila.Enqueue(timeEsquerda)
+	} else {
+		fila.Enqueue(timeDireita)
+	}
+}
+
+// executarTorneio gerencia o fluxo de leitura da entrada e execução dos jogos
+func executarTorneio(fila *Queue[string]) {
+	scanner := bufio.NewScanner(os.Stdin)
+
+	// Enquanto houver mais de um time, o torneio continua
 	for fila.Size() > 1 {
 		if !scanner.Scan() {
 			break
@@ -59,26 +85,13 @@ func main() {
 			continue
 		}
 
-		// Lê os gols do jogo atual
-		gols := strings.Fields(linha)
-		if len(gols) < 2 {
-			continue
-		}
-		golsEsquerda, _ := strconv.Atoi(gols[0])
-		golsDireita, _ := strconv.Atoi(gols[1])
-
-		// Retira os dois times que se enfrentam nesta chave
-		timeEsquerda := fila.Dequeue()
-		timeDireita := fila.Dequeue()
-
-		// O vencedor volta para o fim da fila para a próxima fase
-		if golsEsquerda > golsDireita {
-			fila.Enqueue(timeEsquerda)
-		} else {
-			fila.Enqueue(timeDireita)
-		}
+		processarPartida(linha, fila)
 	}
+}
 
-	// O último que restar na fila é o grande campeão
+func main() {
+	fila := inicializarTimes()
+	executarTorneio(fila)
+
 	fmt.Println(fila.Dequeue())
 }

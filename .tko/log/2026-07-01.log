@@ -66,3 +66,10 @@
 2026-07-01 20:23:55, EXEC, v:1, k:ed@queimada, mode:FULL, rate:100
 2026-07-01 20:24:05, SELF, v:1, k:ed@queimada, self:1, rate:100, friend:120, guided:1, concept:1
 2026-07-01 20:24:07, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-07-01 20:26:48, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-01 20:26:49, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100
+2026-07-01 20:29:03, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-01 20:33:31, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-01 20:33:39, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-01 20:33:41, EXEC, v:1, k:ed@chaves, mode:FULL, size:64, fail:COMP
+2026-07-01 20:33:58, MOVE, v:1, k:ed@chaves, mode:EDIT
