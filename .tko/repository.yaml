@@ -37,5 +37,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@bst_insert
-selected_index: 71
+selected: ed@bst_serial
+selected_index: 72

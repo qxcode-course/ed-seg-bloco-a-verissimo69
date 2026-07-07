@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_12-10-31",
+            "content": "@@ -126,252 +126,8 @@\n %0A%7D%0A%0A\n-func inserir(raiz *Node, value int) *Node %7B%0A%09if raiz == nil %7B%0A%09%09return &Node%7BValue: value%7D%0A%0A%09%7D%0A%0A%09if value %3C raiz.Value %7B%0A%09%09raiz = inserir(raiz.Left, value)%0A%09%7D else if value %3E raiz.Value %7B%0A%09%09raiz = inserir(raiz.Right, value)%0A%09%7D%0A%0A%09return raiz%0A%7D%0A%0A\n func\n@@ -168,16 +168,27 @@\n // TODO%0A\n+%09_ = values\n %0A%09return\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-07-07_12-17-33",
+            "content": "@@ -408,96 +408,15 @@\n  %7B%0A%09\n-var raiz *Node%0A%0A%09for i := 0; i %3C len(values); i++ %7B%0A%09%09raiz = inserir(raiz, values%5Bi%5D)%0A%09%7D\n+// TODO\n %0A%0A%09r\n@@ -417,28 +417,27 @@\n DO%0A%0A%09return \n-raiz\n+nil\n %0A%7D%0A%0A// Dica:\n@@ -598,132 +598,36 @@\n  %7B%0A%09\n-if root == nil %7B%0A%09%09return %22#%22%0A%09%7D%0A%09return strconv.Itoa(root.Value) + %22%22 + Serialize(root.Left) + %22%22 + Serialize(root.Right%0A%09)\n+// TODO%0A%09_ = root%0A%09return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-07-07_12-47-23",
+            "content": "@@ -797,19 +797,19 @@\n ot.Right\n-)\n %0A%09\n+)\n %0A%7D%0A%0A// -\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-07_12-48-04",
+            "content": "@@ -741,25 +741,24 @@\n t.Value) + %22\n- \n %22 + Serializ\n@@ -773,17 +773,16 @@\n eft) + %22\n- \n %22 + Seri\n@@ -799,16 +799,17 @@\n .Right)%0A\n+%09\n %0A%7D%0A%0A// -\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-07_12-48-18",
+            "content": "@@ -249,21 +249,16 @@\n %7B%0A%09%09raiz\n-.Left\n  = inser\n@@ -316,22 +316,16 @@\n %7B%0A%09%09raiz\n-.Right\n  = inser\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-07_13-07-57",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc inserir(raiz *Node, value int) *Node {\n\tif raiz == nil {\n\t\treturn &Node{Value: value}\n\n\t}\n\n\tif value < raiz.Value {\n\t\traiz.Left = inserir(raiz.Left, value)\n\t} else if value > raiz.Value {\n\t\traiz.Right = inserir(raiz.Right, value)\n\t}\n\n\treturn raiz\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar raiz *Node\n\n\tfor i := 0; i < len(values); i++ {\n\t\traiz = inserir(raiz, values[i])\n\t}\n\n\treturn raiz\n}\n\n// Dica: crie um vetor compartilhado e v\u00e1 preenchendo conforme anda na recurs\u00e3o\n// Depois use o strings.Join para gerar o serial\nfunc Serialize(root *Node) string {\n\tif root == nil {\n\t\treturn \"#\"\n\t}\n\treturn strconv.Itoa(root.Value) + \" \" + Serialize(root.Left) + \" \" + Serialize(root.Right)\n\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(Serialize((root)))\n}\n",
+            "lines": "95"
+        }
+    ]
+}
