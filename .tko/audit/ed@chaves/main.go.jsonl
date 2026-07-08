@@ -35,3 +35,4 @@
 {"ts":1783297649,"hash":"4d68f03b44d41e3cd67750e0aca9b04ae1b77adb76cb1a30c9c197eb1be800fd","mode":"diff","ops":[{"tag":"delete","a1":44,"a2":47,"text":""},{"tag":"delete","a1":48,"a2":49,"text":""}]}
 {"ts":1783297680,"hash":"1f84e46ec84c44b9f0bd9e87203ac0acf110a45145db75a26e002b6ef64391db","mode":"diff","ops":[{"tag":"delete","a1":44,"a2":45,"text":""},{"tag":"delete","a1":53,"a2":54,"text":""},{"tag":"replace","a1":93,"a2":96,"text":"\n"}]}
 {"ts":1783297701,"hash":"e5831aedfa37b3c49755165ed2a6f4d71c6ab4179dc27abab1f0d9221e7c1cbc","mode":"diff","ops":[{"tag":"delete","a1":91,"a2":92,"text":""},{"tag":"delete","a1":93,"a2":94,"text":""},{"tag":"delete","a1":95,"a2":97,"text":""},{"tag":"delete","a1":99,"a2":100,"text":""}]}
+{"ts":1783466200,"hash":"9f369ba8c2d9a9eb85c2243f433e68dcbfd5e0570a8fac991207d480e09d0601","mode":"diff","ops":[{"tag":"insert","a1":92,"a2":92,"text":"\n"}]}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_20-18-34",
+            "content": "@@ -117,213 +117,18 @@\n ) %7B%0A\n-%0A%09if len(board) == 0 %7C%7C len(board%5B0%5D) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09rows := len(board)%0A%09cols := len(board%5B0%5D)%0A%09visited := make(%5B%5D%5B%5Dbool, rows)%0A%0A%09for i := range visited %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, cols)%0A%09%7D%0A%09return\n+%09_ = board\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-07_20-40-44",
+            "content": "@@ -45,247 +45,8 @@\n %0A)%0A%0A\n-func dfs(board %5B%5D%5B%5Dbyte, visited %5B%5D%5B%5Dbool, r, c int) %7B%0A%09rows := len(board)%0A%09cols := len(board%5B0%5D)%0A%0A%09if r %3C 0 %7C%7C r %3E= rows %7C%7C c %3C 0 %7C%7C c %3E= cols %7B%0A%09%09return%0A%09%7D%0A%09if board%5Br%5D%5Bc%5D != 'O' %7C%7C visited%5Br%5D%5Bc%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visited%5Br%5D%5Bc%5D = true%0A%0A%7D%0A%0A\n // N\n@@ -314,169 +314,8 @@\n )%0A%09%7D\n-%0A%0A%09for c := 0; c %3C cols; c++ %7B%0A%09%09if board%5B0%5D%5Bc%5D == 'O' %7B%0A%09%09%09dfs(board, visited, 0, c)%0A%09%09%7D%0A%09%09if board%5Brows-1%5D%5Bc%5D == 'O' %7B%0A%09%09%09dfs(board, visited, rows-1, c)%0A%09%09%7D%0A%09%7D\n %0A%09re\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-07_20-48-29",
+            "content": "@@ -281,125 +281,8 @@\n ue%0A%0A\n-%09dfs(board, visited, r+1, c)%0A%09dfs(board, visited, r-1, c)%0A%09dfs(board, visited, r, c+1)%0A%09dfs(board, visited, r, c-1)%0A%0A\n %7D%0A%0A/\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-07_21-50-33",
+            "content": "@@ -831,169 +831,8 @@\n %7D%0A%09%7D\n-%0A%0A%09for r := 0; r %3C rows; r++ %7B%0A%09%09if board%5Br%5D%5B0%5D == 'O' %7B%0A%09%09%09dfs(board, visited, r, 0)%0A%09%09%7D%0A%09%09if board%5Br%5D%5Bcols-1%5D == 'O' %7B%0A%09%09%09dfs(board, visited, r, cols-1)%0A%09%09%7D%0A%09%7D\n %0A%09re\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-07_21-53-31",
+            "content": "@@ -990,16 +990,22 @@\n %09%09%7D%0A%09%7D%0A%09\n+return\n %0A%7D%0A%0A// N\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-07_21-55-37",
+            "content": "@@ -994,145 +994,8 @@\n %09%7D%0A%09\n-for r := 0; r %3C rows; r++ %7B%0A%09%09for c := 0; c %3C cols; c++ %7B%0A%09%09%09if board%5Br%5D%5Bc%5D == 'O' && !visited%5Br%5D%5Bc%5D %7B%0A%09%09%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %0A%7D%0A%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-07_21-57-20",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dfs(board [][]byte, visited [][]bool, r, c int) {\n\trows := len(board)\n\tcols := len(board[0])\n\n\tif r < 0 || r >= rows || c < 0 || c >= cols {\n\t\treturn\n\t}\n\tif board[r][c] != 'O' || visited[r][c] {\n\t\treturn\n\t}\n\n\tvisited[r][c] = true\n\n\tdfs(board, visited, r+1, c)\n\tdfs(board, visited, r-1, c)\n\tdfs(board, visited, r, c+1)\n\tdfs(board, visited, r, c-1)\n\n}\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\n\tif len(board) == 0 || len(board[0]) == 0 {\n\t\treturn\n\t}\n\n\trows := len(board)\n\tcols := len(board[0])\n\tvisited := make([][]bool, rows)\n\n\tfor i := range visited {\n\t\tvisited[i] = make([]bool, cols)\n\t}\n\n\tfor c := 0; c < cols; c++ {\n\t\tif board[0][c] == 'O' {\n\t\t\tdfs(board, visited, 0, c)\n\t\t}\n\t\tif board[rows-1][c] == 'O' {\n\t\t\tdfs(board, visited, rows-1, c)\n\t\t}\n\t}\n\n\tfor r := 0; r < rows; r++ {\n\t\tif board[r][0] == 'O' {\n\t\t\tdfs(board, visited, r, 0)\n\t\t}\n\t\tif board[r][cols-1] == 'O' {\n\t\t\tdfs(board, visited, r, cols-1)\n\t\t}\n\t}\n\tfor r := 0; r < rows; r++ {\n\t\tfor c := 0; c < cols; c++ {\n\t\t\tif board[r][c] == 'O' && !visited[r][c] {\n\t\t\t\tboard[r][c] = 'X'\n\t\t\t}\n\t\t}\n\t}\n\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "86"
+        }
+    ]
+}

@@ -90,6 +90,7 @@ func executarTorneio(fila *Queue[string]) {
 }
 
 func main() {
+
 	fila := inicializarTimes()
 	executarTorneio(fila)
 
