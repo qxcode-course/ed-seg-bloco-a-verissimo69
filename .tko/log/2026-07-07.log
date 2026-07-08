@@ -87,3 +87,4 @@
 2026-07-07 21:57:29, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
 2026-07-07 21:57:40, SELF, v:1, k:ed@cercado, self:1, rate:100, study:70
 2026-07-07 21:57:47, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-07 21:57:17, MOVE, v:1, k:ed@cercado, mode:EDIT
